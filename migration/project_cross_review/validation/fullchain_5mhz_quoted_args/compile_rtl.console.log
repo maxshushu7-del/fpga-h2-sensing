@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/inputs/rtl/measurement/ddc_decimator.v" into library work
+INFO: [VRFC 10-311] analyzing module ddc_decimator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/inputs/rtl/measurement/iq_snapshot.v" into library work
+INFO: [VRFC 10-311] analyzing module iq_snapshot
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/inputs/rtl/measurement/fft_stream_improved.v" into library work
+INFO: [VRFC 10-311] analyzing module fft_stream_improved
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/inputs/rtl/measurement/spectral_estimator.v" into library work
+INFO: [VRFC 10-311] analyzing module spectral_estimator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/inputs/rtl/measurement/measurement_improved.v" into library work
+INFO: [VRFC 10-311] analyzing module measurement_improved
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/validation/fullchain_5MHz_quoted_args/dependencies/tb_measurement_improved.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_measurement_improved
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/validation/fullchain_5MHz_quoted_args/dependencies/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl

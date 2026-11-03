@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "expected_transactions": 718,
+  "actual_transactions": 718,
+  "compared_transactions": 718,
+  "columns": [
+    "y"
+  ],
+  "absolute_tolerance_exact": "0",
+  "order_matches": true,
+  "missing_ids": [],
+  "unexpected_ids": [],
+  "value_mismatches": 0,
+  "first_differences": [],
+  "scope": "numeric accepted-transaction comparison, not cycle timing or hardware"
+}

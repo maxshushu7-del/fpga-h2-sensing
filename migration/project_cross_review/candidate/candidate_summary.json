@@ -1,0 +1,38 @@
+{
+  "completed_utc": "2026-11-02T13:35:59.3674401Z",
+  "status": "isolated_candidate_ready_for_review",
+  "target_finding": "GPT-001",
+  "candidate_rtl": "rtl/auto_lock_fsm.v",
+  "candidate_sha256": "1f38ffe3037864db72059dec983717f2b6487babb30b4cef2344cb5a7f516bf8",
+  "patch": "auto_lock_fsm.patch",
+  "source_hashes": "source_hashes.json",
+  "production_or_inputs_modified": false,
+  "commands": "commands.ps1",
+  "actual_command_log": "logs/run_summary.log",
+  "simulation_utc_start": "2026-11-02T13:33:34.8725941Z",
+  "simulation_utc_end": "2026-11-02T13:33:57.7420987Z",
+  "results": [
+    {
+      "status": "expected_legacy_defects_reproduced",
+      "log": "logs/legacy_endpoints/run.log",
+      "case": "legacy_endpoints"
+    },
+    {
+      "status": "pass",
+      "log": "logs/candidate_endpoints/run.log",
+      "case": "candidate_endpoints"
+    },
+    {
+      "status": "pass",
+      "log": "logs/legacy_production_span/run.log",
+      "case": "legacy_production_span"
+    },
+    {
+      "status": "pass",
+      "log": "logs/candidate_production_span/run.log",
+      "case": "candidate_production_span"
+    }
+  ],
+  "synthesis_or_implementation_run": false,
+  "board_connected": false
+}

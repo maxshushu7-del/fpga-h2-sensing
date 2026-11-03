@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# xsim v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sun Oct 18 17:13:49 2026
+# Process ID: 30040
+# Current directory: E:/Codex/FPGA/learning/03_fir_skill_trial/verification/run_20261018_171346_324/good
+# Command line: xsim.exe -log E:/Codex/FPGA/learning/03_fir_skill_trial/verification/run_20261018_171346_324/good/simulate.log -mode tcl -source {xsim.dir/fir_trial/xsim_script.tcl}
+# Log file: E:/Codex/FPGA/learning/03_fir_skill_trial/verification/run_20261018_171346_324/good/simulate.log
+# Journal file: E:/Codex/FPGA/learning/03_fir_skill_trial/verification/run_20261018_171346_324/good\xsim.jou
+# Running On        :DESKTOP-K8LLODR
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26300
+# Processor Detail  :Intel(R) Core(TM) 7 240H
+# CPU Frequency     :2995 MHz
+# CPU Physical cores:10
+# CPU Logical cores :16
+# Host memory       :34045 MB
+# Swap memory       :6710 MB
+# Total Virtual     :40756 MB
+# Available Virtual :17894 MB
+#-----------------------------------------------------------
+source xsim.dir/fir_trial/xsim_script.tcl
+# xsim {fir_trial} -autoloadwcfg -tclbatch {E:/Codex/FPGA/learning/03_fir_skill_trial/sim/run_all.tcl}
+Time resolution is 1 ps
+source E:/Codex/FPGA/learning/03_fir_skill_trial/sim/run_all.tcl
+## run all
+FIR_TRIAL_COMPLETED cycles=1358 checks=2199 outputs=718 errors=0
+FIR_TRIAL_PASS
+$finish called at time : 13586 ns : File "E:/Codex/FPGA/learning/03_fir_skill_trial/sim/tb_fir4.sv" Line 73
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 18 17:13:51 2026...

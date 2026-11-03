@@ -1,0 +1,34 @@
+#-----------------------------------------------------------
+# xsim v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Nov  2 21:17:54 2026
+# Process ID: 29744
+# Current directory: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/fft
+# Command line: xsim.exe -log wrapper_boundary.log -mode tcl -source {xsim.dir/wrapper_boundary/xsim_script.tcl}
+# Log file: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/fft/wrapper_boundary.log
+# Journal file: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/fft\xsim.jou
+# Running On        :DESKTOP-K8LLODR
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26300
+# Processor Detail  :Intel(R) Core(TM) 7 240H
+# CPU Frequency     :2995 MHz
+# CPU Physical cores:10
+# CPU Logical cores :16
+# Host memory       :34045 MB
+# Swap memory       :8053 MB
+# Total Virtual     :42098 MB
+# Available Virtual :15538 MB
+#-----------------------------------------------------------
+source xsim.dir/wrapper_boundary/xsim_script.tcl
+# xsim {wrapper_boundary} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+WRAPPER_BOUNDARY_PASS 4096 accepted samples; stalls=1171; correct TLAST; index wraps to0
+WRAPPER_BOUNDARY_PASS early TLAST sets protocol_error
+WRAPPER_BOUNDARY_PASS reset clears sticky error and reconfigures
+ALL FFT WRAPPER BOUNDARY UNIT CASES PASSED; fft_core is a non-DSP stub
+$finish called at time : 93850 ns : File "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/fft/tb_fft_wrapper_boundary.sv" Line 54
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 21:17:56 2026...

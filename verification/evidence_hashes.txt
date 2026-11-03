@@ -1,0 +1,10 @@
+
+Path : E:\Codex\FPGA\documents\reusable_engineering_skills_20261018\skill\cases\evidence\tec_report.md
+Hash : E90993E788CE58430F8E6491E5B898FDE5AA5E4EFF2A044561AFC897356239AF
+
+Path : E:\Codex\FPGA\documents\reusable_engineering_skills_20261018\skill\cases\evidence\integration_report.md
+Hash : 60A7C813FF599A786516B0DDAE76C7B26D8ABAF07ADE4F04373EC359D63E7FF2
+
+Path : E:\Codex\FPGA\documents\reusable_engineering_skills_20261018\skill\cases\evidence\integration_results.csv
+Hash : 204666E7A52DE98B5841DB8A11A239F770293BED69B805EAAD80743DA6AB4FC9
+

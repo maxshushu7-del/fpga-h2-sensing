@@ -1,0 +1,22 @@
+UTC start 2026-11-02T13:33:34.8725941Z
+UTC 2026-11-02T13:33:34.8951786Z NAME=legacy_endpoints RTL_SHA256=EB9552DC8261F6A7734CEDE5E5DE0EB47EC5A96DCDDD50DB151824CDD25CC333
+xvlog -d LEGACY_RTL E:\Codex\FPGA\workspace\report_targeted_revision_20261102\project_cross_review\inputs\rtl\laser\auto_lock_fsm.v E:\Codex\FPGA\workspace\report_targeted_revision_20261102\project_cross_review\candidate\tests\tb_auto_lock_candidate_endpoints.v
+xelab tb_auto_lock_candidate_endpoints -s sim
+xsim sim -runall
+PASS legacy_endpoints
+UTC 2026-11-02T13:33:40.5396198Z NAME=candidate_endpoints RTL_SHA256=1F38FFE3037864DB72059DEC983717F2B6487BABB30B4CEF2344CB5A7F516BF8
+xvlog E:\Codex\FPGA\workspace\report_targeted_revision_20261102\project_cross_review\candidate\rtl\auto_lock_fsm.v E:\Codex\FPGA\workspace\report_targeted_revision_20261102\project_cross_review\candidate\tests\tb_auto_lock_candidate_endpoints.v
+xelab tb_auto_lock_candidate_endpoints -s sim
+xsim sim -runall
+PASS candidate_endpoints
+UTC 2026-11-02T13:33:46.3353689Z NAME=legacy_production_span RTL_SHA256=EB9552DC8261F6A7734CEDE5E5DE0EB47EC5A96DCDDD50DB151824CDD25CC333
+xvlog E:\Codex\FPGA\workspace\report_targeted_revision_20261102\project_cross_review\inputs\rtl\laser\auto_lock_fsm.v E:\Codex\FPGA\workspace\report_targeted_revision_20261102\project_cross_review\candidate\tests\tb_auto_lock_production_span.v
+xelab tb_auto_lock_production_span -s sim
+xsim sim -runall
+PASS legacy_production_span
+UTC 2026-11-02T13:33:52.1050208Z NAME=candidate_production_span RTL_SHA256=1F38FFE3037864DB72059DEC983717F2B6487BABB30B4CEF2344CB5A7F516BF8
+xvlog E:\Codex\FPGA\workspace\report_targeted_revision_20261102\project_cross_review\candidate\rtl\auto_lock_fsm.v E:\Codex\FPGA\workspace\report_targeted_revision_20261102\project_cross_review\candidate\tests\tb_auto_lock_production_span.v
+xelab tb_auto_lock_production_span -s sim
+xsim sim -runall
+PASS candidate_production_span
+UTC end 2026-11-02T13:33:57.7420987Z

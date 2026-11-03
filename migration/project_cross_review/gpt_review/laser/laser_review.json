@@ -1,0 +1,19 @@
+{
+  "start_utc":"2026-11-02T13:14:11Z",
+  "end_utc":"2026-11-02T13:24:03Z",
+  "findings":[{
+    "id":"L1",
+    "module":"auto_lock_fsm",
+    "file":"inputs/rtl/laser/auto_lock_fsm.v",
+    "line":109,
+    "priority":"P2",
+    "trigger":"Final SWEEP_AVG at scan_code=+SPAN updates minimum from interior SPAN-STEP to +SPAN; rejection still reads previous min_code and contrast.",
+    "expected":"A sweep whose final minimum is at +SPAN is rejected with RETRY_WAIT, last_reason=1 and servo_enable=0.",
+    "actual":"Monotonic ADC response 3000-(dac_code+1024) reaches LOCKING state=6, last_reason=0, min_code=1024, servo_enable=1; selected_code=-2 and setpoint=1978.",
+    "evidence":["laser/tb_auto_lock_endpoint.v","laser/endpoint_compile.log","laser/endpoint_elaborate.log","laser/endpoint_run.log"],
+    "classification":"reproduced_functional_defect",
+    "replay":"Production SPAN=1024 STEP=2 MIN_CONTRAST=24; shortened SETTLE_CLOCKS=0 AVG_LOG2=0. Reset 5 clocks, assert arm, dac_at_goal=1, adc_valid=arm, drive adc_sample=3000-(signed(dac_code)+1024) each falling edge; servo_valid=0.",
+    "suggestion":"Include current final average in extrema and boundary decision, or commit it before a separate completion state."
+  }]
+}
+

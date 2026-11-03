@@ -1,0 +1,6 @@
+input_hz,reported_read_hz,error_hz,reported_repetitions,provenance
+1000000,1000004,4,10,user_report_20261014
+5000000,5000019,19,10,user_report_20261014
+10000000,10000039,39,10,user_report_20261014
+20000000,20000077,77,10,user_report_20261014
+25000000,25000094,94,,user_report_20261014

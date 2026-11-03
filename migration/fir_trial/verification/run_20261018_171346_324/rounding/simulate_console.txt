@@ -1,0 +1,25 @@
+
+****** xsim v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sun Oct 18 17:13:55 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/fir_trial/xsim_script.tcl
+# xsim {fir_trial} -autoloadwcfg -tclbatch {E:/Codex/FPGA/learning/03_fir_skill_trial/sim/run_all.tcl}
+Time resolution is 1 ps
+source E:/Codex/FPGA/learning/03_fir_skill_trial/sim/run_all.tcl
+## run all
+MISMATCH value cycle=15 sample_id=13 expected=0 actual=-1
+MISMATCH value cycle=27 sample_id=25 expected=0 actual=-1
+MISMATCH value cycle=29 sample_id=27 expected=0 actual=-1
+MISMATCH value cycle=156 sample_id=154 expected=-151 actual=-152
+MISMATCH value cycle=170 sample_id=168 expected=-818 actual=-819
+FIR_TRIAL_COMPLETED cycles=1358 checks=2199 outputs=718 errors=127
+Fatal: FIR checks rejected this implementation
+Time: 13586 ns  Iteration: 0  Process: /tb_fir4/Initial15_2  Scope: tb_fir4  File: E:/Codex/FPGA/learning/03_fir_skill_trial/sim/tb_fir4.sv Line: 71
+$finish called at time : 13586 ns
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Oct 18 17:13:57 2026...

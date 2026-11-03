@@ -1,0 +1,14 @@
+{
+  "classification": "mathematical test observability gap; not observed DUT failure",
+  "minimal_sequence": [[1,0,0,0,1],[0,-128,1,1,1],[0,-32768,-128,1,1]],
+  "sequence_fields": ["rst","x","k","s_valid","m_ready"],
+  "old_initial_state": -1,
+  "correct_increment": 32768,
+  "hypothetical_wrong_increment": 32769,
+  "old_correct_output": 32767,
+  "old_wrong_output": 32767,
+  "new_initial_state": -2,
+  "new_correct_output": 32766,
+  "new_wrong_output": 32767,
+  "actual_mutated_RTL_executed": false
+}

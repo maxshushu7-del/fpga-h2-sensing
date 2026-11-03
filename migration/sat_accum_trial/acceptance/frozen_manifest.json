@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "task": "sat_accum_stream",
+  "frozen_utc": "2026-11-02T10:31:53.7386990Z",
+  "seed": 20261102,
+  "candidates_seen": false,
+  "candidates_run": false,
+  "planned_cycles": 2404,
+  "planned_signal_checks": 14421,
+  "expected_categories": 6,
+  "syntax_validation": "PASS; PowerShell parser, xvlog TB-only, exact runner launch function",
+  "vivado_bin": "E:/Xilinx/Vivado/2024.1/bin",
+  "files": [
+    {
+      "path": "tb_sat_accum_stream.sv",
+      "bytes": 8502,
+      "sha256": "de4a4a3777041aa1cf0375b1b568a6034a35905048b949154719d51bc2fd63cb"
+    },
+    {
+      "path": "run_candidate.ps1",
+      "bytes": 6631,
+      "sha256": "946d3b23bc212d5919ed1a778d281d2ad33a2a61208bac38d45cdfb8e395c28c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3975,
+      "sha256": "54981a209d972eedccc1979149a7276efd998f9399ff6a6052d1c3c9f09ea07c"
+    },
+    {
+      "path": "syntax_validation/validation_result.json",
+      "bytes": 793,
+      "sha256": "4e3bfb8775f3ba9312c8d561281e6912fb7069905356453e186a76767030e977"
+    }
+  ]
+}

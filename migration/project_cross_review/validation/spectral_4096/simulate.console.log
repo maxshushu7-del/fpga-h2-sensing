@@ -1,0 +1,36 @@
+
+****** xsim v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Nov  2 21:20:30 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/unit_snapshot/xsim_script.tcl
+# xsim {unit_snapshot} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS4096 1 positive fractional bin=123 deltaQ16=16384 hz=30090 valid=1 interp=1 power=44100000000 noise=10000 latency=8440
+PASS4096 2 negative wrapped bin=4095 deltaQ16=-16384 hz=-305 valid=1 interp=1 power=44100000000 noise=10000 latency=8440
+PASS4096 3 DC plus quarter bin bin=0 deltaQ16=16384 hz=61 valid=1 interp=1 power=44100000000 noise=10000 latency=8440
+PASS4096 4 DC minus quarter bin bin=0 deltaQ16=-16384 hz=-61 valid=1 interp=1 power=44100000000 noise=10000 latency=8440
+PASS4096 5 complex DC bin=0 deltaQ16=0 hz=0 valid=1 interp=1 power=44100000000 noise=10000 latency=8440
+PASS4096 6 DC only bin=0 deltaQ16=0 hz=0 valid=1 interp=1 power=44100000000 noise=0 latency=8440
+PASS4096 7 signed Nyquist bin=2048 deltaQ16=0 hz=-500000 valid=1 interp=1 power=44100000000 noise=10000 latency=8440
+PASS4096 8 missing TLAST bin=123 deltaQ16=16384 hz=30090 valid=0 interp=0 power=44100000000 noise=10000 latency=8440
+PASS4096 9 recover after missing TLAST bin=123 deltaQ16=16384 hz=30090 valid=1 interp=1 power=44100000000 noise=10000 latency=8440
+PASS4096 10 early TLAST bin=123 deltaQ16=16384 hz=30090 valid=0 interp=0 power=44100000000 noise=10000 latency=8440
+PASS4096 11 recover after early TLAST bin=123 deltaQ16=16384 hz=30090 valid=1 interp=1 power=44100000000 noise=10000 latency=8440
+PASS4096 12 bin order error bin=123 deltaQ16=16384 hz=30090 valid=0 interp=0 power=44100000000 noise=10000 latency=8440
+PASS4096 13 recover after bin error bin=123 deltaQ16=16384 hz=30090 valid=1 interp=1 power=44100000000 noise=10000 latency=8440
+PASS4096 14 frame bad bin=123 deltaQ16=16384 hz=30090 valid=0 interp=0 power=44100000000 noise=10000 latency=8440
+PASS4096 15 recover after frame bad bin=123 deltaQ16=16384 hz=30090 valid=1 interp=1 power=44100000000 noise=10000 latency=8440
+PASS4096 16 zero invalid bin=0 deltaQ16=0 hz=0 valid=0 interp=0 power=0 noise=0 latency=8369
+PASS4096 17 gapped valid recovery bin=123 deltaQ16=16384 hz=30090 valid=1 interp=1 power=44100000000 noise=10000 latency=8440
+PASS4096 18 overlapping frame contract error bin=123 deltaQ16=16384 hz=30090 valid=0 interp=0 power=44100000000 noise=10000 latency=4343
+PASS4096 19 recover after overlap bin=123 deltaQ16=16384 hz=30090 valid=1 interp=1 power=44100000000 noise=10000 latency=8440
+ALL 19 PRODUCTION 4096 SPECTRAL CASES PASSED; frames=20 valid_input_beats=79872
+$finish called at time : 2363490 ns : File "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/validation/tb_spectral_estimator_4096.sv" Line 86
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 21:20:32 2026...

@@ -1,0 +1,20 @@
+{
+  "seed": 20261018,
+  "cycles": 1358,
+  "coverage": {
+    "accepted": 865,
+    "published": 718,
+    "reset_cycles": 45,
+    "disabled_cycles": 78,
+    "ignored_reset_valid": 23,
+    "ignored_disabled_valid": 57,
+    "bubbles": 370,
+    "cancelled_reset": 46,
+    "cancelled_disabled": 101,
+    "positive_saturation": 9,
+    "negative_saturation": 11,
+    "positive_half_tie": 39,
+    "negative_half_tie": 53
+  },
+  "evidence": "synthetic stimulus, exact reference; not DUT coverage or hardware"
+}

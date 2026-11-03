@@ -1,40 +1,50 @@
-# fpga-h2-sensing
-An FPGA-based adaptive system locks a narrow-linewidth laser to the resonance slope for optical hydrogen sensing, analyzes kHz-to-hundreds-of-MHz beat signals by FFT, compensates temperature drift in closed loop, and interfaces with a host for configuration and monitoring.
+# FPGA-Based Adaptive High-Precision Hydrogen Sensing System
 
-## 项目名称
+基于FPGA的自适应高精度氢气传感系统。系统围绕激光工作点锁定、拍频FFT测频、环境管理与集成三条链路，在同一片FPGA上组织采样、处理、保护和UDP遥测。
 
-**FPGA-Based Adaptive High-Precision Hydrogen Sensing System**
+## 阅读入口
 
-基于FPGA的自适应高精度氢气传感系统
-
-## 提交材料导航
-
-本仓库按AMD自主选题指南推荐结构建立以下七个主目录。目录说明先建立，源码、数据、日志和最终报告按入口归档。
-
-| 目录 | 用途 |
+| 材料 | 入口 |
 |---|---|
-| [src](src/README.md) | FPGA源码、约束、系数、IP配置和PC端程序 |
-| [sim](sim/README.md) | 仿真平台、验证脚本与原始结果 |
-| [build](build/README.md) | 可复现构建脚本、综合及实现报告 |
-| [board](board/README.md) | bit/ltx、接线、上板步骤、照片及实测输出 |
-| [data](data/README.md) | 测试输入、参考数据与原始记录 |
-| [skill](skill/README.md) | 可复用技能、工作流与迁移案例 |
-| [report](report/README.md) | 报告、AI协作记录、海报和演示材料入口 |
+| 技术报告 PDF / Word | [PDF](report/design/design_report.pdf) · [Word](report/design/design_report.docx) |
+| 海报与介绍PPT | [中文海报](report/poster/poster_zh.pptx) · [英文海报](report/poster/poster_en.pptx) · [介绍PPT](report/media/system_introduction.pptx) |
+| 作品介绍视频 | [MP4](report/media/system_introduction.mp4) |
+| 从零复现 | [工具、命令、IP、接收与上板步骤](report/reproduction.md) |
+| 第四版 FPGA 源码 | [src/fpga](src/fpga/README.md) |
+| 匹配的 UDP 图形上位机 | [安装与运行](src/host/gui/README.md) · [40字节协议](src/host/gui/protocol_v4.md) |
+| 下载文件 | [同次bit/ltx](board/bitstream) |
+| 资源、时序与构建记录 | [build/reports](build/reports) |
+| 实验照片与测频读数 | [photos](board/photos) · [frequency observations](data/measured/README.md) |
+| 大模型协作原记录 | [提示词、回复、反例、修改与回归](report/ai_collaboration/README.md) |
+| 可复用 Skill | [三项技能与迁移验证](skill/README.md) |
+| 提交要求对照 | [AMD条款](report/requirements.md) · [材料清单](report/submission_checklist.md) |
 
-## 开发平台
+## 硬件与数据接口
 
-- 开发板：ALINX AXAU15；器件：AMD Artix UltraScale+ XCAU15P。
-- ADC：AD9643；DAC：AD9122。
-- 工具：Vivado2024.1。使用版本及复现条件在报告中说明。
+- ALINX AXAU15；AMD Artix UltraScale+ `xcau15p-ffvb676-2-i`。
+- ADC：AD9643，配置250 MSPS；DAC：AD9122。
+- Vivado 2024.1；Python 3.9+、numpy、matplotlib、tkinter。
+- 顶层 `laser_lock_hw_udp_only_top`。UDP从 `192.168.1.10:5000` 广播至 `192.168.1.255:5001`，只用于遥测，不承载实时闭环或下行控制。
+- GUI直接解析V4的40字节 `FPGA` / `TEC2` 大端状态包。该报文不含完整ADC采样块或完整FFT频谱；扩展数据入口与遥测分别处理。
 
-## 从哪里开始阅读
+## 已归档的验证
 
-1. 查看[要求与目录对照](report/requirements.md)。
-2. 按[从零复现入口](report/reproduction.md)组织工具、构建、数字验证和上板步骤。
-3. 查看[AI协作记录](report/ai_collaboration/README.md)及独立[Skill入口](skill/README.md)。
+最终联合工程的归档布局布线结果：17,867 LUT、20,200 FF、42.5 BRAM Tile、88 DSP，WNS +0.006 ns、WHS +0.010 ns。本次在新目录创建Vivado工程并生成FFT/ILA/VIO成功，接收器12项单元与本机UDP回环测试通过。[运行范围和日志](build/reports/release_validation.md)。
 
-仓库中保留确定提交版本；历史对比只保留有来源、参数及对应日志的必要材料。目录和文件名使用英文，正文可以使用中文。大文件可通过Release分发，在对应目录补充固定下载链接。
+`data/measured`保留团队给出的信号源测频读数转录；`data/reference`保留实际RTL运行导出的频谱。光学记录、RTL模型及电子板测按各自条件解释。V4联合顶层的温度对象为数字热模型，报文保留来源标志。
 
-## 许可证
+## 快速开始
 
-沿用本仓库已有的[MIT许可证](LICENSE)。
+先按[从零复现](report/reproduction.md)准备工具。核对发布文件可在仓库根目录执行：
+
+```powershell
+python build/scripts/verify_manifest.py
+```
+
+FPGA源码保留归档bitstream对应RTL；Skill中的候选补丁独立存放，没有混入该板级基线。旧新快照用于复查具体缺陷和回归，不代表多份同时生效的主工程。
+
+## 目录与许可
+
+`src / sim / build / board / data / skill / report`为主目录；`migration`与`verification`保存Skill迁移案例及历史验证材料，保留其相对引用。仓库不包含Vivado安装文件、编译缓存或大型中间网表。
+
+自编代码沿用[MIT](LICENSE)。AMD/Xilinx及其他第三方IP、生成文件的权利和使用条件见各自声明；本仓库MIT不改变其原许可。签字授权书由团队单独提交，不公开放入仓库。

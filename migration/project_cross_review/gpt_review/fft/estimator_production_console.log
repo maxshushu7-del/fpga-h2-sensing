@@ -1,0 +1,22 @@
+
+****** xsim v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Nov  2 21:16:12 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/estimator_production/xsim_script.tcl
+# xsim {estimator_production} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PRODUCTION_ESTIMATOR_PASS case=1 peak=0 delta=16384 hz=61 valid=1
+PRODUCTION_ESTIMATOR_PASS case=2 peak=0 delta=-16384 hz=-61 valid=1
+PRODUCTION_ESTIMATOR_PASS case=3 peak=4095 delta=-16384 hz=-305 valid=1
+PRODUCTION_ESTIMATOR_PASS case=4 peak=10 delta=16384 hz=2502 valid=0
+PRODUCTION_ESTIMATOR_PASS case=5 peak=100 delta=-16384 hz=24353 valid=1
+ALL 5 PRODUCTION-WIDTH 4096-BIN ESTIMATOR UNIT CASES PASSED
+$finish called at time : 586250 ns : File "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/fft/tb_estimator_production.sv" Line 53
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 21:16:14 2026...

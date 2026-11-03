@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/learning/03_fir_skill_trial/rtl/fir4.sv" into library work
+INFO: [VRFC 10-311] analyzing module fir4
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/learning/03_fir_skill_trial/sim/tb_fir4.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_fir4

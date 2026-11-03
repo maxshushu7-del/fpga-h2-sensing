@@ -1,0 +1,19 @@
+test_cli_fixtures_and_error_code (test_compare_vectors.ComparisonTests.test_cli_fixtures_and_error_code) ... ok
+test_equal_signed_values (test_compare_vectors.ComparisonTests.test_equal_signed_values) ... ok
+test_equivalent_decimal_representations (test_compare_vectors.ComparisonTests.test_equivalent_decimal_representations) ... ok
+test_missing_and_extra_transactions (test_compare_vectors.ComparisonTests.test_missing_and_extra_transactions) ... ok
+test_multiple_columns (test_compare_vectors.ComparisonTests.test_multiple_columns) ... ok
+test_one_unit_error_is_not_rounded_away (test_compare_vectors.ComparisonTests.test_one_unit_error_is_not_rounded_away) ... ok
+test_reject_bad_headers_and_rows (test_compare_vectors.ComparisonTests.test_reject_bad_headers_and_rows) ... ok
+test_reject_duplicate_selected_columns (test_compare_vectors.ComparisonTests.test_reject_duplicate_selected_columns) ... ok
+test_reject_empty_and_duplicate_ids (test_compare_vectors.ComparisonTests.test_reject_empty_and_duplicate_ids) ... ok
+test_reject_empty_runs (test_compare_vectors.ComparisonTests.test_reject_empty_runs) ... ok
+test_reject_negative_tolerance (test_compare_vectors.ComparisonTests.test_reject_negative_tolerance) ... ok
+test_reject_nonfinite_and_other_bases (test_compare_vectors.ComparisonTests.test_reject_nonfinite_and_other_bases) ... ok
+test_reordering_fails_even_if_values_match (test_compare_vectors.ComparisonTests.test_reordering_fails_even_if_values_match) ... ok
+test_tolerance_inclusive_and_beyond (test_compare_vectors.ComparisonTests.test_tolerance_inclusive_and_beyond) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.003s
+
+OK

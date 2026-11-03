@@ -1,13 +1,7 @@
-# 设计源码
+# 源码入口
 
-存放本作品实际采用的RTL、约束、系数、IP配置和PC端软件。目录建立不代表其中的功能已经完成验证，验证记录见[sim](../sim/README.md)和[board](../board/README.md)。
+- [fpga](fpga/README.md)：第四版集成RTL、约束、系数、IP模板、构建与测试脚本。
+- [host/gui](host/gui/README.md)：直接接收第四版40字节UDP遥测的图形上位机，含12项测试。
+- `fpga/host/udp_monitor.py`：匹配固件的命令行接收器。
 
-| 子目录 | 内容 |
-|---|---|
-| `rtl/` | FPGA顶层及激光反馈、FFT测频、温度数字控制、UDP接口RTL |
-| `constraints/` | 器件引脚、时钟、接口延迟和跨时钟域约束 |
-| `coefficients/` | 滤波、窗函数和NCO使用的系数及生成说明 |
-| `ip_templates/` | 复建所需的IP配置与生成入口 |
-| `host/` | 匹配的UDP接收器、图形程序、依赖与字段说明 |
-
-文件进入这里时，应同步构建脚本中的相对路径，避免仍依赖原电脑的绝对位置。工程版本、工具版本和实际使用的顶层写入根目录README；不混用旧固件与新接口说明。
+复现用相对目录保持完整，见[复现说明](../report/reproduction.md)。

@@ -1,0 +1,586 @@
+{
+  "created_utc": "2026-11-02T13:25:49.228013+00:00",
+  "independence": "No gpt_review/deepseek_review conclusions read. Real source snapshots only; no source-project writes.",
+  "verification_type": "Vivado 2024.1 software RTL simulation; no hardware or bitstream download",
+  "source_manifest_match": true,
+  "source_file_count": 39,
+  "source_hash_checks": [
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\measurement\\ddc_decimator.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\ddc_decimator.v",
+      "expected_sha256": "9a80ca9f71941f05697519a07d3997f1dd686a16a6450d7146df8881cb7df3d9",
+      "source_sha256": "9a80ca9f71941f05697519a07d3997f1dd686a16a6450d7146df8881cb7df3d9",
+      "snapshot_sha256": "9a80ca9f71941f05697519a07d3997f1dd686a16a6450d7146df8881cb7df3d9",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\measurement\\fft_stream_improved.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\fft_stream_improved.v",
+      "expected_sha256": "c3e06c0b757ec6485ec90d2c6040071b1877d2392c081f21771fe927666f94e5",
+      "source_sha256": "c3e06c0b757ec6485ec90d2c6040071b1877d2392c081f21771fe927666f94e5",
+      "snapshot_sha256": "c3e06c0b757ec6485ec90d2c6040071b1877d2392c081f21771fe927666f94e5",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\measurement\\iq_snapshot.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\iq_snapshot.v",
+      "expected_sha256": "604ed87badf54dd79e8bc052496f1a85e2eaefceea33a4c8eebf2e3a201db78d",
+      "source_sha256": "604ed87badf54dd79e8bc052496f1a85e2eaefceea33a4c8eebf2e3a201db78d",
+      "snapshot_sha256": "604ed87badf54dd79e8bc052496f1a85e2eaefceea33a4c8eebf2e3a201db78d",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\measurement\\measurement_improved.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\measurement_improved.v",
+      "expected_sha256": "bcb0ca52fcf320c63980018a7e6d55398faaae32d8dda4b15ab1dd7491c0dab6",
+      "source_sha256": "bcb0ca52fcf320c63980018a7e6d55398faaae32d8dda4b15ab1dd7491c0dab6",
+      "snapshot_sha256": "bcb0ca52fcf320c63980018a7e6d55398faaae32d8dda4b15ab1dd7491c0dab6",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\measurement\\result_uart_v2.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\result_uart_v2.v",
+      "expected_sha256": "041b6ad02cd68041ab33820e4b317a594884b9255db4563c90afdee3979b11a5",
+      "source_sha256": "041b6ad02cd68041ab33820e4b317a594884b9255db4563c90afdee3979b11a5",
+      "snapshot_sha256": "041b6ad02cd68041ab33820e4b317a594884b9255db4563c90afdee3979b11a5",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\measurement\\spectral_estimator.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\spectral_estimator.v",
+      "expected_sha256": "945d0e48cf38eb5afb56c5fb075304a9640f89c3a3d067bd11c12aed4ede1c9e",
+      "source_sha256": "945d0e48cf38eb5afb56c5fb075304a9640f89c3a3d067bd11c12aed4ede1c9e",
+      "snapshot_sha256": "945d0e48cf38eb5afb56c5fb075304a9640f89c3a3d067bd11c12aed4ede1c9e",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\adc_interface.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\adc_interface.v",
+      "expected_sha256": "868750856912bc59e33deb2b3f38dc449eba6a8d9bfec2565f87a066d10edcca",
+      "source_sha256": "868750856912bc59e33deb2b3f38dc449eba6a8d9bfec2565f87a066d10edcca",
+      "snapshot_sha256": "868750856912bc59e33deb2b3f38dc449eba6a8d9bfec2565f87a066d10edcca",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\auto_lock_fsm.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\auto_lock_fsm.v",
+      "expected_sha256": "eb9552dc8261f6a7734cede5e5de0eb47ec5a96dcddd50db151824cdd25cc333",
+      "source_sha256": "eb9552dc8261f6a7734cede5e5de0eb47ec5a96dcddd50db151824cdd25cc333",
+      "snapshot_sha256": "eb9552dc8261f6a7734cede5e5de0eb47ec5a96dcddd50db151824cdd25cc333",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\auto_lock_uart.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\auto_lock_uart.v",
+      "expected_sha256": "753dd020f513c79c2c4e317a62ca78e7c43b2b3fe871f874854c00ff3db12df9",
+      "source_sha256": "753dd020f513c79c2c4e317a62ca78e7c43b2b3fe871f874854c00ff3db12df9",
+      "snapshot_sha256": "753dd020f513c79c2c4e317a62ca78e7c43b2b3fe871f874854c00ff3db12df9",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\clock_manager.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\clock_manager.v",
+      "expected_sha256": "46e8d37a140d6c38cbd7efb2c198cfd66b6c6b8ac849e80bd9bbf3be068a9ff9",
+      "source_sha256": "46e8d37a140d6c38cbd7efb2c198cfd66b6c6b8ac849e80bd9bbf3be068a9ff9",
+      "snapshot_sha256": "46e8d37a140d6c38cbd7efb2c198cfd66b6c6b8ac849e80bd9bbf3be068a9ff9",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\dac_interface.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\dac_interface.v",
+      "expected_sha256": "ff38e149fe78b54093f5ddee2d6600ac2ebf7f367aadfad1758b254804eac9ab",
+      "source_sha256": "ff38e149fe78b54093f5ddee2d6600ac2ebf7f367aadfad1758b254804eac9ab",
+      "snapshot_sha256": "ff38e149fe78b54093f5ddee2d6600ac2ebf7f367aadfad1758b254804eac9ab",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\error_filter.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\error_filter.v",
+      "expected_sha256": "88d08a4ae09ad7e52bd42b4a238033087246c6c217a8b9448de9e376b36ab38b",
+      "source_sha256": "88d08a4ae09ad7e52bd42b4a238033087246c6c217a8b9448de9e376b36ab38b",
+      "snapshot_sha256": "88d08a4ae09ad7e52bd42b4a238033087246c6c217a8b9448de9e376b36ab38b",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\hw_ad9122_tx.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\hw_ad9122_tx.v",
+      "expected_sha256": "325deb7bcda157e48ea1cb4539c8a04e5d9e8030fab54b7b8e2762c52637c64d",
+      "source_sha256": "325deb7bcda157e48ea1cb4539c8a04e5d9e8030fab54b7b8e2762c52637c64d",
+      "snapshot_sha256": "325deb7bcda157e48ea1cb4539c8a04e5d9e8030fab54b7b8e2762c52637c64d",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\hw_ad9643_rx.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\hw_ad9643_rx.v",
+      "expected_sha256": "24f43aa051bfe2c097ed249ca8eac2deb793f08676f87c4c9b13f0b926864834",
+      "source_sha256": "24f43aa051bfe2c097ed249ca8eac2deb793f08676f87c4c9b13f0b926864834",
+      "snapshot_sha256": "24f43aa051bfe2c097ed249ca8eac2deb793f08676f87c4c9b13f0b926864834",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\hw_clock_health.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\hw_clock_health.v",
+      "expected_sha256": "4f76491357d0ebb755e1370f7c52fc1c4f0ea4ff270a4448f8c95b6dbae8df6d",
+      "source_sha256": "4f76491357d0ebb755e1370f7c52fc1c4f0ea4ff270a4448f8c95b6dbae8df6d",
+      "snapshot_sha256": "4f76491357d0ebb755e1370f7c52fc1c4f0ea4ff270a4448f8c95b6dbae8df6d",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\hw_fl4322_init.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\hw_fl4322_init.v",
+      "expected_sha256": "2b5d99f8f00fda111ed3e2d698412ceb538c3205a7fca3904b3945208dce264d",
+      "source_sha256": "2b5d99f8f00fda111ed3e2d698412ceb538c3205a7fca3904b3945208dce264d",
+      "snapshot_sha256": "2b5d99f8f00fda111ed3e2d698412ceb538c3205a7fca3904b3945208dce264d",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\hw_fl4322_register_table.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\hw_fl4322_register_table.v",
+      "expected_sha256": "ec23d2b783eddc08ca136544990c1fedde96d30bed603b0bfeb7f7ec6b65b5e0",
+      "source_sha256": "ec23d2b783eddc08ca136544990c1fedde96d30bed603b0bfeb7f7ec6b65b5e0",
+      "snapshot_sha256": "ec23d2b783eddc08ca136544990c1fedde96d30bed603b0bfeb7f7ec6b65b5e0",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\laser_actuator_output.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\laser_actuator_output.v",
+      "expected_sha256": "418201402b0e4b90a77a2e9b4756ba42455a7d567f2a16d2490e24171bc5b3e9",
+      "source_sha256": "418201402b0e4b90a77a2e9b4756ba42455a7d567f2a16d2490e24171bc5b3e9",
+      "snapshot_sha256": "418201402b0e4b90a77a2e9b4756ba42455a7d567f2a16d2490e24171bc5b3e9",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\laser_dac_slew.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\laser_dac_slew.v",
+      "expected_sha256": "6595427252c8378334fa3b4a99c368b2313a4852905ebc8031946b1d8f0d952c",
+      "source_sha256": "6595427252c8378334fa3b4a99c368b2313a4852905ebc8031946b1d8f0d952c",
+      "snapshot_sha256": "6595427252c8378334fa3b4a99c368b2313a4852905ebc8031946b1d8f0d952c",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\laser_lock_board_top.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\laser_lock_board_top.v",
+      "expected_sha256": "db70ef042375082d0ed3ab66143fb13b73e564e27ce269a8081f34d9e693a9f4",
+      "source_sha256": "db70ef042375082d0ed3ab66143fb13b73e564e27ce269a8081f34d9e693a9f4",
+      "snapshot_sha256": "db70ef042375082d0ed3ab66143fb13b73e564e27ce269a8081f34d9e693a9f4",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\laser_lock_hw_top.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\laser_lock_hw_top.v",
+      "expected_sha256": "2ed8b96d21d64432e523fe94bd13ebf498c2675cefdc04615f61ad41009fff21",
+      "source_sha256": "2ed8b96d21d64432e523fe94bd13ebf498c2675cefdc04615f61ad41009fff21",
+      "snapshot_sha256": "2ed8b96d21d64432e523fe94bd13ebf498c2675cefdc04615f61ad41009fff21",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\laser_lock_top.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\laser_lock_top.v",
+      "expected_sha256": "ffcfdbde73ed7a00da1cb5e2b7a74b05ca78ad58d136740c2502db434e5f3276",
+      "source_sha256": "ffcfdbde73ed7a00da1cb5e2b7a74b05ca78ad58d136740c2502db434e5f3276",
+      "snapshot_sha256": "ffcfdbde73ed7a00da1cb5e2b7a74b05ca78ad58d136740c2502db434e5f3276",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\locking_error_normalizer.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\locking_error_normalizer.v",
+      "expected_sha256": "4a05bbde76029b3e5b2f630cc44e3e729df9b064531265ebfbcc13216e975808",
+      "source_sha256": "4a05bbde76029b3e5b2f630cc44e3e729df9b064531265ebfbcc13216e975808",
+      "snapshot_sha256": "4a05bbde76029b3e5b2f630cc44e3e729df9b064531265ebfbcc13216e975808",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\lock_point_calibration.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\lock_point_calibration.v",
+      "expected_sha256": "2238981247773652580269edcfa98ea7f0b50e21ff70ee89fe38982b46204826",
+      "source_sha256": "2238981247773652580269edcfa98ea7f0b50e21ff70ee89fe38982b46204826",
+      "snapshot_sha256": "2238981247773652580269edcfa98ea7f0b50e21ff70ee89fe38982b46204826",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\parameter_register.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\parameter_register.v",
+      "expected_sha256": "b171452f767ca0d3e3663a151858a3f7b5c95c5c28b4ec84da60fda4d72152c9",
+      "source_sha256": "b171452f767ca0d3e3663a151858a3f7b5c95c5c28b4ec84da60fda4d72152c9",
+      "snapshot_sha256": "b171452f767ca0d3e3663a151858a3f7b5c95c5c28b4ec84da60fda4d72152c9",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\pi2d_controller.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\pi2d_controller.v",
+      "expected_sha256": "4cc0ad38bd75f386928dcfc8e6b0dcfd529f99590bdae77f1890d75b3102fce3",
+      "source_sha256": "4cc0ad38bd75f386928dcfc8e6b0dcfd529f99590bdae77f1890d75b3102fce3",
+      "snapshot_sha256": "4cc0ad38bd75f386928dcfc8e6b0dcfd529f99590bdae77f1890d75b3102fce3",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\saturation.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\saturation.v",
+      "expected_sha256": "b4cef5d4d266ef4972d07dfcdbe6807ca7deca5399a3ba36018a73e3ebdbfb8a",
+      "source_sha256": "b4cef5d4d266ef4972d07dfcdbe6807ca7deca5399a3ba36018a73e3ebdbfb8a",
+      "snapshot_sha256": "b4cef5d4d266ef4972d07dfcdbe6807ca7deca5399a3ba36018a73e3ebdbfb8a",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\laser\\servo_scheduler.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\servo_scheduler.v",
+      "expected_sha256": "f7e4f320ff42cec9c42784cf3a7bc36195de7161a3f1cbace929a7b02d779e58",
+      "source_sha256": "f7e4f320ff42cec9c42784cf3a7bc36195de7161a3f1cbace929a7b02d779e58",
+      "snapshot_sha256": "f7e4f320ff42cec9c42784cf3a7bc36195de7161a3f1cbace929a7b02d779e58",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\integration\\top_sensor_integrated.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\integration\\top_sensor_integrated.v",
+      "expected_sha256": "ced96b75908b83fab71d3f8eb57650c834c38d5a3fa9b54c6687c55d5d08ef44",
+      "source_sha256": "ced96b75908b83fab71d3f8eb57650c834c38d5a3fa9b54c6687c55d5d08ef44",
+      "snapshot_sha256": "ced96b75908b83fab71d3f8eb57650c834c38d5a3fa9b54c6687c55d5d08ef44",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\platform\\reset_sync.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\platform\\reset_sync.v",
+      "expected_sha256": "075b523b504517140e96f66c9c5e593868ebb673f4b78738b4cae7ba816642c5",
+      "source_sha256": "075b523b504517140e96f66c9c5e593868ebb673f4b78738b4cae7ba816642c5",
+      "snapshot_sha256": "075b523b504517140e96f66c9c5e593868ebb673f4b78738b4cae7ba816642c5",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\rtl\\platform\\uart_byte_tx.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\platform\\uart_byte_tx.v",
+      "expected_sha256": "282f85e4bc190b33dd8fb2fa4a396ad59f2695b1f86ef112ea4d318b68146949",
+      "source_sha256": "282f85e4bc190b33dd8fb2fa4a396ad59f2695b1f86ef112ea4d318b68146949",
+      "snapshot_sha256": "282f85e4bc190b33dd8fb2fa4a396ad59f2695b1f86ef112ea4d318b68146949",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\adc_fft_tracking_20261014\\sim\\tb_ddc_decimator.sv",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\fft\\tb_ddc_decimator.sv",
+      "expected_sha256": "af19773e2bbedd87a685fe763e35835fc3383a60eb4d7404c1e480805d7664d2",
+      "source_sha256": "af19773e2bbedd87a685fe763e35835fc3383a60eb4d7404c1e480805d7664d2",
+      "snapshot_sha256": "af19773e2bbedd87a685fe763e35835fc3383a60eb4d7404c1e480805d7664d2",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\adc_fft_tracking_20261014\\sim\\tb_measurement_dynamic.sv",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\fft\\tb_measurement_dynamic.sv",
+      "expected_sha256": "e7fd5f80af0a922b1dd7df491147153f7beadf4928a14c2b964344de621f4bdf",
+      "source_sha256": "e7fd5f80af0a922b1dd7df491147153f7beadf4928a14c2b964344de621f4bdf",
+      "snapshot_sha256": "e7fd5f80af0a922b1dd7df491147153f7beadf4928a14c2b964344de621f4bdf",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\adc_fft_tracking_20261014\\sim\\tb_measurement_improved.sv",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\fft\\tb_measurement_improved.sv",
+      "expected_sha256": "ef7a1e4cac3080347231222c3ec2db154d8a50b64f8f696d9dc96ba7140db94b",
+      "source_sha256": "ef7a1e4cac3080347231222c3ec2db154d8a50b64f8f696d9dc96ba7140db94b",
+      "snapshot_sha256": "ef7a1e4cac3080347231222c3ec2db154d8a50b64f8f696d9dc96ba7140db94b",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\adc_fft_tracking_20261014\\sim\\tb_measurement_recovery.sv",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\fft\\tb_measurement_recovery.sv",
+      "expected_sha256": "5517c05f17e51a220b4e7df933f21565313ad7266c59733a10c062632ea8009e",
+      "source_sha256": "5517c05f17e51a220b4e7df933f21565313ad7266c59733a10c062632ea8009e",
+      "snapshot_sha256": "5517c05f17e51a220b4e7df933f21565313ad7266c59733a10c062632ea8009e",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\adc_fft_tracking_20261014\\sim\\tb_result_uart_v2.sv",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\fft\\tb_result_uart_v2.sv",
+      "expected_sha256": "1a26ca1662d935d13c18bb7a76e1ef6d337cd5cbf427c71397cd91e42df0bd66",
+      "source_sha256": "1a26ca1662d935d13c18bb7a76e1ef6d337cd5cbf427c71397cd91e42df0bd66",
+      "snapshot_sha256": "1a26ca1662d935d13c18bb7a76e1ef6d337cd5cbf427c71397cd91e42df0bd66",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\adc_fft_tracking_20261014\\sim\\tb_spectral_estimator.sv",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\fft\\tb_spectral_estimator.sv",
+      "expected_sha256": "19195acdec57caca05fa50d16590bc0e89e79cb489fca29533783a2f3cea2fe7",
+      "source_sha256": "19195acdec57caca05fa50d16590bc0e89e79cb489fca29533783a2f3cea2fe7",
+      "snapshot_sha256": "19195acdec57caca05fa50d16590bc0e89e79cb489fca29533783a2f3cea2fe7",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\tec_control_draft_20261017\\integration\\pid_snapshot\\sim\\tb_auto_lock_fsm.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\laser\\tb_auto_lock_fsm.v",
+      "expected_sha256": "19d7121bc9a4746be3af1417f3b518ce2287e51a2b965517a2d9158a94587e84",
+      "source_sha256": "19d7121bc9a4746be3af1417f3b518ce2287e51a2b965517a2d9158a94587e84",
+      "snapshot_sha256": "19d7121bc9a4746be3af1417f3b518ce2287e51a2b965517a2d9158a94587e84",
+      "matches": true
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\tec_control_draft_20261017\\integration\\pid_snapshot\\sim\\tb_auto_lock_uart.v",
+      "snapshot": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\laser\\tb_auto_lock_uart.v",
+      "expected_sha256": "bab866124b530d92eef9debc4a36b1a5785053e485667add7b56b1b05e1caf68",
+      "source_sha256": "bab866124b530d92eef9debc4a36b1a5785053e485667add7b56b1b05e1caf68",
+      "snapshot_sha256": "bab866124b530d92eef9debc4a36b1a5785053e485667add7b56b1b05e1caf68",
+      "matches": true
+    }
+  ],
+  "tests": [
+    {
+      "test": "spectral_existing",
+      "started_utc": "2026-11-02T13:19:32.600235+00:00",
+      "finished_utc": "2026-11-02T13:19:47.711488+00:00",
+      "source_hashes": [
+        {
+          "path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\spectral_estimator.v",
+          "sha256": "945d0e48cf38eb5afb56c5fb075304a9640f89c3a3d067bd11c12aed4ede1c9e"
+        },
+        {
+          "path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\fft\\tb_spectral_estimator.sv",
+          "sha256": "19195acdec57caca05fa50d16590bc0e89e79cb489fca29533783a2f3cea2fe7"
+        }
+      ],
+      "commands": [
+        {
+          "start_utc": "2026-11-02T13:19:32.600235+00:00",
+          "end_utc": "2026-11-02T13:19:35.882605+00:00",
+          "duration_seconds": 3.281,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\spectral_existing",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xvlog.bat --sv E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\spectral_estimator.v E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\fft\\tb_spectral_estimator.sv",
+          "returncode": 0
+        },
+        {
+          "start_utc": "2026-11-02T13:19:35.885114+00:00",
+          "end_utc": "2026-11-02T13:19:41.209522+00:00",
+          "duration_seconds": 5.328,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\spectral_existing",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xelab.bat tb_spectral_estimator -s unit_snapshot",
+          "returncode": 0
+        },
+        {
+          "start_utc": "2026-11-02T13:19:41.210541+00:00",
+          "end_utc": "2026-11-02T13:19:47.694164+00:00",
+          "duration_seconds": 6.484,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\spectral_existing",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xsim.bat unit_snapshot -runall",
+          "returncode": 0
+        }
+      ],
+      "completion_marker": "ALL 18 SPECTRAL ESTIMATOR TESTS PASSED",
+      "completion_marker_found": true,
+      "fatal_or_error_found": false,
+      "passed": true
+    },
+    {
+      "test": "auto_lock_existing",
+      "started_utc": "2026-11-02T13:19:32.584187+00:00",
+      "finished_utc": "2026-11-02T13:19:47.666645+00:00",
+      "source_hashes": [
+        {
+          "path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\auto_lock_fsm.v",
+          "sha256": "eb9552dc8261f6a7734cede5e5de0eb47ec5a96dcddd50db151824cdd25cc333"
+        },
+        {
+          "path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\laser\\tb_auto_lock_fsm.v",
+          "sha256": "19d7121bc9a4746be3af1417f3b518ce2287e51a2b965517a2d9158a94587e84"
+        }
+      ],
+      "commands": [
+        {
+          "start_utc": "2026-11-02T13:19:32.584187+00:00",
+          "end_utc": "2026-11-02T13:19:35.882605+00:00",
+          "duration_seconds": 3.297,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\auto_lock_existing",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xvlog.bat --sv E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\auto_lock_fsm.v E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\laser\\tb_auto_lock_fsm.v",
+          "returncode": 0
+        },
+        {
+          "start_utc": "2026-11-02T13:19:35.884109+00:00",
+          "end_utc": "2026-11-02T13:19:41.204496+00:00",
+          "duration_seconds": 5.312,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\auto_lock_existing",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xelab.bat tb_auto_lock_fsm -s unit_snapshot",
+          "returncode": 0
+        },
+        {
+          "start_utc": "2026-11-02T13:19:41.205524+00:00",
+          "end_utc": "2026-11-02T13:19:47.651591+00:00",
+          "duration_seconds": 6.453,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\auto_lock_existing",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xsim.bat unit_snapshot -runall",
+          "returncode": 0
+        }
+      ],
+      "completion_marker": "PASS AUTO_FSM auto-acquire, loss/reacquire, flat-signal rejection",
+      "completion_marker_found": true,
+      "fatal_or_error_found": false,
+      "passed": true
+    },
+    {
+      "test": "spectral_4096",
+      "started_utc": "2026-11-02T13:20:26.588270+00:00",
+      "finished_utc": "2026-11-02T13:20:33.028568+00:00",
+      "source_hashes": [
+        {
+          "path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\spectral_estimator.v",
+          "sha256": "945d0e48cf38eb5afb56c5fb075304a9640f89c3a3d067bd11c12aed4ede1c9e"
+        },
+        {
+          "path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\tb_spectral_estimator_4096.sv",
+          "sha256": "bf5d9a45be1fc2b3dc3a5476a28612b63870795d036466aeba5402ab1ecbf7b4"
+        }
+      ],
+      "commands": [
+        {
+          "start_utc": "2026-11-02T13:20:26.588270+00:00",
+          "end_utc": "2026-11-02T13:20:27.597447+00:00",
+          "duration_seconds": 1.0,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\spectral_4096",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xvlog.bat --sv E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\spectral_estimator.v E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\tb_spectral_estimator_4096.sv",
+          "returncode": 0
+        },
+        {
+          "start_utc": "2026-11-02T13:20:27.598421+00:00",
+          "end_utc": "2026-11-02T13:20:29.628104+00:00",
+          "duration_seconds": 2.031,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\spectral_4096",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xelab.bat tb_spectral_estimator_4096 -s unit_snapshot",
+          "returncode": 0
+        },
+        {
+          "start_utc": "2026-11-02T13:20:29.630122+00:00",
+          "end_utc": "2026-11-02T13:20:33.012360+00:00",
+          "duration_seconds": 3.391,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\spectral_4096",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xsim.bat unit_snapshot -runall",
+          "returncode": 0
+        }
+      ],
+      "completion_marker": "ALL 19 PRODUCTION 4096 SPECTRAL CASES PASSED",
+      "completion_marker_found": true,
+      "fatal_or_error_found": false,
+      "passed": true
+    },
+    {
+      "utc": "2026-11-02T13:24:40.528428+00:00",
+      "test": "fullchain_5mhz",
+      "commands": [
+        {
+          "start_utc": "2026-11-02T13:22:20.098053+00:00",
+          "end_utc": "2026-11-02T13:22:21.117631+00:00",
+          "duration_seconds": 1.031,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args",
+          "command": "\"E:\\Xilinx\\Vivado\\2024.1\\bin\\xvlog.bat\" \"--sv\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\ddc_decimator.v\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\iq_snapshot.v\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\fft_stream_improved.v\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\spectral_estimator.v\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\measurement_improved.v\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args\\dependencies\\tb_measurement_improved.sv\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args\\dependencies\\glbl.v\"",
+          "returncode": 0
+        },
+        {
+          "start_utc": "2026-11-02T13:22:21.119637+00:00",
+          "end_utc": "2026-11-02T13:22:22.142873+00:00",
+          "duration_seconds": 1.016,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args",
+          "command": "\"E:\\Xilinx\\Vivado\\2024.1\\bin\\xvhdl.bat\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args\\dependencies\\fft_core.vhd\"",
+          "returncode": 0
+        },
+        {
+          "start_utc": "2026-11-02T13:22:22.144397+00:00",
+          "end_utc": "2026-11-02T13:23:13.089841+00:00",
+          "duration_seconds": 50.953,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args",
+          "command": "\"E:\\Xilinx\\Vivado\\2024.1\\bin\\xelab.bat\" \"--relax\" \"--mt\" \"2\" \"-generic_top\" \"ALGORITHM_VERSION=3\" \"-generic_top\" \"FFT_LOG2=12\" \"-generic_top\" \"WINDOW_ENABLE=1\" \"-L\" \"xbip_utils_v3_0_13\" \"-L\" \"axi_utils_v2_0_9\" \"-L\" \"c_reg_fd_v12_0_9\" \"-L\" \"xbip_dsp48_wrapper_v3_0_6\" \"-L\" \"xbip_pipe_v3_0_9\" \"-L\" \"xbip_dsp48_addsub_v3_0_9\" \"-L\" \"xbip_addsub_v3_0_9\" \"-L\" \"c_addsub_v12_0_18\" \"-L\" \"c_mux_bit_v12_0_9\" \"-L\" \"c_shift_ram_v12_0_17\" \"-L\" \"xbip_bram18k_v3_0_9\" \"-L\" \"mult_gen_v12_0_21\" \"-L\" \"cmpy_v6_0_24\" \"-L\" \"floating_point_v7_0_23\" \"-L\" \"xfft_v9_1_12\" \"-L\" \"unisims_ver\" \"-L\" \"unimacro_ver\" \"-L\" \"secureip\" \"-L\" \"xpm\" \"-s\" \"fullchain_snapshot\" \"work.tb_measurement_improved\" \"work.glbl\"",
+          "returncode": 0
+        },
+        {
+          "start_utc": "2026-11-02T13:23:13.090790+00:00",
+          "end_utc": "2026-11-02T13:24:40.510144+00:00",
+          "duration_seconds": 87.422,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args",
+          "command": "\"E:\\Xilinx\\Vivado\\2024.1\\bin\\xsim.bat\" \"fullchain_snapshot\" \"-testplusarg\" \"MODE=0\" \"-testplusarg\" \"FREQ=5000000\" \"-testplusarg\" \"TOLERANCE=150\" \"-testplusarg\" \"FULL_FFT_CLOCK=0\" \"-testplusarg\" \"SPECTRUM=E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/validation/fullchain_5mhz_quoted_args/spectrum.csv\" \"-runall\"",
+          "returncode": 0
+        }
+      ],
+      "dependencies": [
+        {
+          "source": "E:\\Codex\\FPGA\\projects\\adc_fft_tracking_20261014\\sim\\tb_measurement_improved.sv",
+          "copy": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args\\dependencies\\tb_measurement_improved.sv",
+          "source_sha256": "ef7a1e4cac3080347231222c3ec2db154d8a50b64f8f696d9dc96ba7140db94b",
+          "copy_sha256": "ef7a1e4cac3080347231222c3ec2db154d8a50b64f8f696d9dc96ba7140db94b"
+        },
+        {
+          "source": "E:\\Codex\\FPGA\\projects\\adc_fft_tracking_20261014\\projects\\v3_n4096_w1\\v3_n4096_w1.gen\\sources_1\\ip\\fft_core\\sim\\fft_core.vhd",
+          "copy": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args\\dependencies\\fft_core.vhd",
+          "source_sha256": "67026f1a93f1fb4abcf80a2804e09827f641495b2c6d3f7c4dbc367208d74094",
+          "copy_sha256": "67026f1a93f1fb4abcf80a2804e09827f641495b2c6d3f7c4dbc367208d74094"
+        },
+        {
+          "source": "E:\\Xilinx\\Vivado\\2024.1\\data\\verilog\\src\\glbl.v",
+          "copy": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args\\dependencies\\glbl.v",
+          "source_sha256": "6270251cf35e1fce3119fc79f8fb968912f7983027e43cf030409ba68f048936",
+          "copy_sha256": "6270251cf35e1fce3119fc79f8fb968912f7983027e43cf030409ba68f048936"
+        },
+        {
+          "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\ddc_decimator.v",
+          "source_sha256": "9a80ca9f71941f05697519a07d3997f1dd686a16a6450d7146df8881cb7df3d9",
+          "usage": "compiled unchanged snapshot"
+        },
+        {
+          "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\iq_snapshot.v",
+          "source_sha256": "604ed87badf54dd79e8bc052496f1a85e2eaefceea33a4c8eebf2e3a201db78d",
+          "usage": "compiled unchanged snapshot"
+        },
+        {
+          "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\fft_stream_improved.v",
+          "source_sha256": "c3e06c0b757ec6485ec90d2c6040071b1877d2392c081f21771fe927666f94e5",
+          "usage": "compiled unchanged snapshot"
+        },
+        {
+          "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\spectral_estimator.v",
+          "source_sha256": "945d0e48cf38eb5afb56c5fb075304a9640f89c3a3d067bd11c12aed4ede1c9e",
+          "usage": "compiled unchanged snapshot"
+        },
+        {
+          "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\measurement_improved.v",
+          "source_sha256": "bcb0ca52fcf320c63980018a7e6d55398faaae32d8dda4b15ab1dd7491c0dab6",
+          "usage": "compiled unchanged snapshot"
+        },
+        {
+          "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\coefficients\\hann_4096.mem",
+          "source_sha256": "80315ec3629a77c01e9e240e280baa62425188f781fe1c55823af3e06a99e23a",
+          "usage": "read-only RTL absolute coefficient dependency"
+        },
+        {
+          "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\coefficients\\ddc_sine_1024.mem",
+          "source_sha256": "99a7d0a335cd1fe5a62ade4188773927f226e86149a7cc1d923230c53ffc40a4",
+          "usage": "read-only RTL absolute coefficient dependency"
+        }
+      ],
+      "completion_marker_found": true,
+      "fatal_or_error_found": false,
+      "passed": true,
+      "full_fft_clock": false,
+      "fft_pause_policy": "Only idle FFT behavioral model clock pauses during capture. ADC/proc/CIC clocks remain 250MS/s/100MHz; all 4096 samples freshly captured.",
+      "result_lines": [
+        "SIM_CLOCK_POLICY full_fft_clock=0; only idle FFT model may pause, ADC/proc/CIC always full clock",
+        "RTL_RESULT version=3 n=4096 window=1 mode=0 target=5000000.000 valid=1 hz=5000000 coarse=82 peak=4076 delta=-9 fine_hz=-4883 power=34684531037 noise=3879 flags=08",
+        "TEST_DONE passed=1 errors=0 results=1"
+      ]
+    }
+  ],
+  "fullchain_spectrum_evidence": {
+    "utc": "2026-11-02T13:25:49.227014+00:00",
+    "path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args\\spectrum.csv",
+    "sha256": "c65f56a7de138ff239f82cbab4ec1dcff4a7b26227936a84919109c4956c7139",
+    "total_rows": 8192,
+    "modes": [
+      {
+        "fine_mode": 0,
+        "low_mode": 0,
+        "bin_count": 4096,
+        "natural_order_0_to_4095": true,
+        "all_components_numeric": true
+      },
+      {
+        "fine_mode": 1,
+        "low_mode": 0,
+        "bin_count": 4096,
+        "natural_order_0_to_4095": true,
+        "all_components_numeric": true
+      }
+    ],
+    "passed": true
+  },
+  "all_completed_tests_pass": true,
+  "fullchain_status": "passed"
+}

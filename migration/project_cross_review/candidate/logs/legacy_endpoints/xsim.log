@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# xsim v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Nov  2 21:33:38 2026
+# Process ID: 37756
+# Current directory: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/logs/legacy_endpoints
+# Command line: xsim.exe -mode tcl -source {xsim.dir/sim/xsim_script.tcl}
+# Log file: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/logs/legacy_endpoints/xsim.log
+# Journal file: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/logs/legacy_endpoints\xsim.jou
+# Running On        :DESKTOP-K8LLODR
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26300
+# Processor Detail  :Intel(R) Core(TM) 7 240H
+# CPU Frequency     :2995 MHz
+# CPU Physical cores:10
+# CPU Logical cores :16
+# Host memory       :34045 MB
+# Swap memory       :8053 MB
+# Total Virtual     :42098 MB
+# Available Virtual :15749 MB
+#-----------------------------------------------------------
+source xsim.dir/sim/xsim_script.tcl
+# xsim {sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+ENDPOINT falling=0 legacy=1 state=7 reason=1 min_code=-1024 min=952 max=3000 selected=0 servo_enable=0
+PASS ENDPOINT_REJECTION falling=0
+FINAL_MAX legacy=1 state=7 reason=1 min_code=0 min=990 max=1090 half=0
+PASS LEGACY_COUNTEREXAMPLE: final maximum omitted from contrast decision
+ENDPOINT falling=1 legacy=1 state=6 reason=0 min_code=1024 min=952 max=3000 selected=-2 servo_enable=1
+PASS LEGACY_COUNTEREXAMPLE: falling endpoint minimum enters LOCKING
+PASS ENDPOINT_SUITE legacy=1 production SPAN=1024 STEP=2
+$finish called at time : 41070 ns : File "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/tests/tb_auto_lock_candidate_endpoints.v" Line 73
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 21:33:40 2026...

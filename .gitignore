@@ -20,3 +20,10 @@ Thumbs.db
 Desktop.ini
 
 # Keep exported reports, logs, bit/ltx and test data in their documented folders.
+src/fpga/project/
+src/fpga/results/
+src/fpga/task_temp/
+src/fpga/*.log
+src/fpga/*.jou
+src/fpga/.*
+*.inspect.ndjson

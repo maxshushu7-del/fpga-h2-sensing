@@ -1,0 +1,2 @@
+# Preserve exact delivered bytes so SHA-256 checks survive clone/checkout.
+* -text

@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/inputs/rtl/measurement/spectral_estimator.v" into library work
+INFO: [VRFC 10-311] analyzing module spectral_estimator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/fft/tb_estimator_production.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_estimator_production

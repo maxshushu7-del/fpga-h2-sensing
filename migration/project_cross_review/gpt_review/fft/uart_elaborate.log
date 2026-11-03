@@ -1,0 +1,15 @@
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe tb_result_uart_v2 -s uart_existing -debug typical 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.uart_byte_tx(BAUD_RATE=1000000)
+Compiling module work.result_uart_v2(ALGORITHM_VERSION...
+Compiling module work.tb_result_uart_v2
+Built simulation snapshot uart_existing

@@ -1,0 +1,154 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Nov  3 13:45:07 2026
+# Process ID: 29476
+# Current directory: C:/Users/21596/Desktop/FPGA_AXAU15_V4_Four_Functions_Real_UDP_Only_Standalone_20261103
+# Command line: vivado.exe -mode batch -source C:\Users\21596\Desktop\FPGA_AXAU15_V4_Four_Functions_Real_UDP_Only_Standalone_20261103\scripts\build_all.tcl -log C:\Users\21596\Desktop\FPGA_AXAU15_V4_Four_Functions_Real_UDP_Only_Standalone_20261103\all_in_one_build.log -journal C:\Users\21596\Desktop\FPGA_AXAU15_V4_Four_Functions_Real_UDP_Only_Standalone_20261103\all_in_one_build.jou
+# Log file: C:/Users/21596/Desktop/FPGA_AXAU15_V4_Four_Functions_Real_UDP_Only_Standalone_20261103/all_in_one_build.log
+# Journal file: C:\Users\21596\Desktop\FPGA_AXAU15_V4_Four_Functions_Real_UDP_Only_Standalone_20261103\all_in_one_build.jou
+# Running On        :Charon
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26200
+# Processor Detail  :13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency     :2419 MHz
+# CPU Physical cores:24
+# CPU Logical cores :32
+# Host memory       :16779 MB
+# Swap memory       :11584 MB
+# Total Virtual     :28364 MB
+# Available Virtual :2388 MB
+#-----------------------------------------------------------
+source {C:\Users\21596\Desktop\FPGA_AXAU15_V4_Four_Functions_Real_UDP_Only_Standalone_20261103\scripts\build_all.tcl}
+# set ROOT [file normalize [file join [file dirname [info script]] ..]]
+# set XPR [file join $ROOT project contest_all.xpr]
+# if {![file exists $XPR]} {
+#     puts "PHASE_1: Creating full, independent project from bundled sources and XCI"
+#     source [file join $ROOT scripts create_project.tcl]
+# }
+PHASE_1: Creating full, independent project from bundled sources and XCI
+## set ROOT [file normalize [file join [file dirname [info script]] ..]]
+## set PROJECT_NAME contest_all
+## set PROJ_DIR [file join $ROOT project]
+## set XPR [file join $PROJ_DIR ${PROJECT_NAME}.xpr]
+## if {[regexp {[^ -~]} $ROOT]} {error "Use an ASCII-only extraction path such as C:/FPGA/V4. Current: $ROOT"}
+## if {![string match "2024.1*" [version -short]]} {
+##     puts "WARNING: The included XCI files were saved in Vivado 2024.1; currently running [version -short]"
+## }
+## set top_source [file join $ROOT rtl servo laser_lock_hw_top.v]
+## set fh [open $top_source r]
+## set top_text [read $fh]
+## close $fh
+## if {![string match {*DCI_DELAY_PS(875.0)*} $top_text]} {
+##     error "V4 incorrect DAC phase. Expected legal MMCM 875ps (78.75deg)."
+## }
+## if {[file exists $XPR]} {
+##     puts "FULL_PROJECT_ALREADY_EXISTS: $XPR"
+##     return
+## }
+## file mkdir $PROJ_DIR
+## create_project $PROJECT_NAME $PROJ_DIR -part xcau15p-ffvb676-2-i
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/21596/Desktop/FPGA_AXAU15_V4_Four_Functions_Real_UDP_Only_Standalone_20261103/project'
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 658.992 ; gain = 202.887
+## set_property target_language Verilog [current_project]
+## set_property simulator_language Mixed [current_project]
+## set_property target_simulator XSim [current_project]
+## set rtl_count 0
+## foreach folder {platform servo measurement network temperature} {
+##     foreach extension {v sv} {
+##         foreach src [lsort [glob -nocomplain [file join $ROOT rtl $folder *.$extension]]] {
+##             add_files -fileset sources_1 -norecurse $src
+##             if {$extension eq "sv"} {set_property FILE_TYPE SystemVerilog [get_files $src]}
+##             incr rtl_count
+##         }
+##     }
+## }
+## if {$rtl_count < 30} {error "Too few RTL files found ($rtl_count). Check extraction."}
+## foreach source [lsort [glob -nocomplain [file join $ROOT coefficients *.mem]]] {
+##     add_files -fileset sources_1 -norecurse $source
+## }
+## foreach extension {v sv} {
+##     foreach source [lsort [glob -nocomplain [file join $ROOT sim *.$extension]]] {
+##         add_files -fileset sim_1 -norecurse $source
+##         if {$extension eq "sv"} {set_property FILE_TYPE SystemVerilog [get_files $source]}
+##     }
+## }
+CRITICAL WARNING: [Vivado 12-3645] Please note that adding or importing multiple files, one at a time, can be performance intensive.  Both add_files and import_files commands accept multiple files as input, and passing a collection of multiple files to a single add_files or import_files commands can offer significant performance improvement.
+## foreach filename {axau15_fl4322_pins.xdc axau15_eth_udp_tx.xdc hardware_timing.tcl udp_cdc_timing.tcl} {
+##     set xdc_file [file join $ROOT constraints $filename]
+##     if {![file exists $xdc_file]} {error "Missing constraint: $xdc_file"}
+##     add_files -fileset constrs_1 -norecurse $xdc_file
+## }
+## set timing_file [get_files [file join $ROOT constraints hardware_timing.tcl]]
+## set_property FILE_TYPE Tcl $timing_file
+## set_property USED_IN_SYNTHESIS false $timing_file
+## set_property USED_IN_IMPLEMENTATION true $timing_file
+## set_property PROCESSING_ORDER LATE $timing_file
+## set udp_timing_file [get_files [file join $ROOT constraints udp_cdc_timing.tcl]]
+## set_property FILE_TYPE Tcl $udp_timing_file
+## set_property USED_IN_SYNTHESIS false $udp_timing_file
+## set_property USED_IN_IMPLEMENTATION true $udp_timing_file
+## set_property PROCESSING_ORDER LATE $udp_timing_file
+## foreach ip {laser_lock_ila laser_lock_hw_vio fft_core} {
+##     set xci_dir [file join $PROJ_DIR ${PROJECT_NAME}.srcs sources_1 ip $ip]
+##     file mkdir $xci_dir
+##     set xci_dest [file join $xci_dir ${ip}.xci]
+##     file copy -force [file join $ROOT ip_templates $ip ${ip}.xci] $xci_dest
+##     add_files -fileset sources_1 -norecurse $xci_dest
+##     if {[llength [get_ips -quiet $ip]] != 1} {error "IP failed to load: $ip"}
+## }
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 729.137 ; gain = 64.633
+## foreach ip {laser_lock_ila laser_lock_hw_vio fft_core} {
+##     puts "GENERATING_IP: $ip"
+##     generate_target all [get_ips $ip]
+## }
+GENERATING_IP: laser_lock_ila
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'laser_lock_ila'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'laser_lock_ila'...
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/21596/Desktop/FPGA_AXAU15_V4_Four_Functions_Real_UDP_Only_Standalone_20261103/project/contest_all.gen/sources_1/ip/laser_lock_ila/laser_lock_ila_ooc.xdc'
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'laser_lock_ila'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'laser_lock_ila'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'laser_lock_ila'...
+GENERATING_IP: laser_lock_hw_vio
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'laser_lock_hw_vio'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'laser_lock_hw_vio'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'laser_lock_hw_vio'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'laser_lock_hw_vio'...
+GENERATING_IP: fft_core
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fft_core'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fft_core'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fft_core'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'fft_core'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'fft_core'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'fft_core'...
+## set_property top laser_lock_hw_udp_only_top [get_filesets sources_1]
+## set v4_top_file [file join $ROOT rtl servo laser_lock_hw_udp_only_top.v]
+## set v4_top_fh [open $v4_top_file r]
+## set v4_top_text [read $v4_top_fh]
+## close $v4_top_fh
+## if {[string first "uart_tx" $v4_top_text] != -1 && [regexp {output\s+wire\s+uart_tx} $v4_top_text]} {
+##     error "V4 top still declares UART; aborting project creation."
+## }
+## set_property generic {ENABLE_ILA=1 ENABLE_VIO=1} [get_filesets sources_1]
+## set_property top tb_udp_ipv4_frame_tx [get_filesets sim_1]
+## set_property xsim.simulate.runtime all [get_filesets sim_1]
+## update_compile_order -fileset sources_1
+## update_compile_order -fileset sim_1
+update_compile_order: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 816.000 ; gain = 0.246
+## save_project
+ERROR: [Common 17-163] Missing value for option 'name', please type 'save_project_as -help' for usage info.
+
+    while executing
+"source [file join $ROOT scripts create_project.tcl]"
+    invoked from within
+"if {![file exists $XPR]} {
+    puts "PHASE_1: Creating full, independent project from bundled sources and XCI"
+    source [file join $ROOT scripts cre..."
+    (file "C:\Users\21596\Desktop\FPGA_AXAU15_V4_Four_Functions_Real_UDP_Only_Standalone_20261103\scripts\build_all.tcl" line 4)
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  3 13:46:02 2026...

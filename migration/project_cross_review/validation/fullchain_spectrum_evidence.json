@@ -1,0 +1,23 @@
+{
+  "utc": "2026-11-02T13:25:49.227014+00:00",
+  "path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args\\spectrum.csv",
+  "sha256": "c65f56a7de138ff239f82cbab4ec1dcff4a7b26227936a84919109c4956c7139",
+  "total_rows": 8192,
+  "modes": [
+    {
+      "fine_mode": 0,
+      "low_mode": 0,
+      "bin_count": 4096,
+      "natural_order_0_to_4095": true,
+      "all_components_numeric": true
+    },
+    {
+      "fine_mode": 1,
+      "low_mode": 0,
+      "bin_count": 4096,
+      "natural_order_0_to_4095": true,
+      "all_components_numeric": true
+    }
+  ],
+  "passed": true
+}

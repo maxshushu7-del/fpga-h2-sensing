@@ -1,0 +1,33 @@
+diff --git a/rtl/laser/auto_lock_fsm.v b/rtl/laser/auto_lock_fsm.v
+index da52eb6..a12b334 100644
+--- a/rtl/laser/auto_lock_fsm.v
++++ b/rtl/laser/auto_lock_fsm.v
+@@ -48,6 +48,14 @@ module auto_lock_fsm #(
+     wire signed [31:0] sample_expanded = {{18{adc_sample[13]}},adc_sample};
+     wire signed [31:0] average = (sum_samples + sample_expanded) >>> AVG_LOG2;
+     wire signed [16:0] contrast = $signed({scan_max[15],scan_max}) - $signed({scan_min[15],scan_min});
++    // Include the current final point before qualifying the complete sweep.
++    wire signed [15:0] sweep_min_next = average < $signed(scan_min) ? average[15:0] : scan_min;
++    wire signed [15:0] sweep_max_next = average > $signed(scan_max) ? average[15:0] : scan_max;
++    wire signed [15:0] sweep_min_code_next = average < $signed(scan_min) ? scan_code : min_code;
++    wire signed [16:0] sweep_contrast_next =
++        $signed({sweep_max_next[15],sweep_max_next}) - $signed({sweep_min_next[15],sweep_min_next});
++    wire signed [16:0] sweep_half_sum_next =
++        $signed({sweep_min_next[15],sweep_min_next}) + $signed({sweep_max_next[15],sweep_max_next});
+     wire signed [16:0] difference = average[16:0] - $signed({half_level[15],half_level});
+     wire [16:0] abs_difference = difference[16] ? -difference : difference;
+     wire signed [16:0] err17 = $signed({servo_error[15],servo_error});
+@@ -106,11 +114,11 @@ module auto_lock_fsm #(
+                         if(average > $signed(scan_max)) scan_max<=average[15:0];
+                         if(scan_code >= SPAN) begin
+                             // Require a dip rather than mistaking noise for a resonance.
+-                            if(contrast<MIN_CONTRAST || min_code<=-SPAN || min_code>=SPAN) begin
++                            if(sweep_contrast_next<MIN_CONTRAST || sweep_min_code_next<=-SPAN || sweep_min_code_next>=SPAN) begin
+                                 last_reason<=4'd1;reacquire_count<=reacquire_count+1'b1;
+                                 dac_code<=0;dac_valid<=1;state<=RETRY_WAIT;backoff_timer<=0;
+                             end else begin
+-                                half_level<=($signed(scan_min)+$signed(scan_max)) >>> 1;
++                                half_level<=sweep_half_sum_next >>> 1;
+                                 best_diff<=17'h1ffff;
+                                 best_code<=-SPAN;best_level<=0;
+                                 scan_code<=-SPAN;dac_code<=-SPAN;dac_valid<=1;

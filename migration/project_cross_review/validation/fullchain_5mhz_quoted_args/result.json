@@ -1,0 +1,103 @@
+{
+  "utc": "2026-11-02T13:24:40.528428+00:00",
+  "test": "fullchain_5mhz",
+  "commands": [
+    {
+      "start_utc": "2026-11-02T13:22:20.098053+00:00",
+      "end_utc": "2026-11-02T13:22:21.117631+00:00",
+      "duration_seconds": 1.031,
+      "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args",
+      "command": "\"E:\\Xilinx\\Vivado\\2024.1\\bin\\xvlog.bat\" \"--sv\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\ddc_decimator.v\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\iq_snapshot.v\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\fft_stream_improved.v\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\spectral_estimator.v\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\measurement_improved.v\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args\\dependencies\\tb_measurement_improved.sv\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args\\dependencies\\glbl.v\"",
+      "returncode": 0
+    },
+    {
+      "start_utc": "2026-11-02T13:22:21.119637+00:00",
+      "end_utc": "2026-11-02T13:22:22.142873+00:00",
+      "duration_seconds": 1.016,
+      "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args",
+      "command": "\"E:\\Xilinx\\Vivado\\2024.1\\bin\\xvhdl.bat\" \"E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args\\dependencies\\fft_core.vhd\"",
+      "returncode": 0
+    },
+    {
+      "start_utc": "2026-11-02T13:22:22.144397+00:00",
+      "end_utc": "2026-11-02T13:23:13.089841+00:00",
+      "duration_seconds": 50.953,
+      "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args",
+      "command": "\"E:\\Xilinx\\Vivado\\2024.1\\bin\\xelab.bat\" \"--relax\" \"--mt\" \"2\" \"-generic_top\" \"ALGORITHM_VERSION=3\" \"-generic_top\" \"FFT_LOG2=12\" \"-generic_top\" \"WINDOW_ENABLE=1\" \"-L\" \"xbip_utils_v3_0_13\" \"-L\" \"axi_utils_v2_0_9\" \"-L\" \"c_reg_fd_v12_0_9\" \"-L\" \"xbip_dsp48_wrapper_v3_0_6\" \"-L\" \"xbip_pipe_v3_0_9\" \"-L\" \"xbip_dsp48_addsub_v3_0_9\" \"-L\" \"xbip_addsub_v3_0_9\" \"-L\" \"c_addsub_v12_0_18\" \"-L\" \"c_mux_bit_v12_0_9\" \"-L\" \"c_shift_ram_v12_0_17\" \"-L\" \"xbip_bram18k_v3_0_9\" \"-L\" \"mult_gen_v12_0_21\" \"-L\" \"cmpy_v6_0_24\" \"-L\" \"floating_point_v7_0_23\" \"-L\" \"xfft_v9_1_12\" \"-L\" \"unisims_ver\" \"-L\" \"unimacro_ver\" \"-L\" \"secureip\" \"-L\" \"xpm\" \"-s\" \"fullchain_snapshot\" \"work.tb_measurement_improved\" \"work.glbl\"",
+      "returncode": 0
+    },
+    {
+      "start_utc": "2026-11-02T13:23:13.090790+00:00",
+      "end_utc": "2026-11-02T13:24:40.510144+00:00",
+      "duration_seconds": 87.422,
+      "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args",
+      "command": "\"E:\\Xilinx\\Vivado\\2024.1\\bin\\xsim.bat\" \"fullchain_snapshot\" \"-testplusarg\" \"MODE=0\" \"-testplusarg\" \"FREQ=5000000\" \"-testplusarg\" \"TOLERANCE=150\" \"-testplusarg\" \"FULL_FFT_CLOCK=0\" \"-testplusarg\" \"SPECTRUM=E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/validation/fullchain_5mhz_quoted_args/spectrum.csv\" \"-runall\"",
+      "returncode": 0
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\adc_fft_tracking_20261014\\sim\\tb_measurement_improved.sv",
+      "copy": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args\\dependencies\\tb_measurement_improved.sv",
+      "source_sha256": "ef7a1e4cac3080347231222c3ec2db154d8a50b64f8f696d9dc96ba7140db94b",
+      "copy_sha256": "ef7a1e4cac3080347231222c3ec2db154d8a50b64f8f696d9dc96ba7140db94b"
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\adc_fft_tracking_20261014\\projects\\v3_n4096_w1\\v3_n4096_w1.gen\\sources_1\\ip\\fft_core\\sim\\fft_core.vhd",
+      "copy": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args\\dependencies\\fft_core.vhd",
+      "source_sha256": "67026f1a93f1fb4abcf80a2804e09827f641495b2c6d3f7c4dbc367208d74094",
+      "copy_sha256": "67026f1a93f1fb4abcf80a2804e09827f641495b2c6d3f7c4dbc367208d74094"
+    },
+    {
+      "source": "E:\\Xilinx\\Vivado\\2024.1\\data\\verilog\\src\\glbl.v",
+      "copy": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz_quoted_args\\dependencies\\glbl.v",
+      "source_sha256": "6270251cf35e1fce3119fc79f8fb968912f7983027e43cf030409ba68f048936",
+      "copy_sha256": "6270251cf35e1fce3119fc79f8fb968912f7983027e43cf030409ba68f048936"
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\ddc_decimator.v",
+      "source_sha256": "9a80ca9f71941f05697519a07d3997f1dd686a16a6450d7146df8881cb7df3d9",
+      "usage": "compiled unchanged snapshot"
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\iq_snapshot.v",
+      "source_sha256": "604ed87badf54dd79e8bc052496f1a85e2eaefceea33a4c8eebf2e3a201db78d",
+      "usage": "compiled unchanged snapshot"
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\fft_stream_improved.v",
+      "source_sha256": "c3e06c0b757ec6485ec90d2c6040071b1877d2392c081f21771fe927666f94e5",
+      "usage": "compiled unchanged snapshot"
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\spectral_estimator.v",
+      "source_sha256": "945d0e48cf38eb5afb56c5fb075304a9640f89c3a3d067bd11c12aed4ede1c9e",
+      "usage": "compiled unchanged snapshot"
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\measurement_improved.v",
+      "source_sha256": "bcb0ca52fcf320c63980018a7e6d55398faaae32d8dda4b15ab1dd7491c0dab6",
+      "usage": "compiled unchanged snapshot"
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\coefficients\\hann_4096.mem",
+      "source_sha256": "80315ec3629a77c01e9e240e280baa62425188f781fe1c55823af3e06a99e23a",
+      "usage": "read-only RTL absolute coefficient dependency"
+    },
+    {
+      "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\coefficients\\ddc_sine_1024.mem",
+      "source_sha256": "99a7d0a335cd1fe5a62ade4188773927f226e86149a7cc1d923230c53ffc40a4",
+      "usage": "read-only RTL absolute coefficient dependency"
+    }
+  ],
+  "completion_marker_found": true,
+  "fatal_or_error_found": false,
+  "passed": true,
+  "full_fft_clock": false,
+  "fft_pause_policy": "Only idle FFT behavioral model clock pauses during capture. ADC/proc/CIC clocks remain 250MS/s/100MHz; all 4096 samples freshly captured.",
+  "result_lines": [
+    "SIM_CLOCK_POLICY full_fft_clock=0; only idle FFT model may pause, ADC/proc/CIC always full clock",
+    "RTL_RESULT version=3 n=4096 window=1 mode=0 target=5000000.000 valid=1 hz=5000000 coarse=82 peak=4076 delta=-9 fine_hz=-4883 power=34684531037 noise=3879 flags=08",
+    "TEST_DONE passed=1 errors=0 results=1"
+  ]
+}

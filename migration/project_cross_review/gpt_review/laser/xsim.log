@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# xsim v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Nov  2 21:22:53 2026
+# Process ID: 30504
+# Current directory: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/laser
+# Command line: xsim.exe -mode tcl -source {xsim.dir/existing_uart/xsim_script.tcl}
+# Log file: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/laser/xsim.log
+# Journal file: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/laser\xsim.jou
+# Running On        :DESKTOP-K8LLODR
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26300
+# Processor Detail  :Intel(R) Core(TM) 7 240H
+# CPU Frequency     :2995 MHz
+# CPU Physical cores:10
+# CPU Logical cores :16
+# Host memory       :34045 MB
+# Swap memory       :8053 MB
+# Total Virtual     :42098 MB
+# Available Virtual :14678 MB
+#-----------------------------------------------------------
+source xsim.dir/existing_uart/xsim_script.tcl
+# xsim {existing_uart} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS UART status format start; decoded S=6 L=1
+$finish called at time : 9055 ns : File "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/inputs/existing_tests/laser/tb_auto_lock_uart.v" Line 30
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 21:22:55 2026...

@@ -1,0 +1,55 @@
+#-----------------------------------------------------------
+# xsim v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Nov  2 21:22:48 2026
+# Process ID: 6576
+# Current directory: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/laser
+# Command line: xsim.exe -mode tcl -source {xsim.dir/pi_review/xsim_script.tcl}
+# Log file: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/laser/xsim.log
+# Journal file: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/laser\xsim.jou
+# Running On        :DESKTOP-K8LLODR
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26300
+# Processor Detail  :Intel(R) Core(TM) 7 240H
+# CPU Frequency     :2995 MHz
+# CPU Physical cores:10
+# CPU Logical cores :16
+# Host memory       :34045 MB
+# Swap memory       :8053 MB
+# Total Virtual     :42098 MB
+# Available Virtual :14711 MB
+#-----------------------------------------------------------
+source xsim.dir/pi_review/xsim_script.tcl
+# xsim {pi_review} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS PI e=50 value=50 Iq16=0 anti=0 clip=0 iclip=0
+PASS PI e=-50 value=-50 Iq16=0 anti=0 clip=0 iclip=0
+PASS PI e=101 value=100 Iq16=0 anti=0 clip=1 iclip=0
+PASS PI e=-101 value=-100 Iq16=0 anti=0 clip=1 iclip=0
+PASS PI e=10 value=10 Iq16=655360 anti=0 clip=0 iclip=0
+PASS PI e=10 value=15 Iq16=983040 anti=0 clip=0 iclip=1
+PASS PI e=-5 value=10 Iq16=655360 anti=0 clip=0 iclip=0
+PASS PI e=10 value=10 Iq16=655360 anti=0 clip=0 iclip=0
+PASS PI e=10 value=10 Iq16=655360 anti=1 clip=0 iclip=0
+PASS PI e=-10 value=0 Iq16=0 anti=0 clip=0 iclip=0
+PASS PI e=10 value=0 Iq16=0 anti=1 clip=0 iclip=0
+PASS PI e=10 value=10 Iq16=0 anti=0 clip=0 iclip=0
+PASS PI e=10 value=-10 Iq16=0 anti=0 clip=0 iclip=0
+PASS PI e=0 value=-10 Iq16=0 anti=0 clip=0 iclip=0
+PASS PI clear cancels internal stage=1 and suppresses stale output
+PASS PI clear cancels internal stage=2 and suppresses stale output
+PASS PI clear cancels internal stage=3 and suppresses stale output
+PASS PI clear cancels internal stage=4 and suppresses stale output
+PASS PI clear cancels internal stage=5 and suppresses stale output
+PASS PI clear cancels internal stage=6 and suppresses stale output
+PASS PI clear cancels internal stage=7 and suppresses stale output
+PASS PI clear cancels internal stage=8 and suppresses stale output
+PASS PI clear cancels internal stage=9 and suppresses stale output
+PASS PI clear cancels internal stage=10 and suppresses stale output
+PASS PI2D review numerical/antiwindup checks and clear in all 10 processing stages
+$finish called at time : 4250 ns : File "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/laser/tb_pi2d_review.v" Line 46
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 21:22:49 2026...

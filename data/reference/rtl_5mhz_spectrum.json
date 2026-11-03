@@ -1,0 +1,13 @@
+{
+  "source": "E:\\Codex\\FPGA\\documents\\report_targeted_revision_20261102\\技能包_11.2_FFT锁频工程版\\migration\\project_cross_review\\validation\\fullchain_5MHz_quoted_args\\spectrum.csv",
+  "sha256": "c65f56a7de138ff239f82cbab4ec1dcff4a7b26227936a84919109c4956c7139",
+  "input_hz": 5000000,
+  "amplitude_adc_codes": 200,
+  "dc_adc_codes": 31,
+  "n": 4096,
+  "coarse_fs_hz": 250000000,
+  "fine_fs_hz": 1000000,
+  "coarse_peak_bin": 82,
+  "nco_hz": 5004882.8125,
+  "provenance": "Archived RTL/Vivado FFT behavioral run; not board capture"
+}

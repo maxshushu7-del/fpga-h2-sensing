@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/inputs/rtl/laser/auto_lock_fsm.v" into library work
+INFO: [VRFC 10-311] analyzing module auto_lock_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/inputs/existing_tests/laser/tb_auto_lock_fsm.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_auto_lock_fsm

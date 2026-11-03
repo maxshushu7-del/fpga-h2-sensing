@@ -1,0 +1,19 @@
+
+****** xsim v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Nov  2 21:21:24 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/endpoint/xsim_script.tcl
+# xsim {endpoint} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+FINAL_SWEEP t=20555000 sample=952 old_scan_min=954 old_min_code=1022 old_contrast=2046
+RESULT state=6 reason=0 min_code=1024 scan_min=952 scan_max=3000 selected_code=-2 setpoint=1978 servo_enable=1
+REPRODUCED: monotonic decreasing response with positive-edge minimum was accepted into LOCKING; expected RETRY_WAIT reason=1.
+$finish called at time : 41070 ns : File "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/laser/tb_auto_lock_endpoint.v" Line 32
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 21:21:25 2026...

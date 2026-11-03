@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# xsim v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Nov  2 21:23:14 2026
+# Process ID: 6908
+# Current directory: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/validation/fullchain_5MHz_quoted_args
+# Command line: xsim.exe -mode tcl -source {xsim.dir/fullchain_snapshot/xsim_script.tcl}
+# Log file: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/validation/fullchain_5MHz_quoted_args/xsim.log
+# Journal file: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/validation/fullchain_5MHz_quoted_args\xsim.jou
+# Running On        :DESKTOP-K8LLODR
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26300
+# Processor Detail  :Intel(R) Core(TM) 7 240H
+# CPU Frequency     :2995 MHz
+# CPU Physical cores:10
+# CPU Logical cores :16
+# Host memory       :34045 MB
+# Swap memory       :8053 MB
+# Total Virtual     :42098 MB
+# Available Virtual :15786 MB
+#-----------------------------------------------------------
+source xsim.dir/fullchain_snapshot/xsim_script.tcl
+# xsim {fullchain_snapshot} -testplusarg MODE=0 -testplusarg FREQ=5000000 -testplusarg TOLERANCE=150 -testplusarg FULL_FFT_CLOCK=0 -testplusarg SPECTRUM=E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/validation/fullchain_5MHz_quoted_args/spectrum.csv -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+SIM_CLOCK_POLICY full_fft_clock=0; only idle FFT model may pause, ADC/proc/CIC always full clock
+Note:   - SCALING_SCH: in_ptr = 1, out_ptr = 1
+Time: 0 ps  Iteration: 0  Process: /tb_measurement_improved(ALGORITHM_VERSION=3)/dut/u_stream/u_fft/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__862  File: E:\Xilinx\Vivado\2024.1\data/ip/xilinx/xfft_v9_1/hdl/axi_wrapper.vhd
+Note:   - SCALING_SCH: in_ptr = 1, out_ptr = 1
+Time: 0 ps  Iteration: 1  Process: /tb_measurement_improved(ALGORITHM_VERSION=3)/dut/u_stream/u_fft/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__862  File: E:\Xilinx\Vivado\2024.1\data/ip/xilinx/xfft_v9_1/hdl/axi_wrapper.vhd
+RTL_RESULT version=3 n=4096 window=1 mode=0 target=5000000.000 valid=1 hz=5000000 coarse=82 peak=4076 delta=-9 fine_hz=-4883 power=34684531037 noise=3879 flags=08
+TEST_DONE passed=1 errors=0 results=1
+$finish called at time : 4780275 ns : File "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/validation/fullchain_5MHz_quoted_args/dependencies/tb_measurement_improved.sv" Line 97
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:01:23 . Memory (MB): peak = 223.699 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 51212 KB (Peak: 51212 KB), Simulation CPU Usage: 81656 ms
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 21:24:40 2026...

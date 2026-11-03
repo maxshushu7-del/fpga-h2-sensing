@@ -1,9 +1,26 @@
-# 大模型协作记录
+# 大模型协作与可迁移经验
 
-按实际工程问题归档，不上传未经整理的全部聊天历史。报告保留代表案例，完整提示词、回答及证据放在对应案例目录。
+## 真实FFT与锁频案例
 
-每个案例记录问题与源码版本、人员分工、输入上下文、原始回答、发现的问题、触发反例、修改、回归与最终裁决。实现与审查使用同一份固定输入，独立审查不能代替程序运行和硬件验证。
+固定39文件源码快照 → GPT审查FFT/锁频 → 构造失败输入 → 候选最小修复 → DeepSeek定向复审 → 人工核对接口和预期 → 运行回归。
 
-使用GPT与DeepSeek时写明实际模型、任务和时间；区分静态意见、复现结果与修正后的回归。保留失败经过和错误测试预期的纠正，不以两个模型回答一致作为通过依据。
+- [案例与重放入口](../../migration/project_cross_review/README.md)
+- [原始任务](../../migration/project_cross_review/gpt_review/task.md)
+- [GPT审查及运行证据](../../migration/project_cross_review/gpt_review/review.md)
+- [DeepSeek复审请求](../../migration/project_cross_review/deepseek_review/followup_patch_review.md)
+- [DeepSeek原回复](../../migration/project_cross_review/deepseek_review/patch_review_response.md)
+- [逐条裁决](../../migration/project_cross_review/deepseek_review/review_disposition.md)
+- [验证结果](../../migration/project_cross_review/validation/report.md)
+- [FIR迁移](../../migration/fir_trial)
 
-可迁移步骤与脚本由[skill](../../skill/README.md)提供。
+另见[UDP接收适配案例](udp_adapter_case.md)与本次执行日志。
+
+## 人与AI的分工
+
+人确定光学原理、硬件接线、电平、验收目标和实验条件；AI整理接口、编写候选与测试、读工具报告和准备复现材料。模型给出的反例也要验算；两个回答一致不能代替程序通过。
+
+上下文隔离是让审查者先看同一份代码和接口，减少被原解释带偏。快照是冻结审查输入，确保后续改动与回归针对同一份文件。旧新只保留与具体缺陷有关的对照，不做模型能力排名。
+
+## Skill提炼
+
+三项可复用Skill见[入口](../../skill/README.md)：定点RTL验证、Vivado诊断、跨模型反例审查。每项记录输入、步骤、脚本、输出、验收、失败条件与经验来源；FIR用于检查换任务后的流程适用性。完整材料随独立Skill压缩包提供，报告内保留过程和结论。

@@ -1,0 +1,5 @@
+本轮改为审查我们实际用于比赛的FFT测频和激光锁频程序。此前累加器试用到此停止，不继续扩展。
+先读E:/Codex/FPGA/AGENTS.md。本轮输入仅为E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/inputs中的project_contract.md、source_manifest.json以及真实RTL和existing_tests。不要阅读其他评审或validation输出，不要连接板卡、不修改原工程或输入快照、不人为加入错误。输出全部放E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review。
+重点审查：(1)测频measurement_improved.v、spectral_estimator.v、fft_stream_improved.v在粗/低频/细测切换、负频偏、结果与模式锁存、无效恢复及FFT帧协议方面的实际行为；(2)锁频auto_lock_fsm.v、pi2d_controller.v、servo_scheduler.v、laser_lock_top.v在扫描到锁定、积分/限幅、clear/复位/取消使能时的实际行为。可按调用关系读取同目录其余源码。
+请最多优先提出3个有证据的重要发现。每项给出文件行号、真实触发条件、预期和实际结果、可重放输入/时钟序列；能在独立测试中复现就运行并保存真实日志，证据不足的建议单列。也可以没有功能缺陷，直接说明已检查范围，不要强迫得出有bug的结论。不要根据光学未知参数猜测功能错误。
+交付review.md、review.json（findings数组含id,module,line,trigger,expected,actual,evidence,classification）、实际命令/日志与UTC起止。若提出修正，只给最小建议，不直接改生产RTL。建议15分钟内完成。工具Vivado2024.1在E:/Xilinx/Vivado/2024.1/bin，Python C:/Users/dell/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe。

@@ -1,0 +1,191 @@
+{
+  "source_archive": "FPGA_AXAU15_V4_Four_Functions_Real_UDP_Only_Standalone_20261103",
+  "files": [
+    {
+      "file": "rtl/measurement/ddc_decimator.v",
+      "match_original": true,
+      "sha256": "1fda71369869b71d5db87da478f87322f881ad8055b826dccdada0f37edd6354"
+    },
+    {
+      "file": "rtl/measurement/fft_stream_improved.v",
+      "match_original": true,
+      "sha256": "c3e06c0b757ec6485ec90d2c6040071b1877d2392c081f21771fe927666f94e5"
+    },
+    {
+      "file": "rtl/measurement/iq_snapshot.v",
+      "match_original": true,
+      "sha256": "604ed87badf54dd79e8bc052496f1a85e2eaefceea33a4c8eebf2e3a201db78d"
+    },
+    {
+      "file": "rtl/measurement/measurement_improved.v",
+      "match_original": true,
+      "sha256": "9b124230b2d1d44586ee029cfb20f6a0519827a81c85d5642edcf9c1ddfa72c8"
+    },
+    {
+      "file": "rtl/measurement/spectral_estimator.v",
+      "match_original": true,
+      "sha256": "945d0e48cf38eb5afb56c5fb075304a9640f89c3a3d067bd11c12aed4ede1c9e"
+    },
+    {
+      "file": "rtl/network/rgmii_udp_tx.v",
+      "match_original": true,
+      "sha256": "f966afab0f35d70b7b36999617a672ef3f9c405db7aecc70d50c31732c8ccae4"
+    },
+    {
+      "file": "rtl/network/tec200_virtual_plant.v",
+      "match_original": true,
+      "sha256": "60ab430467dcf9fd4ebcb756bed7fd1de5eb09501cfd54cf7a9278b7bbdd2bd0"
+    },
+    {
+      "file": "rtl/network/udp_ipv4_frame_tx.v",
+      "match_original": true,
+      "sha256": "7e1a60255316a32dcfaf7923f6296870c2e1c236f403873c848a57207814b51d"
+    },
+    {
+      "file": "rtl/network/udp_telemetry_bridge.v",
+      "match_original": true,
+      "sha256": "069d93917e936d1e4bd0f8aa73149c186c90248113ae487ad02ab7dfe157b046"
+    },
+    {
+      "file": "rtl/platform/reset_sync.v",
+      "match_original": true,
+      "sha256": "075b523b504517140e96f66c9c5e593868ebb673f4b78738b4cae7ba816642c5"
+    },
+    {
+      "file": "rtl/servo/adc_interface.v",
+      "match_original": true,
+      "sha256": "868750856912bc59e33deb2b3f38dc449eba6a8d9bfec2565f87a066d10edcca"
+    },
+    {
+      "file": "rtl/servo/clock_manager.v",
+      "match_original": true,
+      "sha256": "46e8d37a140d6c38cbd7efb2c198cfd66b6c6b8ac849e80bd9bbf3be068a9ff9"
+    },
+    {
+      "file": "rtl/servo/dac_interface.v",
+      "match_original": true,
+      "sha256": "ff38e149fe78b54093f5ddee2d6600ac2ebf7f367aadfad1758b254804eac9ab"
+    },
+    {
+      "file": "rtl/servo/error_filter.v",
+      "match_original": true,
+      "sha256": "88d08a4ae09ad7e52bd42b4a238033087246c6c217a8b9448de9e376b36ab38b"
+    },
+    {
+      "file": "rtl/servo/hw_ad9122_tx.v",
+      "match_original": true,
+      "sha256": "3c7dafb1eed9a32bdf171248d0b934217f1f0f91b857fa47f0a01a2679334e86"
+    },
+    {
+      "file": "rtl/servo/hw_ad9643_rx.v",
+      "match_original": true,
+      "sha256": "24f43aa051bfe2c097ed249ca8eac2deb793f08676f87c4c9b13f0b926864834"
+    },
+    {
+      "file": "rtl/servo/hw_clock_health.v",
+      "match_original": true,
+      "sha256": "4f76491357d0ebb755e1370f7c52fc1c4f0ea4ff270a4448f8c95b6dbae8df6d"
+    },
+    {
+      "file": "rtl/servo/hw_fl4322_init.v",
+      "match_original": true,
+      "sha256": "2b5d99f8f00fda111ed3e2d698412ceb538c3205a7fca3904b3945208dce264d"
+    },
+    {
+      "file": "rtl/servo/hw_fl4322_register_table.v",
+      "match_original": true,
+      "sha256": "ec23d2b783eddc08ca136544990c1fedde96d30bed603b0bfeb7f7ec6b65b5e0"
+    },
+    {
+      "file": "rtl/servo/laser_actuator_output.v",
+      "match_original": true,
+      "sha256": "418201402b0e4b90a77a2e9b4756ba42455a7d567f2a16d2490e24171bc5b3e9"
+    },
+    {
+      "file": "rtl/servo/laser_auto_search.v",
+      "match_original": true,
+      "sha256": "789924d012000911a376b78d51057b666c6ee02953a2bcbdab90fb8a48497185"
+    },
+    {
+      "file": "rtl/servo/laser_code_guard.v",
+      "match_original": true,
+      "sha256": "1ce5bc7a102bdd7559b54a55b50cd605f0dda3f0f64bb880b562145bc12df281"
+    },
+    {
+      "file": "rtl/servo/laser_lock_board_top.v",
+      "match_original": true,
+      "sha256": "df67fc5a859c3479a4308149a8f8a9541d3b74dda505e76423aa118f35cdad28"
+    },
+    {
+      "file": "rtl/servo/laser_lock_hw_top.v",
+      "match_original": true,
+      "sha256": "838d7936d600c2dd58f49872f827570f3f23eb5b1d1a81b3a75bd2a09b1ce572"
+    },
+    {
+      "file": "rtl/servo/laser_lock_hw_udp_only_top.v",
+      "match_original": true,
+      "sha256": "77e6309ab1294c2c8b379b3dd93ef6b9925583bab48fe86244954feb7f172fb1"
+    },
+    {
+      "file": "rtl/servo/laser_lock_top.v",
+      "match_original": true,
+      "sha256": "9c3be70929abb274973917320eb743bd5ab1ed707a42661c49be2a293925522b"
+    },
+    {
+      "file": "rtl/servo/laser_triangle_scan.v",
+      "match_original": true,
+      "sha256": "efa51167cfbf2c83e118e965e942c2deeac86a91ff9b66aec6b602575a822a41"
+    },
+    {
+      "file": "rtl/servo/lock_point_calibration.v",
+      "match_original": true,
+      "sha256": "2238981247773652580269edcfa98ea7f0b50e21ff70ee89fe38982b46204826"
+    },
+    {
+      "file": "rtl/servo/locking_error_normalizer.v",
+      "match_original": true,
+      "sha256": "4a05bbde76029b3e5b2f630cc44e3e729df9b064531265ebfbcc13216e975808"
+    },
+    {
+      "file": "rtl/servo/parameter_register.v",
+      "match_original": true,
+      "sha256": "b171452f767ca0d3e3663a151858a3f7b5c95c5c28b4ec84da60fda4d72152c9"
+    },
+    {
+      "file": "rtl/servo/pi2d_controller.v",
+      "match_original": true,
+      "sha256": "4cc0ad38bd75f386928dcfc8e6b0dcfd529f99590bdae77f1890d75b3102fce3"
+    },
+    {
+      "file": "rtl/servo/saturation.v",
+      "match_original": true,
+      "sha256": "b4cef5d4d266ef4972d07dfcdbe6807ca7deca5399a3ba36018a73e3ebdbfb8a"
+    },
+    {
+      "file": "rtl/servo/servo_scheduler.v",
+      "match_original": true,
+      "sha256": "f7e4f320ff42cec9c42784cf3a7bc36195de7161a3f1cbace929a7b02d779e58"
+    },
+    {
+      "file": "rtl/temperature/heater_pwm.sv",
+      "match_original": true,
+      "sha256": "402045a12f2ed4d21b2cada38c5fc55769672e0b5ef994f08e38c24c2035d951"
+    },
+    {
+      "file": "rtl/temperature/tec200_pid_io_guard.v",
+      "match_original": true,
+      "sha256": "1e7d8f9e856cebc739d23b0225f23e2c83d7d64c228d50f064be5f2cd3cc5fcc"
+    },
+    {
+      "file": "rtl/temperature/temperature_peripheral.sv",
+      "match_original": true,
+      "sha256": "44430bca55fd297365c05e6687f0cbb576ea6c2db01d3191997540ae2fb91e3d"
+    },
+    {
+      "file": "rtl/temperature/temperature_pid.sv",
+      "match_original": true,
+      "sha256": "44d553952104404b7c168d71970bedfbf3f10fe54d1c04e46d890d3887727c99"
+    }
+  ],
+  "all_match": true
+}

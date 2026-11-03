@@ -1,0 +1,18 @@
+{
+  "utc": "2026-11-02T13:33:39.6218760Z",
+  "files": [
+    {
+      "path": "inputs/rtl/laser/auto_lock_fsm.v",
+      "sha256": "eb9552dc8261f6a7734cede5e5de0eb47ec5a96dcddd50db151824cdd25cc333"
+    },
+    {
+      "path": "candidate/rtl/auto_lock_fsm.v",
+      "sha256": "1f38ffe3037864db72059dec983717f2b6487babb30b4cef2344cb5a7f516bf8"
+    },
+    {
+      "path": "candidate/auto_lock_fsm.patch",
+      "sha256": "3526e80f4b811fdc7dca969c244e56afdf0077637a92427351aa425b68209414"
+    }
+  ],
+  "source_snapshot_matches_manifest": true
+}

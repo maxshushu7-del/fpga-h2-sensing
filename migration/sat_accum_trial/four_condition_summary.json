@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-02",
+  "task": "sat_accum_stream",
+  "scope": "Same frozen independent RTL functional acceptance, not physical hardware measurement or general model ranking.",
+  "manifest_sha256": "d9012df7ed9c047f88a0bd1d7073824bb1808514a7664f75da8799c4fe700bc9",
+  "seed": 20261102,
+  "groups": [
+    {
+      "group": "gpt_ordinary",
+      "label": "GPT普通提问",
+      "candidate": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\ai_trial\\gpt_ordinary\\first_ready\\sat_accum_stream.sv",
+      "candidate_sha256": "6d02d87943cc10171361bb0881ef0b0ff8c15220f30a4998cdb27972cce60157",
+      "acceptance_report": "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/results/gpt_ordinary/runner_result.json",
+      "report_sha256": "f612fe04b68b9da7e0146d4aa8f128397c49426a61f5fdccf046ba6d34e6e216",
+      "status": "PASS",
+      "categories_passed": 6,
+      "cycles": 2404,
+      "signal_checks": 14421,
+      "first_counterexample": null,
+      "notes": "首次候选通过；保存运行适配与自测记录"
+    },
+    {
+      "group": "gpt_skill_first",
+      "label": "GPT采用Skill",
+      "candidate": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\ai_trial\\gpt_skill\\first_acceptable\\rtl\\sat_accum_stream.sv",
+      "candidate_sha256": "5b08997e2a2e23bfe347ed4afaba070853b0230550e28b96fcab2ae9059974a0",
+      "acceptance_report": "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/results/gpt_skill_first/runner_result.json",
+      "report_sha256": "47723233b8fdb5847818784faea0e2dca6969eef35e914fe03eb04e66be3db10",
+      "status": "PASS",
+      "categories_passed": 6,
+      "cycles": 2404,
+      "signal_checks": 14421,
+      "first_counterexample": null,
+      "notes": "首次候选通过；审查后增强隔离算术测试"
+    },
+    {
+      "group": "deepseek_ordinary_first",
+      "label": "DeepSeek普通提问",
+      "candidate": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\ai_trial\\deepseek_ordinary\\artifacts\\acceptance_20261102T120353Z\\rtl\\sat_accum_stream.sv",
+      "candidate_sha256": "0e03b696282ce88e2a833ba25cc048a3bd58fada49bb56206f8716d2e6b98714",
+      "acceptance_report": "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/results/deepseek_ordinary_first/runner_result.json",
+      "report_sha256": "ffff8906937a2867cf0f401de5f0951e3e70f4098c46df48f704ad62b63f8df8",
+      "status": "PASS",
+      "categories_passed": 6,
+      "cycles": 2404,
+      "signal_checks": 14421,
+      "first_counterexample": null,
+      "notes": "首次候选通过；保存测试序列与编译修正记录"
+    },
+    {
+      "group": "deepseek_skill_first",
+      "label": "DeepSeek采用Skill",
+      "candidate": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\ai_trial\\deepseek_skill\\snapshot\\v1_20261102T115704Z\\rtl\\sat_accum_stream.sv",
+      "candidate_sha256": "75cf4a6f1436d181a9da98de360cd03a50ff366cbf40baab41f749606f332633",
+      "acceptance_report": "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/results/deepseek_skill_first/runner_result.json",
+      "report_sha256": "c52cf4bc6d310a8ef98477574b0b20195a32500fd9c8ea34558b6fb80f3591c5",
+      "status": "PASS",
+      "categories_passed": 6,
+      "cycles": 2404,
+      "signal_checks": 14421,
+      "first_counterexample": null,
+      "notes": "首次候选通过；保存参考、计数及门禁修正记录"
+    }
+  ],
+  "model_observations": {
+    "gpt": "Independent Codex agents inheriting parent configuration; exact backend model IDs not exposed in candidate metadata. Parent UI label GPT-6.1 Sol Ultra is a UI observation only.",
+    "deepseek": "Two separate DeepSeek Harness chats; observed UI label DeepSeek-V4.1-Flash 1017 High.",
+    "python_version_verified_by_command": "3.12.14"
+  },
+  "report_table_rows": [
+    [
+      "GPT普通提问",
+      "6/6通过",
+      "首次候选通过；保存运行适配与自测记录"
+    ],
+    [
+      "GPT采用Skill",
+      "6/6通过",
+      "首次候选通过；审查后增强隔离算术测试"
+    ],
+    [
+      "DeepSeek普通提问",
+      "6/6通过",
+      "首次候选通过；保存测试序列与编译修正记录"
+    ],
+    [
+      "DeepSeek采用Skill",
+      "6/6通过",
+      "首次候选通过；保存参考、计数及门禁修正记录"
+    ]
+  ],
+  "report_results_paragraph": "四个首次可验收候选均通过同一固定验收的6/6类检查，每组实际完成2404个时钟周期、14421次ready、valid和数据比较，未发现反例。表4-2列出各条件的结果与过程观察。此次试用表明，两类模型在这项明确需求下均能交付符合有限验收的实现；采用Skill的作用主要体现在把参考推导、边界检查、错误分类和回归记录变成明确步骤。不同候选仍出现过参考期望、测试序列、工具调用或日志门禁需要修正的情况，因此工程采用以源码和实际验收结果为依据。",
+  "report_methods_paragraph": "GPT侧由独立任务代理执行，DeepSeek侧通过本机Harness的两个新会话执行，后者界面标签为DeepSeek-V4.1-Flash 1017 High；后端模型ID未暴露时按可见配置记录。各组使用Vivado/XSim 2024.1，Python实际命令核验为3.12.14。完成时间、权限等待和工具运行分别保存在过程记录中，客户端、权限等待、自测范围及追加综合检查的差异不计作模型能力差异。本轮是一次端到端工程流程试用，统一比较只使用被冻结的六类验收；多次独立任务与重复试用可继续检验流程的稳定收益。"
+}

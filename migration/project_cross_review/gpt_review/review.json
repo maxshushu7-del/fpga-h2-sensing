@@ -1,0 +1,106 @@
+{
+  "reviewer": "GPT",
+  "started_utc": "2026-11-02T13:12:19.5872231Z",
+  "completed_utc": "2026-11-02T13:25:53.9914253Z",
+  "source_project": "sensor_integrated_20261018",
+  "inputs_sha256_matched": 39,
+  "inputs_sha256_checked": 39,
+  "production_changes": false,
+  "board_connected": false,
+  "findings": [
+    {
+      "id": "GPT-001",
+      "module": "auto_lock_fsm",
+      "file": "inputs/rtl/laser/auto_lock_fsm.v",
+      "line": 109,
+      "related_lines": [
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113
+      ],
+      "severity": "P2",
+      "classification": "confirmed_functional_defect",
+      "title": "Final sweep point is omitted from the endpoint rejection decision",
+      "trigger": "On the final positive sweep point scan_code==SPAN, average becomes a new minimum while the previous min_code is interior; nonblocking extrema writes have not updated the values used for qualification.",
+      "expected": "A minimum at +SPAN is rejected: RETRY_WAIT state=7, last_reason=1, servo_enable=0.",
+      "actual": "Monotonic ADC response reached LOCKING state=6, reason=0, min_code=1024, servo_enable=1.",
+      "evidence": {
+        "log": "laser/endpoint_run.log",
+        "testbench": "laser/tb_auto_lock_endpoint.v",
+        "log_excerpt": [
+          "FINAL_SWEEP t=20555000 sample=952 old_scan_min=954 old_min_code=1022 old_contrast=2046",
+          "RESULT state=6 reason=0 min_code=1024 scan_min=952 scan_max=3000 selected_code=-2 setpoint=1978 servo_enable=1"
+        ],
+        "replay": {
+          "production_rtl_modified": false,
+          "reset": "rst=1 for five falling edges; then rst=0, arm=1",
+          "inputs": "dac_at_goal=1; adc_valid=arm; at every negedge adc_sample=3000-(dac_code+1024); servo_valid=0",
+          "internal_force_used": false,
+          "parameters": {
+            "STEP": 2,
+            "SPAN": 1024,
+            "SETTLE_CLOCKS": 0,
+            "AVG_LOG2": 0,
+            "NO_SAMPLE_CLOCKS": 1000000
+          },
+          "clock_period_ns": 10
+        }
+      },
+      "minimal_fix": "Compute extrema and min_code including the current average before contrast/endpoint/half-level qualification, or add a sweep-finalization state."
+    }
+  ],
+  "passed_checks": [
+    {
+      "name": "existing_spectral_estimator",
+      "log": "fft/estimator_existing.log",
+      "scope": "16-bin, production 29-bit width estimator unit test",
+      "cases": 18
+    },
+    {
+      "name": "production_size_estimator",
+      "log": "fft/estimator_production.log",
+      "scope": "4096-bin synthetic-spectrum estimator unit test; not an FFT transform",
+      "cases": 5
+    },
+    {
+      "name": "fft_wrapper_boundary",
+      "log": "fft/wrapper_boundary.log",
+      "scope": "real wrapper, non-DSP IP handshake stub, 4096 acceptances, 1171 stalls"
+    },
+    {
+      "log": "fft/uart_existing.log",
+      "name": "result_uart_existing",
+      "packets": 5
+    },
+    {
+      "log": "laser/existing_fsm_run.log",
+      "name": "auto_lock_fsm_existing"
+    },
+    {
+      "log": "laser/uart_run.log",
+      "name": "auto_lock_uart_existing"
+    },
+    {
+      "name": "pi2d_review",
+      "log": "laser/pi_run.log",
+      "scope": "numerical, saturation, integral, anti-windup, K2 second difference, clear in all ten processing stages",
+      "numerical_cases": 14,
+      "clear_processing_stages": 10
+    }
+  ],
+  "limitations": [
+    "Generated fft_core and original coefficient files are outside the supplied snapshot; full measurement chain simulations were not run under the inputs-only rule.",
+    "Measurement mode selection and same-NCO signed recovery were statically reviewed; estimator and wrapper simulations do not establish end-to-end FFT/DDC accuracy.",
+    "servo_scheduler and laser_lock_top integration were statically reviewed, not exhaustively simulated.",
+    "Endpoint reproduction shortens settle/averaging timing and proves servo enable, not optical lock."
+  ],
+  "commands": "commands.md"
+}

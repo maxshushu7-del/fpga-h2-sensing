@@ -1,0 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/deepseek_ordinary/rtl/sat_accum_stream.sv" into library work
+INFO: [VRFC 10-311] analyzing module sat_accum_stream
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'clk' when default_nettype is none [E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/deepseek_ordinary/rtl/sat_accum_stream.sv:24]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'rst' when default_nettype is none [E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/deepseek_ordinary/rtl/sat_accum_stream.sv:25]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 's_x' when default_nettype is none [E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/deepseek_ordinary/rtl/sat_accum_stream.sv:26]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 's_k' when default_nettype is none [E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/deepseek_ordinary/rtl/sat_accum_stream.sv:27]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 's_valid' when default_nettype is none [E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/deepseek_ordinary/rtl/sat_accum_stream.sv:28]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'm_ready' when default_nettype is none [E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/deepseek_ordinary/rtl/sat_accum_stream.sv:32]
+ERROR: [VRFC 10-8530] module 'sat_accum_stream' is ignored due to previous errors [E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/deepseek_ordinary/rtl/sat_accum_stream.sv:23]

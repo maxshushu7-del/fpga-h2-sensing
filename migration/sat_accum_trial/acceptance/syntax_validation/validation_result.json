@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "powershell_parser": "PASS",
+  "testbench_xvlog_syntax": "PASS",
+  "exact_runner_launch_function": "PASS",
+  "candidate_read": false,
+  "dut_elaboration": false,
+  "dut_simulation": false,
+  "planned_cycles": 2404,
+  "planned_signal_checks": 14421,
+  "stages": [
+    {
+      "name": "testbench_only_compile",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 1.053,
+      "stdout": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\ai_trial\\acceptance\\syntax_validation\\runner_launch_probe\\testbench_only_compile.stdout.log",
+      "stderr": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\ai_trial\\acceptance\\syntax_validation\\runner_launch_probe\\testbench_only_compile.stderr.log"
+    }
+  ]
+}

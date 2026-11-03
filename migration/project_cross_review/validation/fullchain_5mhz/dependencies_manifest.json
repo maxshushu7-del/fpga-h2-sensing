@@ -1,0 +1,55 @@
+[
+  {
+    "source": "E:\\Codex\\FPGA\\projects\\adc_fft_tracking_20261014\\sim\\tb_measurement_improved.sv",
+    "copy": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz\\dependencies\\tb_measurement_improved.sv",
+    "source_sha256": "ef7a1e4cac3080347231222c3ec2db154d8a50b64f8f696d9dc96ba7140db94b",
+    "copy_sha256": "ef7a1e4cac3080347231222c3ec2db154d8a50b64f8f696d9dc96ba7140db94b"
+  },
+  {
+    "source": "E:\\Codex\\FPGA\\projects\\adc_fft_tracking_20261014\\projects\\v3_n4096_w1\\v3_n4096_w1.gen\\sources_1\\ip\\fft_core\\sim\\fft_core.vhd",
+    "copy": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz\\dependencies\\fft_core.vhd",
+    "source_sha256": "67026f1a93f1fb4abcf80a2804e09827f641495b2c6d3f7c4dbc367208d74094",
+    "copy_sha256": "67026f1a93f1fb4abcf80a2804e09827f641495b2c6d3f7c4dbc367208d74094"
+  },
+  {
+    "source": "E:\\Xilinx\\Vivado\\2024.1\\data\\verilog\\src\\glbl.v",
+    "copy": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\fullchain_5mhz\\dependencies\\glbl.v",
+    "source_sha256": "6270251cf35e1fce3119fc79f8fb968912f7983027e43cf030409ba68f048936",
+    "copy_sha256": "6270251cf35e1fce3119fc79f8fb968912f7983027e43cf030409ba68f048936"
+  },
+  {
+    "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\ddc_decimator.v",
+    "source_sha256": "9a80ca9f71941f05697519a07d3997f1dd686a16a6450d7146df8881cb7df3d9",
+    "usage": "compiled unchanged snapshot"
+  },
+  {
+    "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\iq_snapshot.v",
+    "source_sha256": "604ed87badf54dd79e8bc052496f1a85e2eaefceea33a4c8eebf2e3a201db78d",
+    "usage": "compiled unchanged snapshot"
+  },
+  {
+    "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\fft_stream_improved.v",
+    "source_sha256": "c3e06c0b757ec6485ec90d2c6040071b1877d2392c081f21771fe927666f94e5",
+    "usage": "compiled unchanged snapshot"
+  },
+  {
+    "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\spectral_estimator.v",
+    "source_sha256": "945d0e48cf38eb5afb56c5fb075304a9640f89c3a3d067bd11c12aed4ede1c9e",
+    "usage": "compiled unchanged snapshot"
+  },
+  {
+    "source": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\measurement_improved.v",
+    "source_sha256": "bcb0ca52fcf320c63980018a7e6d55398faaae32d8dda4b15ab1dd7491c0dab6",
+    "usage": "compiled unchanged snapshot"
+  },
+  {
+    "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\coefficients\\hann_4096.mem",
+    "source_sha256": "80315ec3629a77c01e9e240e280baa62425188f781fe1c55823af3e06a99e23a",
+    "usage": "read-only RTL absolute coefficient dependency"
+  },
+  {
+    "source": "E:\\Codex\\FPGA\\projects\\sensor_integrated_20261018\\coefficients\\ddc_sine_1024.mem",
+    "source_sha256": "99a7d0a335cd1fe5a62ade4188773927f226e86149a7cc1d923230c53ffc40a4",
+    "usage": "read-only RTL absolute coefficient dependency"
+  }
+]

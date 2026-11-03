@@ -1,0 +1,17 @@
+{
+  "first_recorded_start_utc": "2026-11-02 10:40:16 UTC",
+  "first_acceptable_snapshot_utc": "2026-11-02 10:47:23 UTC",
+  "end_utc": "2026-11-02 10:51:13 UTC",
+  "permission_wait": {
+    "observed_request_yield_seconds": 31.0,
+    "exact_total_wait_seconds": null,
+    "note": "Permission waiting is separate: request_permissions yielded after 31.0 s; exact total approval wait was not instrumented. Initial grant alone did not permit mkdir; require_escalated execution succeeded. Do not subtract an invented exact wait from total elapsed."
+  },
+  "rtl_functional_changes_after_first_compile": 0,
+  "startup_failures": 1,
+  "dut_mismatches": 0,
+  "recorded_elapsed_seconds_including_permission_wait": 657.5,
+  "final_status": "PASS",
+  "final_full_suite_cycles": 664555,
+  "final_test_margin_enhancement": "isolated seed ±2, RTL unchanged, complete suite rerun PASS"
+}

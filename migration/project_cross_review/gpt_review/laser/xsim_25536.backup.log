@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# xsim v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Nov  2 21:22:28 2026
+# Process ID: 25536
+# Current directory: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/laser
+# Command line: xsim.exe -mode tcl -source {xsim.dir/pi_review/xsim_script.tcl}
+# Log file: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/laser/xsim.log
+# Journal file: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/laser\xsim.jou
+# Running On        :DESKTOP-K8LLODR
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26300
+# Processor Detail  :Intel(R) Core(TM) 7 240H
+# CPU Frequency     :2995 MHz
+# CPU Physical cores:10
+# CPU Logical cores :16
+# Host memory       :34045 MB
+# Swap memory       :8053 MB
+# Total Virtual     :42098 MB
+# Available Virtual :15245 MB
+#-----------------------------------------------------------
+source xsim.dir/pi_review/xsim_script.tcl
+# xsim {pi_review} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS PI e=50 value=50 Iq16=0 anti=0 clip=0 iclip=0
+PASS PI e=-50 value=-50 Iq16=0 anti=0 clip=0 iclip=0
+PASS PI e=101 value=100 Iq16=0 anti=0 clip=1 iclip=0
+PASS PI e=-101 value=-100 Iq16=0 anti=0 clip=1 iclip=0
+PASS PI e=10 value=10 Iq16=655360 anti=0 clip=0 iclip=0
+PASS PI e=10 value=15 Iq16=983040 anti=0 clip=0 iclip=1
+PASS PI e=-5 value=10 Iq16=655360 anti=0 clip=0 iclip=0
+PASS PI e=10 value=10 Iq16=655360 anti=0 clip=0 iclip=0
+PASS PI e=10 value=10 Iq16=655360 anti=1 clip=0 iclip=0
+PASS PI e=-10 value=0 Iq16=0 anti=0 clip=0 iclip=0
+PASS PI e=10 value=0 Iq16=0 anti=1 clip=0 iclip=0
+PASS PI e=10 value=10 Iq16=0 anti=0 clip=0 iclip=0
+PASS PI e=10 value=-10 Iq16=0 anti=0 clip=0 iclip=0
+PASS PI e=0 value=-10 Iq16=0 anti=0 clip=0 iclip=0
+Fatal: clear failed in stage 1
+Time: 1850 ns  Iteration: 0  Process: /tb_pi2d_review/Initial27_4  Scope: tb_pi2d_review  File: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/gpt_review/laser/tb_pi2d_review.v Line: 42
+$finish called at time : 1850 ns
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 21:22:29 2026...

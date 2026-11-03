@@ -1,0 +1,201 @@
+{
+  "source_project": "E:/Codex/FPGA/projects/sensor_integrated_20261018",
+  "snapshot_kind": "Exact byte copies of real project source; no deliberate faults inserted.",
+  "files": [
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/measurement/ddc_decimator.v",
+      "copy": "rtl/measurement/ddc_decimator.v",
+      "sha256": "9a80ca9f71941f05697519a07d3997f1dd686a16a6450d7146df8881cb7df3d9"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/measurement/fft_stream_improved.v",
+      "copy": "rtl/measurement/fft_stream_improved.v",
+      "sha256": "c3e06c0b757ec6485ec90d2c6040071b1877d2392c081f21771fe927666f94e5"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/measurement/iq_snapshot.v",
+      "copy": "rtl/measurement/iq_snapshot.v",
+      "sha256": "604ed87badf54dd79e8bc052496f1a85e2eaefceea33a4c8eebf2e3a201db78d"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/measurement/measurement_improved.v",
+      "copy": "rtl/measurement/measurement_improved.v",
+      "sha256": "bcb0ca52fcf320c63980018a7e6d55398faaae32d8dda4b15ab1dd7491c0dab6"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/measurement/result_uart_v2.v",
+      "copy": "rtl/measurement/result_uart_v2.v",
+      "sha256": "041b6ad02cd68041ab33820e4b317a594884b9255db4563c90afdee3979b11a5"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/measurement/spectral_estimator.v",
+      "copy": "rtl/measurement/spectral_estimator.v",
+      "sha256": "945d0e48cf38eb5afb56c5fb075304a9640f89c3a3d067bd11c12aed4ede1c9e"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/adc_interface.v",
+      "copy": "rtl/laser/adc_interface.v",
+      "sha256": "868750856912bc59e33deb2b3f38dc449eba6a8d9bfec2565f87a066d10edcca"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/auto_lock_fsm.v",
+      "copy": "rtl/laser/auto_lock_fsm.v",
+      "sha256": "eb9552dc8261f6a7734cede5e5de0eb47ec5a96dcddd50db151824cdd25cc333"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/auto_lock_uart.v",
+      "copy": "rtl/laser/auto_lock_uart.v",
+      "sha256": "753dd020f513c79c2c4e317a62ca78e7c43b2b3fe871f874854c00ff3db12df9"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/clock_manager.v",
+      "copy": "rtl/laser/clock_manager.v",
+      "sha256": "46e8d37a140d6c38cbd7efb2c198cfd66b6c6b8ac849e80bd9bbf3be068a9ff9"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/dac_interface.v",
+      "copy": "rtl/laser/dac_interface.v",
+      "sha256": "ff38e149fe78b54093f5ddee2d6600ac2ebf7f367aadfad1758b254804eac9ab"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/error_filter.v",
+      "copy": "rtl/laser/error_filter.v",
+      "sha256": "88d08a4ae09ad7e52bd42b4a238033087246c6c217a8b9448de9e376b36ab38b"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/hw_ad9122_tx.v",
+      "copy": "rtl/laser/hw_ad9122_tx.v",
+      "sha256": "325deb7bcda157e48ea1cb4539c8a04e5d9e8030fab54b7b8e2762c52637c64d"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/hw_ad9643_rx.v",
+      "copy": "rtl/laser/hw_ad9643_rx.v",
+      "sha256": "24f43aa051bfe2c097ed249ca8eac2deb793f08676f87c4c9b13f0b926864834"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/hw_clock_health.v",
+      "copy": "rtl/laser/hw_clock_health.v",
+      "sha256": "4f76491357d0ebb755e1370f7c52fc1c4f0ea4ff270a4448f8c95b6dbae8df6d"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/hw_fl4322_init.v",
+      "copy": "rtl/laser/hw_fl4322_init.v",
+      "sha256": "2b5d99f8f00fda111ed3e2d698412ceb538c3205a7fca3904b3945208dce264d"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/hw_fl4322_register_table.v",
+      "copy": "rtl/laser/hw_fl4322_register_table.v",
+      "sha256": "ec23d2b783eddc08ca136544990c1fedde96d30bed603b0bfeb7f7ec6b65b5e0"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/laser_actuator_output.v",
+      "copy": "rtl/laser/laser_actuator_output.v",
+      "sha256": "418201402b0e4b90a77a2e9b4756ba42455a7d567f2a16d2490e24171bc5b3e9"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/laser_dac_slew.v",
+      "copy": "rtl/laser/laser_dac_slew.v",
+      "sha256": "6595427252c8378334fa3b4a99c368b2313a4852905ebc8031946b1d8f0d952c"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/laser_lock_board_top.v",
+      "copy": "rtl/laser/laser_lock_board_top.v",
+      "sha256": "db70ef042375082d0ed3ab66143fb13b73e564e27ce269a8081f34d9e693a9f4"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/laser_lock_hw_top.v",
+      "copy": "rtl/laser/laser_lock_hw_top.v",
+      "sha256": "2ed8b96d21d64432e523fe94bd13ebf498c2675cefdc04615f61ad41009fff21"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/laser_lock_top.v",
+      "copy": "rtl/laser/laser_lock_top.v",
+      "sha256": "ffcfdbde73ed7a00da1cb5e2b7a74b05ca78ad58d136740c2502db434e5f3276"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/locking_error_normalizer.v",
+      "copy": "rtl/laser/locking_error_normalizer.v",
+      "sha256": "4a05bbde76029b3e5b2f630cc44e3e729df9b064531265ebfbcc13216e975808"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/lock_point_calibration.v",
+      "copy": "rtl/laser/lock_point_calibration.v",
+      "sha256": "2238981247773652580269edcfa98ea7f0b50e21ff70ee89fe38982b46204826"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/parameter_register.v",
+      "copy": "rtl/laser/parameter_register.v",
+      "sha256": "b171452f767ca0d3e3663a151858a3f7b5c95c5c28b4ec84da60fda4d72152c9"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/pi2d_controller.v",
+      "copy": "rtl/laser/pi2d_controller.v",
+      "sha256": "4cc0ad38bd75f386928dcfc8e6b0dcfd529f99590bdae77f1890d75b3102fce3"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/saturation.v",
+      "copy": "rtl/laser/saturation.v",
+      "sha256": "b4cef5d4d266ef4972d07dfcdbe6807ca7deca5399a3ba36018a73e3ebdbfb8a"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/laser/servo_scheduler.v",
+      "copy": "rtl/laser/servo_scheduler.v",
+      "sha256": "f7e4f320ff42cec9c42784cf3a7bc36195de7161a3f1cbace929a7b02d779e58"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/integration/top_sensor_integrated.v",
+      "copy": "rtl/integration/top_sensor_integrated.v",
+      "sha256": "ced96b75908b83fab71d3f8eb57650c834c38d5a3fa9b54c6687c55d5d08ef44"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/platform/reset_sync.v",
+      "copy": "rtl/platform/reset_sync.v",
+      "sha256": "075b523b504517140e96f66c9c5e593868ebb673f4b78738b4cae7ba816642c5"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/sensor_integrated_20261018/rtl/platform/uart_byte_tx.v",
+      "copy": "rtl/platform/uart_byte_tx.v",
+      "sha256": "282f85e4bc190b33dd8fb2fa4a396ad59f2695b1f86ef112ea4d318b68146949"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/adc_fft_tracking_20261014/sim/tb_ddc_decimator.sv",
+      "copy": "existing_tests/fft/tb_ddc_decimator.sv",
+      "sha256": "af19773e2bbedd87a685fe763e35835fc3383a60eb4d7404c1e480805d7664d2"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/adc_fft_tracking_20261014/sim/tb_measurement_dynamic.sv",
+      "copy": "existing_tests/fft/tb_measurement_dynamic.sv",
+      "sha256": "e7fd5f80af0a922b1dd7df491147153f7beadf4928a14c2b964344de621f4bdf"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/adc_fft_tracking_20261014/sim/tb_measurement_improved.sv",
+      "copy": "existing_tests/fft/tb_measurement_improved.sv",
+      "sha256": "ef7a1e4cac3080347231222c3ec2db154d8a50b64f8f696d9dc96ba7140db94b"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/adc_fft_tracking_20261014/sim/tb_measurement_recovery.sv",
+      "copy": "existing_tests/fft/tb_measurement_recovery.sv",
+      "sha256": "5517c05f17e51a220b4e7df933f21565313ad7266c59733a10c062632ea8009e"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/adc_fft_tracking_20261014/sim/tb_result_uart_v2.sv",
+      "copy": "existing_tests/fft/tb_result_uart_v2.sv",
+      "sha256": "1a26ca1662d935d13c18bb7a76e1ef6d337cd5cbf427c71397cd91e42df0bd66"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/adc_fft_tracking_20261014/sim/tb_spectral_estimator.sv",
+      "copy": "existing_tests/fft/tb_spectral_estimator.sv",
+      "sha256": "19195acdec57caca05fa50d16590bc0e89e79cb489fca29533783a2f3cea2fe7"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/tec_control_draft_20261017/integration/pid_snapshot/sim/tb_auto_lock_fsm.v",
+      "copy": "existing_tests/laser/tb_auto_lock_fsm.v",
+      "sha256": "19d7121bc9a4746be3af1417f3b518ce2287e51a2b965517a2d9158a94587e84"
+    },
+    {
+      "source": "E:/Codex/FPGA/projects/tec_control_draft_20261017/integration/pid_snapshot/sim/tb_auto_lock_uart.v",
+      "copy": "existing_tests/laser/tb_auto_lock_uart.v",
+      "sha256": "bab866124b530d92eef9debc4a36b1a5785053e485667add7b56b1b05e1caf68"
+    }
+  ]
+}

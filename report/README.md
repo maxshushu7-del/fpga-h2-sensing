@@ -1,14 +1,10 @@
-# 报告与协作记录
+# 报告与展示材料
 
-| 子目录或文件 | 内容 |
-|---|---|
-| `design/` | 确定提交版本的设计报告，正式上传使用PDF |
-| `ai_collaboration/` | 提示词、模型回答、反例、修改及回归的可追溯记录 |
-| `poster/` | AMD原模板英文海报，中文稿可作为交流材料附上 |
-| `media/` | 演示视频或大文件的固定下载入口 |
-| [reproduction.md](reproduction.md) | 从零复现说明的填写入口 |
-| [requirements.md](requirements.md) | AMD指南第22—26页的要求与目录对照 |
+- [技术报告PDF](design/design_report.pdf) / [Word](design/design_report.docx)
+- [中文海报](poster/poster_zh.pptx) / [英文海报](poster/poster_en.pptx)
+- [介绍PPT](media/system_introduction.pptx) / [视频](media/system_introduction.mp4)
+- [AI协作原记录入口](ai_collaboration/README.md)
+- [从零复现](reproduction.md)
+- [AMD要求](requirements.md) / [提交清单](submission_checklist.md)
 
-设计报告应呈现背景与前人工作、原理框图、软硬件划分及接口、优化前后性能与资源对比、AI协作、Skill提炼验证和从零复现说明。完整工程和技能材料分别放入对应目录，不能用报告中的文字替代。
-
-签名授权书按竞赛提交页面要求单独提交，不必放入公开仓库。照片入口见[board/photos](../board/photos/)。
+报告描述设计主线并选取代表案例；完整源码、技能与原始证据分别保存在仓库对应目录。纸面核心代码索引不代替独立工程包。

@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# xsim v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Nov  2 20:02:45 2026
+# Process ID: 26140
+# Current directory: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/deepseek_ordinary/sim_run
+# Command line: xsim.exe -log E:\Codex\FPGA\workspace\report_targeted_revision_20261102\ai_trial\deepseek_ordinary\logs\xsim_20261102T120242Z.log -mode tcl -source {xsim.dir/sim_sat_accum/xsim_script.tcl}
+# Log file: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/deepseek_ordinary/logs/xsim_20261102T120242Z.log
+# Journal file: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/deepseek_ordinary/sim_run\xsim.jou
+# Running On        :DESKTOP-K8LLODR
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26300
+# Processor Detail  :Intel(R) Core(TM) 7 240H
+# CPU Frequency     :2995 MHz
+# CPU Physical cores:10
+# CPU Logical cores :16
+# Host memory       :34045 MB
+# Swap memory       :8053 MB
+# Total Virtual     :42098 MB
+# Available Virtual :16658 MB
+#-----------------------------------------------------------
+source xsim.dir/sim_sat_accum/xsim_script.tcl
+# xsim {sim_sat_accum} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+[126000] FAIL: 200*127/128 rounds to 198, 1+198=199
+[136000] FAIL: back-pressure keeps m_y
+[146000] FAIL: idle with back-pressure keeps m_y
+[156000] FAIL: same-cycle replacement value
+[166000] FAIL: m_y holds with no new input
+[186000] FAIL: large positive increment, 199+32511
+[296000] FAIL: 10*127/128 rounds to 10
+[306000] FAIL: reset does not clear m_y before the edge
+RESULT: FAIL errors=8 checks=12154
+Fatal: tb_sat_accum_stream failed
+Time: 40366 ns  Iteration: 0  Process: /tb_sat_accum_stream/Initial189_2  Scope: tb_sat_accum_stream  File: E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/deepseek_ordinary/tb/tb_sat_accum_stream.sv Line: 342
+$finish called at time : 40366 ns
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 20:02:47 2026...

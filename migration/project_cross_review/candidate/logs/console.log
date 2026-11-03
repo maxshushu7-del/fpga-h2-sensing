@@ -1,0 +1,172 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/inputs/rtl/laser/auto_lock_fsm.v" into library work
+INFO: [VRFC 10-311] analyzing module auto_lock_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/tests/tb_auto_lock_candidate_endpoints.v" into library work
+INFO: [VRFC 10-311] analyzing module endpoint_case
+INFO: [VRFC 10-311] analyzing module final_max_case
+INFO: [VRFC 10-311] analyzing module tb_auto_lock_candidate_endpoints
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe tb_auto_lock_candidate_endpoints -s sim 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'dac_valid' remains unconnected for this instance [E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/tests/tb_auto_lock_candidate_endpoints.v:12]
+WARNING: [VRFC 10-3645] port 'dac_valid' remains unconnected for this instance [E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/tests/tb_auto_lock_candidate_endpoints.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.auto_lock_fsm(SETTLE_CLOCKS=0,AV...
+Compiling module work.endpoint_case(LEGACY=1)
+Compiling module work.final_max_case(LEGACY=1)
+Compiling module work.tb_auto_lock_candidate_endpoints
+Built simulation snapshot sim
+
+****** xsim v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Nov  2 21:33:38 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/sim/xsim_script.tcl
+# xsim {sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+ENDPOINT falling=0 legacy=1 state=7 reason=1 min_code=-1024 min=952 max=3000 selected=0 servo_enable=0
+PASS ENDPOINT_REJECTION falling=0
+FINAL_MAX legacy=1 state=7 reason=1 min_code=0 min=990 max=1090 half=0
+PASS LEGACY_COUNTEREXAMPLE: final maximum omitted from contrast decision
+ENDPOINT falling=1 legacy=1 state=6 reason=0 min_code=1024 min=952 max=3000 selected=-2 servo_enable=1
+PASS LEGACY_COUNTEREXAMPLE: falling endpoint minimum enters LOCKING
+PASS ENDPOINT_SUITE legacy=1 production SPAN=1024 STEP=2
+$finish called at time : 41070 ns : File "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/tests/tb_auto_lock_candidate_endpoints.v" Line 73
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 21:33:40 2026...
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/rtl/auto_lock_fsm.v" into library work
+INFO: [VRFC 10-311] analyzing module auto_lock_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/tests/tb_auto_lock_candidate_endpoints.v" into library work
+INFO: [VRFC 10-311] analyzing module endpoint_case
+INFO: [VRFC 10-311] analyzing module final_max_case
+INFO: [VRFC 10-311] analyzing module tb_auto_lock_candidate_endpoints
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe tb_auto_lock_candidate_endpoints -s sim 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'dac_valid' remains unconnected for this instance [E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/tests/tb_auto_lock_candidate_endpoints.v:12]
+WARNING: [VRFC 10-3645] port 'dac_valid' remains unconnected for this instance [E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/tests/tb_auto_lock_candidate_endpoints.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.auto_lock_fsm(SETTLE_CLOCKS=0,AV...
+Compiling module work.endpoint_case
+Compiling module work.final_max_case
+Compiling module work.tb_auto_lock_candidate_endpoints
+Built simulation snapshot sim
+
+****** xsim v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Nov  2 21:33:44 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/sim/xsim_script.tcl
+# xsim {sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+ENDPOINT falling=1 legacy=0 state=7 reason=1 min_code=1024 min=952 max=3000 selected=0 servo_enable=0
+PASS ENDPOINT_REJECTION falling=1
+ENDPOINT falling=0 legacy=0 state=7 reason=1 min_code=-1024 min=952 max=3000 selected=0 servo_enable=0
+PASS ENDPOINT_REJECTION falling=0
+FINAL_MAX legacy=0 state=3 reason=0 min_code=0 min=990 max=1090 half=1040
+PASS FINAL_MAX: updated contrast=100 accepted; half_level=(990+1090)/2=1040
+PASS ENDPOINT_SUITE legacy=0 production SPAN=1024 STEP=2
+$finish called at time : 20560 ns : File "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/tests/tb_auto_lock_candidate_endpoints.v" Line 73
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 21:33:46 2026...
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/inputs/rtl/laser/auto_lock_fsm.v" into library work
+INFO: [VRFC 10-311] analyzing module auto_lock_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/tests/tb_auto_lock_production_span.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_auto_lock_production_span
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe tb_auto_lock_production_span -s sim 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.auto_lock_fsm(SETTLE_CLOCKS=2,RE...
+Compiling module work.tb_auto_lock_production_span
+Built simulation snapshot sim
+
+****** xsim v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Nov  2 21:33:50 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/sim/xsim_script.tcl
+# xsim {sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS AUTO acquired production SPAN=1024 STEP=2 AVG_LOG2=2: setpoint=1650 selected=0 min_code=2 contrast=630
+PASS AUTO loss detection, reason=4
+PASS AUTO reacquisition attempts=2
+PASS AUTO flat rejection
+PASS PRODUCTION_SPAN_REGRESSION acquisition, loss, reacquisition, flat rejection
+$finish called at time : 627250 ns : File "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/tests/tb_auto_lock_production_span.v" Line 54
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 21:33:52 2026...
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/rtl/auto_lock_fsm.v" into library work
+INFO: [VRFC 10-311] analyzing module auto_lock_fsm
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/tests/tb_auto_lock_production_span.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_auto_lock_production_span
+Vivado Simulator v2024.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2024.1/bin/unwrapped/win64.o/xelab.exe tb_auto_lock_production_span -s sim 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.auto_lock_fsm(SETTLE_CLOCKS=2,RE...
+Compiling module work.tb_auto_lock_production_span
+Built simulation snapshot sim
+
+****** xsim v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Nov  2 21:33:55 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/sim/xsim_script.tcl
+# xsim {sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS AUTO acquired production SPAN=1024 STEP=2 AVG_LOG2=2: setpoint=1650 selected=0 min_code=2 contrast=630
+PASS AUTO loss detection, reason=4
+PASS AUTO reacquisition attempts=2
+PASS AUTO flat rejection
+PASS PRODUCTION_SPAN_REGRESSION acquisition, loss, reacquisition, flat rejection
+$finish called at time : 627250 ns : File "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/project_cross_review/candidate/tests/tb_auto_lock_production_span.v" Line 54
+exit
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 21:33:57 2026...

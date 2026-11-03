@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "evidence": "AUTHOR_EXECUTED_SIMULATION_AND_EXPLICIT_FAULT_INJECTION",
+  "rtl_sha256": "7DB30AA2B6C741DC0157DC8B17584D48003FA23B6103BF72ABB5B17516DFADC9",
+  "comparator_sha256": "3C8A5C144772B0C2F06CDCFE9645E05470ACE47E2BCAE03BCBED907AA00AA5B9",
+  "cases": [
+    {
+      "name": "good",
+      "outcome": "PASS",
+      "deliberately_injected": false,
+      "cycles": 1358,
+      "checks": 2199,
+      "outputs": 718,
+      "errors": 0,
+      "valid_errors": 0,
+      "value_errors": 0,
+      "comparison": "PASS",
+      "simulator_exit": 0,
+      "first_mismatch": null
+    },
+    {
+      "name": "rounding",
+      "outcome": "INJECTED_FAULT_REJECTED",
+      "deliberately_injected": true,
+      "cycles": 1358,
+      "checks": 2199,
+      "outputs": 718,
+      "errors": 127,
+      "valid_errors": 0,
+      "value_errors": 127,
+      "comparison": "FAIL",
+      "simulator_exit": 0,
+      "first_mismatch": "MISMATCH value cycle=15 sample_id=13 expected=0 actual=-1"
+    },
+    {
+      "name": "sign",
+      "outcome": "INJECTED_FAULT_REJECTED",
+      "deliberately_injected": true,
+      "cycles": 1358,
+      "checks": 2199,
+      "outputs": 718,
+      "errors": 340,
+      "valid_errors": 0,
+      "value_errors": 340,
+      "comparison": "FAIL",
+      "simulator_exit": 0,
+      "first_mismatch": "MISMATCH value cycle=15 sample_id=13 expected=0 actual=1536"
+    },
+    {
+      "name": "valid",
+      "outcome": "INJECTED_FAULT_REJECTED",
+      "deliberately_injected": true,
+      "cycles": 1358,
+      "checks": 2199,
+      "outputs": 792,
+      "errors": 470,
+      "valid_errors": 470,
+      "value_errors": 0,
+      "comparison": "FAIL",
+      "simulator_exit": 0,
+      "first_mismatch": "MISMATCH valid cycle=4 expected=0 actual=1"
+    },
+    {
+      "name": "restored",
+      "outcome": "PASS",
+      "deliberately_injected": false,
+      "cycles": 1358,
+      "checks": 2199,
+      "outputs": 718,
+      "errors": 0,
+      "valid_errors": 0,
+      "value_errors": 0,
+      "comparison": "PASS",
+      "simulator_exit": 0,
+      "first_mismatch": null
+    }
+  ],
+  "independent_user": false,
+  "hardware_tested": false,
+  "implementation_requested": true
+}

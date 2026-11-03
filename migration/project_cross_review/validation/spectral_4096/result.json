@@ -1,0 +1,45 @@
+{
+  "test": "spectral_4096",
+  "started_utc": "2026-11-02T13:20:26.588270+00:00",
+  "finished_utc": "2026-11-02T13:20:33.028568+00:00",
+  "source_hashes": [
+    {
+      "path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\spectral_estimator.v",
+      "sha256": "945d0e48cf38eb5afb56c5fb075304a9640f89c3a3d067bd11c12aed4ede1c9e"
+    },
+    {
+      "path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\tb_spectral_estimator_4096.sv",
+      "sha256": "bf5d9a45be1fc2b3dc3a5476a28612b63870795d036466aeba5402ab1ecbf7b4"
+    }
+  ],
+  "commands": [
+    {
+      "start_utc": "2026-11-02T13:20:26.588270+00:00",
+      "end_utc": "2026-11-02T13:20:27.597447+00:00",
+      "duration_seconds": 1.0,
+      "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\spectral_4096",
+      "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xvlog.bat --sv E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\spectral_estimator.v E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\tb_spectral_estimator_4096.sv",
+      "returncode": 0
+    },
+    {
+      "start_utc": "2026-11-02T13:20:27.598421+00:00",
+      "end_utc": "2026-11-02T13:20:29.628104+00:00",
+      "duration_seconds": 2.031,
+      "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\spectral_4096",
+      "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xelab.bat tb_spectral_estimator_4096 -s unit_snapshot",
+      "returncode": 0
+    },
+    {
+      "start_utc": "2026-11-02T13:20:29.630122+00:00",
+      "end_utc": "2026-11-02T13:20:33.012360+00:00",
+      "duration_seconds": 3.391,
+      "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\spectral_4096",
+      "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xsim.bat unit_snapshot -runall",
+      "returncode": 0
+    }
+  ],
+  "completion_marker": "ALL 19 PRODUCTION 4096 SPECTRAL CASES PASSED",
+  "completion_marker_found": true,
+  "fatal_or_error_found": false,
+  "passed": true
+}

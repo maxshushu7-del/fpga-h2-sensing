@@ -1,0 +1,95 @@
+{
+  "utc": "2026-11-02T13:19:47.712545+00:00",
+  "tests": [
+    {
+      "test": "spectral_existing",
+      "started_utc": "2026-11-02T13:19:32.600235+00:00",
+      "finished_utc": "2026-11-02T13:19:47.711488+00:00",
+      "source_hashes": [
+        {
+          "path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\spectral_estimator.v",
+          "sha256": "945d0e48cf38eb5afb56c5fb075304a9640f89c3a3d067bd11c12aed4ede1c9e"
+        },
+        {
+          "path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\fft\\tb_spectral_estimator.sv",
+          "sha256": "19195acdec57caca05fa50d16590bc0e89e79cb489fca29533783a2f3cea2fe7"
+        }
+      ],
+      "commands": [
+        {
+          "start_utc": "2026-11-02T13:19:32.600235+00:00",
+          "end_utc": "2026-11-02T13:19:35.882605+00:00",
+          "duration_seconds": 3.281,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\spectral_existing",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xvlog.bat --sv E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\measurement\\spectral_estimator.v E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\fft\\tb_spectral_estimator.sv",
+          "returncode": 0
+        },
+        {
+          "start_utc": "2026-11-02T13:19:35.885114+00:00",
+          "end_utc": "2026-11-02T13:19:41.209522+00:00",
+          "duration_seconds": 5.328,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\spectral_existing",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xelab.bat tb_spectral_estimator -s unit_snapshot",
+          "returncode": 0
+        },
+        {
+          "start_utc": "2026-11-02T13:19:41.210541+00:00",
+          "end_utc": "2026-11-02T13:19:47.694164+00:00",
+          "duration_seconds": 6.484,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\spectral_existing",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xsim.bat unit_snapshot -runall",
+          "returncode": 0
+        }
+      ],
+      "completion_marker": "ALL 18 SPECTRAL ESTIMATOR TESTS PASSED",
+      "completion_marker_found": true,
+      "fatal_or_error_found": false,
+      "passed": true
+    },
+    {
+      "test": "auto_lock_existing",
+      "started_utc": "2026-11-02T13:19:32.584187+00:00",
+      "finished_utc": "2026-11-02T13:19:47.666645+00:00",
+      "source_hashes": [
+        {
+          "path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\auto_lock_fsm.v",
+          "sha256": "eb9552dc8261f6a7734cede5e5de0eb47ec5a96dcddd50db151824cdd25cc333"
+        },
+        {
+          "path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\laser\\tb_auto_lock_fsm.v",
+          "sha256": "19d7121bc9a4746be3af1417f3b518ce2287e51a2b965517a2d9158a94587e84"
+        }
+      ],
+      "commands": [
+        {
+          "start_utc": "2026-11-02T13:19:32.584187+00:00",
+          "end_utc": "2026-11-02T13:19:35.882605+00:00",
+          "duration_seconds": 3.297,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\auto_lock_existing",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xvlog.bat --sv E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\rtl\\laser\\auto_lock_fsm.v E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\inputs\\existing_tests\\laser\\tb_auto_lock_fsm.v",
+          "returncode": 0
+        },
+        {
+          "start_utc": "2026-11-02T13:19:35.884109+00:00",
+          "end_utc": "2026-11-02T13:19:41.204496+00:00",
+          "duration_seconds": 5.312,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\auto_lock_existing",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xelab.bat tb_auto_lock_fsm -s unit_snapshot",
+          "returncode": 0
+        },
+        {
+          "start_utc": "2026-11-02T13:19:41.205524+00:00",
+          "end_utc": "2026-11-02T13:19:47.651591+00:00",
+          "duration_seconds": 6.453,
+          "cwd": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\project_cross_review\\validation\\auto_lock_existing",
+          "command": "E:\\Xilinx\\Vivado\\2024.1\\bin\\xsim.bat unit_snapshot -runall",
+          "returncode": 0
+        }
+      ],
+      "completion_marker": "PASS AUTO_FSM auto-acquire, loss/reacquire, flat-signal rejection",
+      "completion_marker_found": true,
+      "fatal_or_error_found": false,
+      "passed": true
+    }
+  ]
+}

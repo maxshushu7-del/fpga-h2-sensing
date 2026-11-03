@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/results/gpt_skill_first/candidate.sv" into library work
+INFO: [VRFC 10-311] analyzing module sat_accum_stream
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/acceptance/tb_sat_accum_stream.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_sat_accum_stream

@@ -1,0 +1,23 @@
+
+****** xsim v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Nov  2 18:57:45 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/acceptance_snapshot/xsim_script.tcl
+# xsim {acceptance_snapshot} -autoloadwcfg -runall -onfinish quit
+Time resolution is 1 ps
+run -all
+SAT_ACCUM_CATEGORY id=1 name=sign_zero_extremes status=PASS checks=1161
+SAT_ACCUM_CATEGORY id=2 name=rounding_half_neighbors status=PASS checks=2592
+SAT_ACCUM_CATEGORY id=3 name=saturation_hold_recovery status=PASS checks=564
+SAT_ACCUM_CATEGORY id=4 name=continuous_simultaneous_io status=PASS checks=2334
+SAT_ACCUM_CATEGORY id=5 name=long_backpressure_random status=PASS checks=7440
+SAT_ACCUM_CATEGORY id=6 name=pending_reset_restart status=PASS checks=330
+SAT_ACCUM_ACCEPTANCE_COMPLETE status=PASS seed=20261102 cycles=2404 checks=14421
+$finish called at time : 24046 ns : File "E:/Codex/FPGA/workspace/report_targeted_revision_20261102/ai_trial/acceptance/tb_sat_accum_stream.sv" Line 176
+exit 0
+INFO: [Common 17-206] Exiting xsim at Mon Nov  2 18:57:47 2026...

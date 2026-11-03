@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "seed": 20261102,
+  "start_utc": "2026-11-02T10:57:41.8531007Z",
+  "candidate_path": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\ai_trial\\gpt_skill\\first_acceptable\\rtl\\sat_accum_stream.sv",
+  "candidate_sha256": "5b08997e2a2e23bfe347ed4afaba070853b0230550e28b96fcab2ae9059974a0",
+  "manifest_sha256": "d9012df7ed9c047f88a0bd1d7073824bb1808514a7664f75da8799c4fe700bc9",
+  "output_directory": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\ai_trial\\results\\gpt_skill_first",
+  "completion_marker_found": true,
+  "testbench": {
+    "schema": 1,
+    "status": "PASS",
+    "seed": 20261102,
+    "cycles": 2404,
+    "signal_checks": 14421,
+    "input_handshakes": 962,
+    "output_handshakes": 953,
+    "simultaneous_handshakes": 675,
+    "stalled_cycles": 899,
+    "max_stall_run": 128,
+    "reset_cancellations": 9,
+    "first_counterexample": null,
+    "categories": [
+      {
+        "id": 1,
+        "name": "sign_zero_extremes",
+        "status": "PASS",
+        "signal_checks": 1161
+      },
+      {
+        "id": 2,
+        "name": "rounding_half_neighbors",
+        "status": "PASS",
+        "signal_checks": 2592
+      },
+      {
+        "id": 3,
+        "name": "saturation_hold_recovery",
+        "status": "PASS",
+        "signal_checks": 564
+      },
+      {
+        "id": 4,
+        "name": "continuous_simultaneous_io",
+        "status": "PASS",
+        "signal_checks": 2334
+      },
+      {
+        "id": 5,
+        "name": "long_backpressure_random",
+        "status": "PASS",
+        "signal_checks": 7440
+      },
+      {
+        "id": 6,
+        "name": "pending_reset_restart",
+        "status": "PASS",
+        "signal_checks": 330
+      }
+    ]
+  },
+  "error": null,
+  "stages": [
+    {
+      "name": "01_compile",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 1.053,
+      "stdout": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\ai_trial\\results\\gpt_skill_first\\01_compile.stdout.log",
+      "stderr": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\ai_trial\\results\\gpt_skill_first\\01_compile.stderr.log"
+    },
+    {
+      "name": "02_elaborate",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 1.58,
+      "stdout": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\ai_trial\\results\\gpt_skill_first\\02_elaborate.stdout.log",
+      "stderr": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\ai_trial\\results\\gpt_skill_first\\02_elaborate.stderr.log"
+    },
+    {
+      "name": "03_simulate",
+      "exit_code": 0,
+      "timed_out": false,
+      "seconds": 3.008,
+      "stdout": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\ai_trial\\results\\gpt_skill_first\\03_simulate.stdout.log",
+      "stderr": "E:\\Codex\\FPGA\\workspace\\report_targeted_revision_20261102\\ai_trial\\results\\gpt_skill_first\\03_simulate.stderr.log"
+    }
+  ],
+  "finish_utc": "2026-11-02T10:57:47.5723604Z"
+}

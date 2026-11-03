@@ -1,0 +1,12 @@
+{
+  "input_snapshot_files": 39,
+  "input_snapshot_sha256_matches": true,
+  "rtl_tests_executed_during_packaging": false,
+  "replay_adapter_validation": "Python AST and PowerShell parser only; no adapted RTL execution",
+  "project_evidence_path": "migration/project_cross_review",
+  "skills": [
+    "fpga-rtl-verification",
+    "fpga-vivado-diagnosis",
+    "fpga-cross-model-review"
+  ]
+}

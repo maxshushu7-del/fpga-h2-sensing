@@ -1,0 +1,157 @@
+{
+  "status": "FAIL",
+  "expected_transactions": 718,
+  "actual_transactions": 718,
+  "compared_transactions": 718,
+  "columns": [
+    "y"
+  ],
+  "absolute_tolerance_exact": "0",
+  "order_matches": true,
+  "missing_ids": [],
+  "unexpected_ids": [],
+  "value_mismatches": 340,
+  "first_differences": [
+    {
+      "sample_id": "13",
+      "column": "y",
+      "expected_exact": "0",
+      "actual_exact": "1536",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "35",
+      "column": "y",
+      "expected_exact": "-2",
+      "actual_exact": "1535",
+      "abs_error_exact": "1537"
+    },
+    {
+      "sample_id": "57",
+      "column": "y",
+      "expected_exact": "-768",
+      "actual_exact": "768",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "100",
+      "column": "y",
+      "expected_exact": "-3",
+      "actual_exact": "1533",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "101",
+      "column": "y",
+      "expected_exact": "-1",
+      "actual_exact": "1535",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "103",
+      "column": "y",
+      "expected_exact": "-6",
+      "actual_exact": "1530",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "104",
+      "column": "y",
+      "expected_exact": "-5",
+      "actual_exact": "1531",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "105",
+      "column": "y",
+      "expected_exact": "-5",
+      "actual_exact": "1531",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "107",
+      "column": "y",
+      "expected_exact": "-5",
+      "actual_exact": "1531",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "108",
+      "column": "y",
+      "expected_exact": "-5",
+      "actual_exact": "1531",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "109",
+      "column": "y",
+      "expected_exact": "-5",
+      "actual_exact": "1531",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "111",
+      "column": "y",
+      "expected_exact": "-5",
+      "actual_exact": "1531",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "112",
+      "column": "y",
+      "expected_exact": "-5",
+      "actual_exact": "1531",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "113",
+      "column": "y",
+      "expected_exact": "-5",
+      "actual_exact": "1531",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "115",
+      "column": "y",
+      "expected_exact": "-5",
+      "actual_exact": "1531",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "121",
+      "column": "y",
+      "expected_exact": "-768",
+      "actual_exact": "768",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "123",
+      "column": "y",
+      "expected_exact": "-2048",
+      "actual_exact": "-1024",
+      "abs_error_exact": "1024"
+    },
+    {
+      "sample_id": "131",
+      "column": "y",
+      "expected_exact": "-1280",
+      "actual_exact": "256",
+      "abs_error_exact": "1536"
+    },
+    {
+      "sample_id": "133",
+      "column": "y",
+      "expected_exact": "-2048",
+      "actual_exact": "-1280",
+      "abs_error_exact": "768"
+    },
+    {
+      "sample_id": "154",
+      "column": "y",
+      "expected_exact": "-151",
+      "actual_exact": "1385",
+      "abs_error_exact": "1536"
+    }
+  ],
+  "scope": "numeric accepted-transaction comparison, not cycle timing or hardware"
+}

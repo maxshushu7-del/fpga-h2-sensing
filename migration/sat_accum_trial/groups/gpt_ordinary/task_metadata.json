@@ -1,0 +1,36 @@
+{
+  "task_start_utc": "2026-11-02T10:22:22+00:00",
+  "task_end_utc": "2026-11-02T10:29:54.106868+00:00",
+  "first_declared_ready_utc": "2026-11-02T10:29:54.106868+00:00",
+  "start_basis": "First tool-observed UTC timestamp after reading project AGENTS.md.",
+  "group_label": "gpt_ordinary",
+  "actual_model_id": null,
+  "model_id_status": "No actual model ID exposed by environment; group label is not a model ID.",
+  "tools": {
+    "simulator": "Vivado 2024.1 XSim",
+    "python": "C:/Users/dell/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe"
+  },
+  "result": "PASS cycles=757132 accepted=388813 consumed=59977 cancelled=328836 blocked=19467 replaced=45006 positive_ties=2503 negative_ties=2518 positive_saturation=5780 negative_saturation=5817 resets=328926 seed=61eac4b9",
+  "rtl_failures": [],
+  "actual_failures_and_corrections": [
+    {
+      "failure": "Target group directory did not exist, and restricted New-Item was denied.",
+      "correction": "Obtained group write access and used an authorized elevated directory creation. All project output remained in this group."
+    },
+    {
+      "failure": "First elaboration failed XSIM 43-3409 and 43-3915. Diagnostic gcc execution in restricted environment reported invalid system DLL relocation.",
+      "correction": "Verified the same installed gcc --version succeeded in authorized normal execution; reran unchanged RTL and testbench with normal execution and passed."
+    }
+  ],
+  "validation_changes_after_first_pass": [
+    "Added registered-output stability check before rising edge, including synchronous reset timing.",
+    "Added a=-1 then r=32768 directed case to reject prematurely saturated rounded products."
+  ],
+  "unverified": [
+    "Synthesis",
+    "place and route",
+    "timing closure",
+    "hardware operation"
+  ],
+  "isolation": "Only own group files plus project AGENTS.md and installed tools inspected. No other candidate group or acceptance files read."
+}

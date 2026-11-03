@@ -1,0 +1,1587 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date              : Tue Nov  3 14:52:26 2026
+| Host              : Charon running 64-bit major release  (build 9200)
+| Command           : report_bus_skew -warn_on_violation -file laser_lock_hw_udp_only_top_bus_skew_routed.rpt -pb laser_lock_hw_udp_only_top_bus_skew_routed.pb -rpx laser_lock_hw_udp_only_top_bus_skew_routed.rpx
+| Design            : laser_lock_hw_udp_only_top
+| Device            : xcau15p-ffvb676
+| Speed File        : -2  PRODUCTION 1.30 03-14-2023
+| Design State      : Routed
+| Temperature Grade : I
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+Table of Contents
+-----------------
+1. Bus Skew Report Summary
+2. Bus Skew Report Per Constraint
+
+1. Bus Skew Report Summary
+--------------------------
+
+Id  Position  From                            To                              Corner  Requirement(ns)  Actual(ns)  Slack(ns)
+--  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
+1   85        [get_cells -hier -filter {NAME =~ *u_rx/mailbox_data_reg* && IS_SEQUENTIAL == 1}]
+                                              [get_cells -hier -filter {NAME =~ *u_rx/adc_data_out_reg* && IS_SEQUENTIAL == 1}]
+                                                                              Slow             10.000       0.580      9.420
+2   88        [get_cells -hier -filter {NAME =~ *u_rx/dropped_gray_source_reg* && IS_SEQUENTIAL == 1}]
+                                              [get_cells -hier -filter {NAME =~ *u_rx/drop_gray_sync1_reg* && IS_SEQUENTIAL == 1}]
+                                                                              Slow              4.000       0.970      3.030
+3   91        [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/tune_latched_reg* && IS_SEQUENTIAL == 1}]
+                                              [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/tune_adc_reg* && IS_SEQUENTIAL == 1}]
+                                                                              Slow              2.000       0.770      1.230
+4   94        [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/sum_i_reg* && IS_SEQUENTIAL == 1}]
+                                              [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/mean_i_reg* && IS_SEQUENTIAL == 1}]
+                                                                              Slow              4.000       0.407      3.593
+5   96        [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/sum_q_reg* && IS_SEQUENTIAL == 1}]
+                                              [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/mean_q_reg* && IS_SEQUENTIAL == 1}]
+                                                                              Slow              4.000       0.515      3.485
+6   98        [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/adc_clip_count_reg* && IS_SEQUENTIAL == 1}]
+                                              [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/clipped_samples_reg* && IS_SEQUENTIAL == 1}]
+                                                                              Slow              4.000       0.849      3.151
+7   104       [get_cells -hier -filter {NAME =~ *u_udp/snapshot_reg* && IS_SEQUENTIAL == 1}]
+                                              [get_cells -hier -filter {NAME =~ *u_udp/eth_payload_reg* && IS_SEQUENTIAL == 1}]
+                                                                              Slow              8.000       0.665      7.335
+8   108       [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[3]}]]
+                                              [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[3]}]]
+                                                                              Slow             10.000       0.314      9.686
+9   110       [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]}]]
+                                              [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]}]]
+                                                                              Slow             10.000       0.329      9.671
+10  113       [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[3]}]]
+                                              [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[3]}]]
+                                                                              Slow             10.000       0.328      9.672
+11  115       [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]}]]
+                                              [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]}]]
+                                                                              Slow             10.000       0.322      9.678
+
+
+2. Bus Skew Report Per Constraint
+---------------------------------
+
+Id: 1
+set_bus_skew -from [get_cells -hier -filter {NAME =~ *u_rx/mailbox_data_reg* && IS_SEQUENTIAL == 1}] -to [get_cells -hier -filter {NAME =~ *u_rx/adc_data_out_reg* && IS_SEQUENTIAL == 1}] 10.000
+Requirement: 10.000ns
+Endpoints: 14
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+dco_capture_unbuffered
+                      work_unbuffered       u_integrated/u_rx/adc_data_out_reg[7]/D
+                                                                            u_integrated/u_rx/adc_data_out_reg[1]/D
+                                                                                                            Slow         0.580      9.420
+
+
+Slack (MET) :             9.420ns  (requirement - actual skew)
+  Endpoint Source:        u_integrated/u_rx/mailbox_data_reg[7]/C
+                            (rising edge-triggered cell FDCE clocked by dco_capture_unbuffered)
+  Endpoint Destination:   u_integrated/u_rx/adc_data_out_reg[7]/D
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Reference Source:       u_integrated/u_rx/mailbox_data_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by dco_capture_unbuffered)
+  Reference Destination:  u_integrated/u_rx/adc_data_out_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:   -1.357ns
+  Reference Relative Delay:  -1.903ns
+  Relative CRPR:             -0.034ns
+  Actual Bus Skew:            0.580ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock dco_capture_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    V23                                               0.000     0.000 r  adc_dco_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_rx/u_dco_ibuf/I
+    HPIOBDIFFINBUF_X0Y34 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.634     0.734 r  u_integrated/u_rx/u_dco_ibuf/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.784    u_integrated/u_rx/u_dco_ibuf/OUT
+    V23                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.784 r  u_integrated/u_rx/u_dco_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.397     1.181    u_integrated/u_rx/dco_ibuf
+    MMCM_X0Y1            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.987    -1.806 r  u_integrated/u_rx/u_dco_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245    -1.561    u_integrated/u_rx/dco_capture_unbuffered
+    BUFGCE_X0Y43         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028    -1.533 r  u_integrated/u_rx/u_dco_bufg/O
+    X0Y0 (CLOCK_ROOT)    net (fo=1584, routed)        1.760     0.227    u_integrated/u_rx/adc_clk_out
+    SLICE_X29Y75         FDCE                                         r  u_integrated/u_rx/mailbox_data_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X29Y75         FDCE (Prop_DFF_SLICEL_C_Q)
+                                                      0.079     0.306 r  u_integrated/u_rx/mailbox_data_reg[7]/Q
+                         net (fo=2, routed)           0.326     0.632    u_integrated/u_rx/mailbox_data[7]
+    SLICE_X29Y74         LUT3 (Prop_A6LUT_SLICEL_I2_O)
+                                                      0.149     0.781 r  u_integrated/u_rx/adc_data_out[7]_i_1/O
+                         net (fo=1, routed)           0.048     0.829    u_integrated/u_rx/adc_data_out[7]_i_1_n_0
+    SLICE_X29Y74         FDCE                                         r  u_integrated/u_rx/adc_data_out_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.520     0.599 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.639    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.298     0.937    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.961 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.074     2.035    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.776     0.259 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215     0.474    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.498 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.664     2.161    u_integrated/u_rx/clk_work
+    SLICE_X29Y74         FDCE                                         r  u_integrated/u_rx/adc_data_out_reg[7]/C
+                         clock pessimism              0.000     2.161    
+    SLICE_X29Y74         FDCE (Setup_AFF_SLICEL_C_D)
+                                                      0.025     2.186    u_integrated/u_rx/adc_data_out_reg[7]
+  -------------------------------------------------------------------
+                         data arrival                           0.829    
+                         clock arrival                          2.186    
+  -------------------------------------------------------------------
+                         relative delay                        -1.357    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock dco_capture_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    V23                                               0.000     0.000 r  adc_dco_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_rx/u_dco_ibuf/I
+    HPIOBDIFFINBUF_X0Y34 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.524     0.603 r  u_integrated/u_rx/u_dco_ibuf/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.643    u_integrated/u_rx/u_dco_ibuf/OUT
+    V23                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.643 r  u_integrated/u_rx/u_dco_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.344     0.987    u_integrated/u_rx/dco_ibuf
+    MMCM_X0Y1            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.567    -1.580 r  u_integrated/u_rx/u_dco_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215    -1.365    u_integrated/u_rx/dco_capture_unbuffered
+    BUFGCE_X0Y43         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024    -1.341 r  u_integrated/u_rx/u_dco_bufg/O
+    X0Y0 (CLOCK_ROOT)    net (fo=1584, routed)        1.544     0.203    u_integrated/u_rx/adc_clk_out
+    SLICE_X28Y74         FDCE                                         r  u_integrated/u_rx/mailbox_data_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y74         FDCE (Prop_CFF_SLICEM_C_Q)
+                                                      0.058     0.261 r  u_integrated/u_rx/mailbox_data_reg[1]/Q
+                         net (fo=2, routed)           0.043     0.304    u_integrated/u_rx/mailbox_data[1]
+    SLICE_X28Y73         LUT3 (Prop_G6LUT_SLICEM_I2_O)
+                                                      0.022     0.326 r  u_integrated/u_rx/adc_data_out[1]_i_1/O
+                         net (fo=1, routed)           0.030     0.356    u_integrated/u_rx/adc_data_out[1]_i_1_n_0
+    SLICE_X28Y73         FDCE                                         r  u_integrated/u_rx/adc_data_out_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.629     0.729 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.779    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.779 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.335     1.114    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.142 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.206     2.348    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.318     0.030 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245     0.275    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.303 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.895     2.198    u_integrated/u_rx/clk_work
+    SLICE_X28Y73         FDCE                                         r  u_integrated/u_rx/adc_data_out_reg[1]/C
+                         clock pessimism              0.000     2.198    
+    SLICE_X28Y73         FDCE (Hold_GFF_SLICEM_C_D)
+                                                      0.060     2.258    u_integrated/u_rx/adc_data_out_reg[1]
+  -------------------------------------------------------------------
+                         data arrival                           0.356    
+                         clock arrival                          2.258    
+  -------------------------------------------------------------------
+                         relative delay                        -1.903    
+
+
+
+Id: 2
+set_bus_skew -from [get_cells -hier -filter {NAME =~ *u_rx/dropped_gray_source_reg* && IS_SEQUENTIAL == 1}] -to [get_cells -hier -filter {NAME =~ *u_rx/drop_gray_sync1_reg* && IS_SEQUENTIAL == 1}] 4.000
+Requirement: 4.000ns
+Endpoints: 32
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+dco_capture_unbuffered
+                      work_unbuffered       u_integrated/u_rx/drop_gray_sync1_reg[31]/D
+                                                                            u_integrated/u_rx/drop_gray_sync1_reg[14]/D
+                                                                                                            Slow         0.970      3.030
+
+
+Slack (MET) :             3.030ns  (requirement - actual skew)
+  Endpoint Source:        u_integrated/u_rx/dropped_gray_source_reg[31]/C
+                            (rising edge-triggered cell FDCE clocked by dco_capture_unbuffered)
+  Endpoint Destination:   u_integrated/u_rx/drop_gray_sync1_reg[31]/D
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Reference Source:       u_integrated/u_rx/dropped_gray_source_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by dco_capture_unbuffered)
+  Reference Destination:  u_integrated/u_rx/drop_gray_sync1_reg[14]/D
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            4.000ns
+  Endpoint Relative Delay:   -1.042ns
+  Reference Relative Delay:  -1.901ns
+  Relative CRPR:             -0.111ns
+  Actual Bus Skew:            0.970ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock dco_capture_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    V23                                               0.000     0.000 r  adc_dco_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_rx/u_dco_ibuf/I
+    HPIOBDIFFINBUF_X0Y34 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.634     0.734 r  u_integrated/u_rx/u_dco_ibuf/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.784    u_integrated/u_rx/u_dco_ibuf/OUT
+    V23                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.784 r  u_integrated/u_rx/u_dco_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.397     1.181    u_integrated/u_rx/dco_ibuf
+    MMCM_X0Y1            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.987    -1.806 r  u_integrated/u_rx/u_dco_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245    -1.561    u_integrated/u_rx/dco_capture_unbuffered
+    BUFGCE_X0Y43         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028    -1.533 r  u_integrated/u_rx/u_dco_bufg/O
+    X0Y0 (CLOCK_ROOT)    net (fo=1584, routed)        1.782     0.249    u_integrated/u_rx/adc_clk_out
+    SLICE_X42Y48         FDCE                                         r  u_integrated/u_rx/dropped_gray_source_reg[31]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y48         FDCE (Prop_HFF2_SLICEM_C_Q)
+                                                      0.078     0.327 r  u_integrated/u_rx/dropped_gray_source_reg[31]/Q
+                         net (fo=1, routed)           0.733     1.060    u_integrated/u_rx/dropped_gray_source_reg_n_0_[31]
+    SLICE_X42Y48         LUT2 (Prop_C6LUT_SLICEM_I0_O)
+                                                      0.123     1.183 r  u_integrated/u_rx/drop_gray_sync1[31]_i_1/O
+                         net (fo=1, routed)           0.066     1.249    u_integrated/u_rx/drop_gray_sync1[31]_i_1_n_0
+    SLICE_X42Y48         FDCE                                         r  u_integrated/u_rx/drop_gray_sync1_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.520     0.599 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.639    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.298     0.937    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.961 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.074     2.035    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.776     0.259 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215     0.474    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.498 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.769     2.267    u_integrated/u_rx/clk_work
+    SLICE_X42Y48         FDCE                                         r  u_integrated/u_rx/drop_gray_sync1_reg[31]/C
+                         clock pessimism              0.000     2.267    
+    SLICE_X42Y48         FDCE (Setup_CFF_SLICEM_C_D)
+                                                      0.025     2.292    u_integrated/u_rx/drop_gray_sync1_reg[31]
+  -------------------------------------------------------------------
+                         data arrival                           1.249    
+                         clock arrival                          2.292    
+  -------------------------------------------------------------------
+                         relative delay                        -1.042    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock dco_capture_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    V23                                               0.000     0.000 r  adc_dco_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_rx/u_dco_ibuf/I
+    HPIOBDIFFINBUF_X0Y34 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.524     0.603 r  u_integrated/u_rx/u_dco_ibuf/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.643    u_integrated/u_rx/u_dco_ibuf/OUT
+    V23                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.643 r  u_integrated/u_rx/u_dco_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.344     0.987    u_integrated/u_rx/dco_ibuf
+    MMCM_X0Y1            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.567    -1.580 r  u_integrated/u_rx/u_dco_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215    -1.365    u_integrated/u_rx/dco_capture_unbuffered
+    BUFGCE_X0Y43         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024    -1.341 r  u_integrated/u_rx/u_dco_bufg/O
+    X0Y0 (CLOCK_ROOT)    net (fo=1584, routed)        1.617     0.276    u_integrated/u_rx/adc_clk_out
+    SLICE_X44Y44         FDCE                                         r  u_integrated/u_rx/dropped_gray_source_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y44         FDCE (Prop_GFF_SLICEM_C_Q)
+                                                      0.058     0.334 r  u_integrated/u_rx/dropped_gray_source_reg[14]/Q
+                         net (fo=1, routed)           0.089     0.423    u_integrated/u_rx/dropped_gray_source_reg_n_0_[14]
+    SLICE_X44Y44         LUT2 (Prop_C6LUT_SLICEM_I0_O)
+                                                      0.035     0.458 r  u_integrated/u_rx/drop_gray_sync1[14]_i_1/O
+                         net (fo=1, routed)           0.035     0.493    u_integrated/u_rx/drop_gray_sync1[14]_i_1_n_0
+    SLICE_X44Y44         FDCE                                         r  u_integrated/u_rx/drop_gray_sync1_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.629     0.729 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.779    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.779 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.335     1.114    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.142 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.206     2.348    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.318     0.030 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245     0.275    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.303 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       2.031     2.334    u_integrated/u_rx/clk_work
+    SLICE_X44Y44         FDCE                                         r  u_integrated/u_rx/drop_gray_sync1_reg[14]/C
+                         clock pessimism              0.000     2.334    
+    SLICE_X44Y44         FDCE (Hold_CFF_SLICEM_C_D)
+                                                      0.060     2.394    u_integrated/u_rx/drop_gray_sync1_reg[14]
+  -------------------------------------------------------------------
+                         data arrival                           0.493    
+                         clock arrival                          2.394    
+  -------------------------------------------------------------------
+                         relative delay                        -1.901    
+
+
+
+Id: 3
+set_bus_skew -from [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/tune_latched_reg* && IS_SEQUENTIAL == 1}] -to [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/tune_adc_reg* && IS_SEQUENTIAL == 1}] 2.000
+Requirement: 2.000ns
+Endpoints: 32
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+work_unbuffered       dco_capture_unbuffered
+                                            u_integrated/u_measurement/u_snapshot/tune_adc_reg[8]/D
+                                                                            u_integrated/u_measurement/u_snapshot/tune_adc_reg[10]/D
+                                                                                                            Slow         0.770      1.230
+
+
+Slack (MET) :             1.230ns  (requirement - actual skew)
+  Endpoint Source:        u_integrated/u_measurement/u_snapshot/tune_latched_reg[8]/C
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Endpoint Destination:   u_integrated/u_measurement/u_snapshot/tune_adc_reg[8]/D
+                            (rising edge-triggered cell FDCE clocked by dco_capture_unbuffered)
+  Reference Source:       u_integrated/u_measurement/u_snapshot/tune_latched_reg[10]/C
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Reference Destination:  u_integrated/u_measurement/u_snapshot/tune_adc_reg[10]/D
+                            (rising edge-triggered cell FDCE clocked by dco_capture_unbuffered)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            2.000ns
+  Endpoint Relative Delay:    2.731ns
+  Reference Relative Delay:   2.094ns
+  Relative CRPR:             -0.133ns
+  Actual Bus Skew:            0.770ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.629     0.729 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.779    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.779 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.335     1.114    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.142 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.206     2.348    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.318     0.030 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245     0.275    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.303 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.846     2.149    u_integrated/u_measurement/u_snapshot/clk_work_out
+    SLICE_X24Y90         FDCE                                         r  u_integrated/u_measurement/u_snapshot/tune_latched_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X24Y90         FDCE (Prop_EFF2_SLICEM_C_Q)
+                                                      0.079     2.228 r  u_integrated/u_measurement/u_snapshot/tune_latched_reg[8]/Q
+                         net (fo=1, routed)           0.704     2.932    u_integrated/u_measurement/u_snapshot/tune_latched[8]
+    SLICE_X24Y90         FDCE                                         r  u_integrated/u_measurement/u_snapshot/tune_adc_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock dco_capture_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    V23                                               0.000     0.000 r  adc_dco_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_rx/u_dco_ibuf/I
+    HPIOBDIFFINBUF_X0Y34 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.524     0.603 r  u_integrated/u_rx/u_dco_ibuf/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.643    u_integrated/u_rx/u_dco_ibuf/OUT
+    V23                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.643 r  u_integrated/u_rx/u_dco_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.344     0.987    u_integrated/u_rx/dco_ibuf
+    MMCM_X0Y1            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.567    -1.580 r  u_integrated/u_rx/u_dco_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215    -1.365    u_integrated/u_rx/dco_capture_unbuffered
+    BUFGCE_X0Y43         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024    -1.341 r  u_integrated/u_rx/u_dco_bufg/O
+    X0Y0 (CLOCK_ROOT)    net (fo=1584, routed)        1.517     0.176    u_integrated/u_measurement/u_snapshot/adc_clk_out
+    SLICE_X24Y90         FDCE                                         r  u_integrated/u_measurement/u_snapshot/tune_adc_reg[8]/C
+                         clock pessimism              0.000     0.176    
+    SLICE_X24Y90         FDCE (Setup_DFF2_SLICEM_C_D)
+                                                      0.025     0.201    u_integrated/u_measurement/u_snapshot/tune_adc_reg[8]
+  -------------------------------------------------------------------
+                         data arrival                           2.932    
+                         clock arrival                          0.201    
+  -------------------------------------------------------------------
+                         relative delay                         2.731    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.520     0.599 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.639    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.298     0.937    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.961 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.074     2.035    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.776     0.259 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215     0.474    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.498 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.658     2.155    u_integrated/u_measurement/u_snapshot/clk_work_out
+    SLICE_X28Y91         FDCE                                         r  u_integrated/u_measurement/u_snapshot/tune_latched_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y91         FDCE (Prop_DFF2_SLICEM_C_Q)
+                                                      0.061     2.216 r  u_integrated/u_measurement/u_snapshot/tune_latched_reg[10]/Q
+                         net (fo=1, routed)           0.158     2.374    u_integrated/u_measurement/u_snapshot/tune_latched[10]
+    SLICE_X25Y94         FDCE                                         r  u_integrated/u_measurement/u_snapshot/tune_adc_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock dco_capture_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    V23                                               0.000     0.000 r  adc_dco_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_rx/u_dco_ibuf/I
+    HPIOBDIFFINBUF_X0Y34 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.634     0.734 r  u_integrated/u_rx/u_dco_ibuf/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.784    u_integrated/u_rx/u_dco_ibuf/OUT
+    V23                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.784 r  u_integrated/u_rx/u_dco_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.397     1.181    u_integrated/u_rx/dco_ibuf
+    MMCM_X0Y1            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.987    -1.806 r  u_integrated/u_rx/u_dco_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245    -1.561    u_integrated/u_rx/dco_capture_unbuffered
+    BUFGCE_X0Y43         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028    -1.533 r  u_integrated/u_rx/u_dco_bufg/O
+    X0Y0 (CLOCK_ROOT)    net (fo=1584, routed)        1.753     0.220    u_integrated/u_measurement/u_snapshot/adc_clk_out
+    SLICE_X25Y94         FDCE                                         r  u_integrated/u_measurement/u_snapshot/tune_adc_reg[10]/C
+                         clock pessimism              0.000     0.220    
+    SLICE_X25Y94         FDCE (Hold_AFF_SLICEM_C_D)
+                                                      0.060     0.280    u_integrated/u_measurement/u_snapshot/tune_adc_reg[10]
+  -------------------------------------------------------------------
+                         data arrival                           2.374    
+                         clock arrival                          0.280    
+  -------------------------------------------------------------------
+                         relative delay                         2.094    
+
+
+
+Id: 4
+set_bus_skew -from [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/sum_i_reg* && IS_SEQUENTIAL == 1}] -to [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/mean_i_reg* && IS_SEQUENTIAL == 1}] 4.000
+Requirement: 4.000ns
+Endpoints: 16
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+dco_capture_unbuffered
+                      work_unbuffered       u_integrated/u_measurement/u_snapshot/mean_i_reg[10]/D
+                                                                            u_integrated/u_measurement/u_snapshot/mean_i_reg[2]/D
+                                                                                                            Slow         0.407      3.593
+
+
+Slack (MET) :             3.593ns  (requirement - actual skew)
+  Endpoint Source:        u_integrated/u_measurement/u_snapshot/sum_i_reg[22]/C
+                            (rising edge-triggered cell FDCE clocked by dco_capture_unbuffered)
+  Endpoint Destination:   u_integrated/u_measurement/u_snapshot/mean_i_reg[10]/D
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Reference Source:       u_integrated/u_measurement/u_snapshot/sum_i_reg[14]/C
+                            (rising edge-triggered cell FDCE clocked by dco_capture_unbuffered)
+  Reference Destination:  u_integrated/u_measurement/u_snapshot/mean_i_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            4.000ns
+  Endpoint Relative Delay:   -1.456ns
+  Reference Relative Delay:  -1.851ns
+  Relative CRPR:             -0.011ns
+  Actual Bus Skew:            0.407ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock dco_capture_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    V23                                               0.000     0.000 r  adc_dco_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_rx/u_dco_ibuf/I
+    HPIOBDIFFINBUF_X0Y34 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.634     0.734 r  u_integrated/u_rx/u_dco_ibuf/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.784    u_integrated/u_rx/u_dco_ibuf/OUT
+    V23                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.784 r  u_integrated/u_rx/u_dco_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.397     1.181    u_integrated/u_rx/dco_ibuf
+    MMCM_X0Y1            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.987    -1.806 r  u_integrated/u_rx/u_dco_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245    -1.561    u_integrated/u_rx/dco_capture_unbuffered
+    BUFGCE_X0Y43         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028    -1.533 r  u_integrated/u_rx/u_dco_bufg/O
+    X0Y0 (CLOCK_ROOT)    net (fo=1584, routed)        1.802     0.270    u_integrated/u_measurement/u_snapshot/adc_clk_out
+    SLICE_X7Y99          FDCE                                         r  u_integrated/u_measurement/u_snapshot/sum_i_reg[22]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y99          FDCE (Prop_GFF_SLICEM_C_Q)
+                                                      0.078     0.348 r  u_integrated/u_measurement/u_snapshot/sum_i_reg[22]/Q
+                         net (fo=2, routed)           0.405     0.753    u_integrated/u_measurement/u_snapshot/p_0_in__0[10]
+    SLICE_X7Y100         FDCE                                         r  u_integrated/u_measurement/u_snapshot/mean_i_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.520     0.599 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.639    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.298     0.937    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.961 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.074     2.035    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.776     0.259 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215     0.474    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.498 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.686     2.184    u_integrated/u_measurement/u_snapshot/clk_work_out
+    SLICE_X7Y100         FDCE                                         r  u_integrated/u_measurement/u_snapshot/mean_i_reg[10]/C
+                         clock pessimism              0.000     2.184    
+    SLICE_X7Y100         FDCE (Setup_EFF_SLICEM_C_D)
+                                                      0.025     2.209    u_integrated/u_measurement/u_snapshot/mean_i_reg[10]
+  -------------------------------------------------------------------
+                         data arrival                           0.753    
+                         clock arrival                          2.209    
+  -------------------------------------------------------------------
+                         relative delay                        -1.456    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock dco_capture_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    V23                                               0.000     0.000 r  adc_dco_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_rx/u_dco_ibuf/I
+    HPIOBDIFFINBUF_X0Y34 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.524     0.603 r  u_integrated/u_rx/u_dco_ibuf/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.643    u_integrated/u_rx/u_dco_ibuf/OUT
+    V23                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.643 r  u_integrated/u_rx/u_dco_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.344     0.987    u_integrated/u_rx/dco_ibuf
+    MMCM_X0Y1            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.567    -1.580 r  u_integrated/u_rx/u_dco_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215    -1.365    u_integrated/u_rx/dco_capture_unbuffered
+    BUFGCE_X0Y43         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024    -1.341 r  u_integrated/u_rx/u_dco_bufg/O
+    X0Y0 (CLOCK_ROOT)    net (fo=1584, routed)        1.592     0.251    u_integrated/u_measurement/u_snapshot/adc_clk_out
+    SLICE_X7Y98          FDCE                                         r  u_integrated/u_measurement/u_snapshot/sum_i_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y98          FDCE (Prop_GFF_SLICEM_C_Q)
+                                                      0.058     0.309 r  u_integrated/u_measurement/u_snapshot/sum_i_reg[14]/Q
+                         net (fo=2, routed)           0.100     0.409    u_integrated/u_measurement/u_snapshot/p_0_in__0[2]
+    SLICE_X7Y100         FDCE                                         r  u_integrated/u_measurement/u_snapshot/mean_i_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.629     0.729 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.779    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.779 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.335     1.114    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.142 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.206     2.348    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.318     0.030 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245     0.275    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.303 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.897     2.200    u_integrated/u_measurement/u_snapshot/clk_work_out
+    SLICE_X7Y100         FDCE                                         r  u_integrated/u_measurement/u_snapshot/mean_i_reg[2]/C
+                         clock pessimism              0.000     2.200    
+    SLICE_X7Y100         FDCE (Hold_GFF_SLICEM_C_D)
+                                                      0.060     2.260    u_integrated/u_measurement/u_snapshot/mean_i_reg[2]
+  -------------------------------------------------------------------
+                         data arrival                           0.409    
+                         clock arrival                          2.260    
+  -------------------------------------------------------------------
+                         relative delay                        -1.851    
+
+
+
+Id: 5
+set_bus_skew -from [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/sum_q_reg* && IS_SEQUENTIAL == 1}] -to [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/mean_q_reg* && IS_SEQUENTIAL == 1}] 4.000
+Requirement: 4.000ns
+Endpoints: 16
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+dco_capture_unbuffered
+                      work_unbuffered       u_integrated/u_measurement/u_snapshot/mean_q_reg[14]/D
+                                                                            u_integrated/u_measurement/u_snapshot/mean_q_reg[9]/D
+                                                                                                            Slow         0.515      3.485
+
+
+Slack (MET) :             3.485ns  (requirement - actual skew)
+  Endpoint Source:        u_integrated/u_measurement/u_snapshot/sum_q_reg[26]/C
+                            (rising edge-triggered cell FDCE clocked by dco_capture_unbuffered)
+  Endpoint Destination:   u_integrated/u_measurement/u_snapshot/mean_q_reg[14]/D
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Reference Source:       u_integrated/u_measurement/u_snapshot/sum_q_reg[21]/C
+                            (rising edge-triggered cell FDCE clocked by dco_capture_unbuffered)
+  Reference Destination:  u_integrated/u_measurement/u_snapshot/mean_q_reg[9]/D
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            4.000ns
+  Endpoint Relative Delay:   -1.377ns
+  Reference Relative Delay:  -1.893ns
+  Relative CRPR:              0.002ns
+  Actual Bus Skew:            0.515ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock dco_capture_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    V23                                               0.000     0.000 r  adc_dco_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_rx/u_dco_ibuf/I
+    HPIOBDIFFINBUF_X0Y34 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.634     0.734 r  u_integrated/u_rx/u_dco_ibuf/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.784    u_integrated/u_rx/u_dco_ibuf/OUT
+    V23                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.784 r  u_integrated/u_rx/u_dco_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.397     1.181    u_integrated/u_rx/dco_ibuf
+    MMCM_X0Y1            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.987    -1.806 r  u_integrated/u_rx/u_dco_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245    -1.561    u_integrated/u_rx/dco_capture_unbuffered
+    BUFGCE_X0Y43         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028    -1.533 r  u_integrated/u_rx/u_dco_bufg/O
+    X0Y0 (CLOCK_ROOT)    net (fo=1584, routed)        1.744     0.211    u_integrated/u_measurement/u_snapshot/adc_clk_out
+    SLICE_X19Y101        FDCE                                         r  u_integrated/u_measurement/u_snapshot/sum_q_reg[26]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X19Y101        FDCE (Prop_CFF_SLICEM_C_Q)
+                                                      0.078     0.289 r  u_integrated/u_measurement/u_snapshot/sum_q_reg[26]/Q
+                         net (fo=2, routed)           0.518     0.808    u_integrated/u_measurement/u_snapshot/sum_q_reg[26]
+    SLICE_X19Y102        FDCE                                         r  u_integrated/u_measurement/u_snapshot/mean_q_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.520     0.599 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.639    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.298     0.937    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.961 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.074     2.035    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.776     0.259 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215     0.474    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.498 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.662     2.159    u_integrated/u_measurement/u_snapshot/clk_work_out
+    SLICE_X19Y102        FDCE                                         r  u_integrated/u_measurement/u_snapshot/mean_q_reg[14]/C
+                         clock pessimism              0.000     2.159    
+    SLICE_X19Y102        FDCE (Setup_FFF2_SLICEM_C_D)
+                                                      0.025     2.184    u_integrated/u_measurement/u_snapshot/mean_q_reg[14]
+  -------------------------------------------------------------------
+                         data arrival                           0.808    
+                         clock arrival                          2.184    
+  -------------------------------------------------------------------
+                         relative delay                        -1.377    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock dco_capture_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    V23                                               0.000     0.000 r  adc_dco_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_rx/u_dco_ibuf/I
+    HPIOBDIFFINBUF_X0Y34 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.524     0.603 r  u_integrated/u_rx/u_dco_ibuf/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.643    u_integrated/u_rx/u_dco_ibuf/OUT
+    V23                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.643 r  u_integrated/u_rx/u_dco_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.344     0.987    u_integrated/u_rx/dco_ibuf
+    MMCM_X0Y1            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.567    -1.580 r  u_integrated/u_rx/u_dco_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215    -1.365    u_integrated/u_rx/dco_capture_unbuffered
+    BUFGCE_X0Y43         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024    -1.341 r  u_integrated/u_rx/u_dco_bufg/O
+    X0Y0 (CLOCK_ROOT)    net (fo=1584, routed)        1.547     0.206    u_integrated/u_measurement/u_snapshot/adc_clk_out
+    SLICE_X19Y100        FDCE                                         r  u_integrated/u_measurement/u_snapshot/sum_q_reg[21]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X19Y100        FDCE (Prop_FFF_SLICEM_C_Q)
+                                                      0.057     0.263 r  u_integrated/u_measurement/u_snapshot/sum_q_reg[21]/Q
+                         net (fo=2, routed)           0.096     0.359    u_integrated/u_measurement/u_snapshot/sum_q_reg[21]
+    SLICE_X19Y102        FDCE                                         r  u_integrated/u_measurement/u_snapshot/mean_q_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.629     0.729 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.779    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.779 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.335     1.114    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.142 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.206     2.348    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.318     0.030 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245     0.275    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.303 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.889     2.192    u_integrated/u_measurement/u_snapshot/clk_work_out
+    SLICE_X19Y102        FDCE                                         r  u_integrated/u_measurement/u_snapshot/mean_q_reg[9]/C
+                         clock pessimism              0.000     2.192    
+    SLICE_X19Y102        FDCE (Hold_GFF_SLICEM_C_D)
+                                                      0.060     2.252    u_integrated/u_measurement/u_snapshot/mean_q_reg[9]
+  -------------------------------------------------------------------
+                         data arrival                           0.359    
+                         clock arrival                          2.252    
+  -------------------------------------------------------------------
+                         relative delay                        -1.893    
+
+
+
+Id: 6
+set_bus_skew -from [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/adc_clip_count_reg* && IS_SEQUENTIAL == 1}] -to [get_cells -hier -filter {NAME =~ *u_measurement/u_snapshot/clipped_samples_reg* && IS_SEQUENTIAL == 1}] 4.000
+Requirement: 4.000ns
+Endpoints: 32
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+dco_capture_unbuffered
+                      work_unbuffered       u_integrated/u_measurement/u_snapshot/clipped_samples_reg[30]/D
+                                                                            u_integrated/u_measurement/u_snapshot/clipped_samples_reg[19]/D
+                                                                                                            Slow         0.849      3.151
+
+
+Slack (MET) :             3.151ns  (requirement - actual skew)
+  Endpoint Source:        u_integrated/u_measurement/u_snapshot/adc_clip_count_reg[30]/C
+                            (rising edge-triggered cell FDCE clocked by dco_capture_unbuffered)
+  Endpoint Destination:   u_integrated/u_measurement/u_snapshot/clipped_samples_reg[30]/D
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Reference Source:       u_integrated/u_measurement/u_snapshot/adc_clip_count_reg[19]/C
+                            (rising edge-triggered cell FDCE clocked by dco_capture_unbuffered)
+  Reference Destination:  u_integrated/u_measurement/u_snapshot/clipped_samples_reg[19]/D
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            4.000ns
+  Endpoint Relative Delay:   -1.065ns
+  Reference Relative Delay:  -1.882ns
+  Relative CRPR:             -0.032ns
+  Actual Bus Skew:            0.849ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock dco_capture_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    V23                                               0.000     0.000 r  adc_dco_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_rx/u_dco_ibuf/I
+    HPIOBDIFFINBUF_X0Y34 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.634     0.734 r  u_integrated/u_rx/u_dco_ibuf/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.784    u_integrated/u_rx/u_dco_ibuf/OUT
+    V23                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.784 r  u_integrated/u_rx/u_dco_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.397     1.181    u_integrated/u_rx/dco_ibuf
+    MMCM_X0Y1            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.987    -1.806 r  u_integrated/u_rx/u_dco_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245    -1.561    u_integrated/u_rx/dco_capture_unbuffered
+    BUFGCE_X0Y43         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028    -1.533 r  u_integrated/u_rx/u_dco_bufg/O
+    X0Y0 (CLOCK_ROOT)    net (fo=1584, routed)        1.793     0.261    u_integrated/u_measurement/u_snapshot/adc_clk_out
+    SLICE_X15Y103        FDCE                                         r  u_integrated/u_measurement/u_snapshot/adc_clip_count_reg[30]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y103        FDCE (Prop_GFF_SLICEM_C_Q)
+                                                      0.078     0.339 r  u_integrated/u_measurement/u_snapshot/adc_clip_count_reg[30]/Q
+                         net (fo=2, routed)           0.798     1.137    u_integrated/u_measurement/u_snapshot/adc_clip_count_reg[30]
+    SLICE_X16Y103        FDCE                                         r  u_integrated/u_measurement/u_snapshot/clipped_samples_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.520     0.599 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.639    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.298     0.937    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.961 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.074     2.035    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.776     0.259 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215     0.474    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.498 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.679     2.176    u_integrated/u_measurement/u_snapshot/clk_work_out
+    SLICE_X16Y103        FDCE                                         r  u_integrated/u_measurement/u_snapshot/clipped_samples_reg[30]/C
+                         clock pessimism              0.000     2.176    
+    SLICE_X16Y103        FDCE (Setup_BFF_SLICEL_C_D)
+                                                      0.025     2.201    u_integrated/u_measurement/u_snapshot/clipped_samples_reg[30]
+  -------------------------------------------------------------------
+                         data arrival                           1.137    
+                         clock arrival                          2.201    
+  -------------------------------------------------------------------
+                         relative delay                        -1.065    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock dco_capture_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    V23                                               0.000     0.000 r  adc_dco_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_rx/u_dco_ibuf/I
+    HPIOBDIFFINBUF_X0Y34 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.524     0.603 r  u_integrated/u_rx/u_dco_ibuf/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.643    u_integrated/u_rx/u_dco_ibuf/OUT
+    V23                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.643 r  u_integrated/u_rx/u_dco_ibuf/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.344     0.987    u_integrated/u_rx/dco_ibuf
+    MMCM_X0Y1            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.567    -1.580 r  u_integrated/u_rx/u_dco_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215    -1.365    u_integrated/u_rx/dco_capture_unbuffered
+    BUFGCE_X0Y43         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024    -1.341 r  u_integrated/u_rx/u_dco_bufg/O
+    X0Y0 (CLOCK_ROOT)    net (fo=1584, routed)        1.585     0.244    u_integrated/u_measurement/u_snapshot/adc_clk_out
+    SLICE_X15Y102        FDCE                                         r  u_integrated/u_measurement/u_snapshot/adc_clip_count_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y102        FDCE (Prop_DFF_SLICEM_C_Q)
+                                                      0.058     0.302 r  u_integrated/u_measurement/u_snapshot/adc_clip_count_reg[19]/Q
+                         net (fo=2, routed)           0.074     0.377    u_integrated/u_measurement/u_snapshot/adc_clip_count_reg[19]
+    SLICE_X16Y102        FDCE                                         r  u_integrated/u_measurement/u_snapshot/clipped_samples_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.629     0.729 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.779    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.779 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.335     1.114    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.142 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.206     2.348    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.318     0.030 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245     0.275    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.303 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.893     2.196    u_integrated/u_measurement/u_snapshot/clk_work_out
+    SLICE_X16Y102        FDCE                                         r  u_integrated/u_measurement/u_snapshot/clipped_samples_reg[19]/C
+                         clock pessimism              0.000     2.196    
+    SLICE_X16Y102        FDCE (Hold_AFF2_SLICEL_C_D)
+                                                      0.062     2.258    u_integrated/u_measurement/u_snapshot/clipped_samples_reg[19]
+  -------------------------------------------------------------------
+                         data arrival                           0.377    
+                         clock arrival                          2.258    
+  -------------------------------------------------------------------
+                         relative delay                        -1.882    
+
+
+
+Id: 7
+set_bus_skew -from [get_cells -hier -filter {NAME =~ *u_udp/snapshot_reg* && IS_SEQUENTIAL == 1}] -to [get_cells -hier -filter {NAME =~ *u_udp/eth_payload_reg* && IS_SEQUENTIAL == 1}] 8.000
+Requirement: 8.000ns
+Endpoints: 223
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+work_unbuffered       clk_eth               u_udp/eth_payload_reg[247]/D    u_udp/eth_payload_reg[126]/D    Slow         0.665      7.335
+
+
+Slack (MET) :             7.335ns  (requirement - actual skew)
+  Endpoint Source:        u_udp/snapshot_reg[247]/C
+                            (rising edge-triggered cell FDRE clocked by work_unbuffered)
+  Endpoint Destination:   u_udp/eth_payload_reg[247]/D
+                            (rising edge-triggered cell FDRE clocked by clk_eth)
+  Reference Source:       u_udp/snapshot_reg[126]/C
+                            (rising edge-triggered cell FDRE clocked by work_unbuffered)
+  Reference Destination:  u_udp/eth_payload_reg[126]/D
+                            (rising edge-triggered cell FDRE clocked by clk_eth)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Endpoint Relative Delay:    2.714ns
+  Reference Relative Delay:   2.192ns
+  Relative CRPR:             -0.143ns
+  Actual Bus Skew:            0.665ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.629     0.729 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.779    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.779 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.335     1.114    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.142 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.206     2.348    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.318     0.030 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245     0.275    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.303 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.895     2.198    u_udp/udp_clk_work
+    SLICE_X29Y35         FDRE                                         r  u_udp/snapshot_reg[247]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X29Y35         FDRE (Prop_BFF_SLICEL_C_Q)
+                                                      0.079     2.277 r  u_udp/snapshot_reg[247]/Q
+                         net (fo=1, routed)           0.593     2.870    u_udp/snapshot_reg_n_0_[247]
+    SLICE_X29Y35         FDRE                                         r  u_udp/eth_payload_reg[247]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_eth rise edge)    0.000     0.000 r  
+    AD20                                              0.000     0.000 r  fpga_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_tx/u_clock_input/I
+    HPIOBDIFFINBUF_X0Y12 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.548     0.627 r  u_integrated/u_tx/u_clock_input/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.667    u_integrated/u_tx/u_clock_input/OUT
+    AD20                 IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.667 r  u_integrated/u_tx/u_clock_input/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.333     1.000    u_integrated/u_tx/reference_clk
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.187    -1.187 r  u_integrated/u_tx/u_clock_mmcm/CLKOUT0
+                         net (fo=2, routed)           0.215    -0.972    u_rgmii/lopt_1
+    BUFGCE_DIV_X0Y1      BUFGCE_DIV (Prop_BUFGCE_DIV_I_O)
+                                                      0.131    -0.841 r  u_rgmii/u_clk_div/O
+    X0Y0 (CLOCK_ROOT)    net (fo=564, routed)         0.972     0.131    u_udp/clk_eth
+    SLICE_X29Y35         FDRE                                         r  u_udp/eth_payload_reg[247]/C
+                         clock pessimism              0.000     0.131    
+    SLICE_X29Y35         FDRE (Setup_FFF2_SLICEL_C_D)
+                                                      0.025     0.156    u_udp/eth_payload_reg[247]
+  -------------------------------------------------------------------
+                         data arrival                           2.870    
+                         clock arrival                          0.156    
+  -------------------------------------------------------------------
+                         relative delay                         2.714    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.520     0.599 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.639    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.298     0.937    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.961 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.074     2.035    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.776     0.259 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215     0.474    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.498 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.668     2.166    u_udp/udp_clk_work
+    SLICE_X29Y39         FDRE                                         r  u_udp/snapshot_reg[126]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X29Y39         FDRE (Prop_AFF_SLICEL_C_Q)
+                                                      0.058     2.224 r  u_udp/snapshot_reg[126]/Q
+                         net (fo=1, routed)           0.071     2.295    u_udp/snapshot_reg_n_0_[126]
+    SLICE_X29Y38         FDRE                                         r  u_udp/eth_payload_reg[126]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_eth rise edge)    0.000     0.000 r  
+    AD20                                              0.000     0.000 r  fpga_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_tx/u_clock_input/I
+    HPIOBDIFFINBUF_X0Y12 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.658     0.758 r  u_integrated/u_tx/u_clock_input/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.808    u_integrated/u_tx/u_clock_input/OUT
+    AD20                 IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.808 r  u_integrated/u_tx/u_clock_input/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.384     1.192    u_integrated/u_tx/reference_clk
+    MMCM_X0Y0            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.676    -1.484 r  u_integrated/u_tx/u_clock_mmcm/CLKOUT0
+                         net (fo=2, routed)           0.244    -1.240    u_rgmii/lopt_1
+    BUFGCE_DIV_X0Y1      BUFGCE_DIV (Prop_BUFGCE_DIV_I_O)
+                                                      0.151    -1.089 r  u_rgmii/u_clk_div/O
+    X0Y0 (CLOCK_ROOT)    net (fo=564, routed)         1.129     0.040    u_udp/clk_eth
+    SLICE_X29Y38         FDRE                                         r  u_udp/eth_payload_reg[126]/C
+                         clock pessimism              0.000     0.040    
+    SLICE_X29Y38         FDRE (Hold_HFF2_SLICEL_C_D)
+                                                      0.062     0.102    u_udp/eth_payload_reg[126]
+  -------------------------------------------------------------------
+                         data arrival                           2.295    
+                         clock arrival                          0.102    
+  -------------------------------------------------------------------
+                         relative delay                         2.192    
+
+
+
+Id: 8
+set_bus_skew -from [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[3]}]] -to [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[3]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK
+                      work_unbuffered       dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/D
+                                                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
+                                                                                                            Slow         0.314      9.686
+
+
+Slack (MET) :             9.686ns  (requirement - actual skew)
+  Endpoint Source:        dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK)
+  Endpoint Destination:   dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Reference Source:       dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK)
+  Reference Destination:  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:    5.725ns
+  Reference Relative Delay:   0.837ns
+  Relative CRPR:              4.574ns
+  Actual Bus Skew:            0.314ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK rise edge)
+                                                      0.000     0.000 r  
+    CONFIG_SITE_X0Y0     BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK
+    CONFIG_SITE_X0Y0     BSCANE2 (Prop_BSCAN1_CONFIG_SITE_INTERNAL_TCK_TCK)
+                                                      4.300     4.300 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
+                         net (fo=1, routed)           1.786     6.086    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
+    BUFGCE_X0Y21         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     6.114 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
+    X1Y0 (CLOCK_ROOT)    net (fo=482, routed)         1.571     7.685    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_clk
+    SLICE_X51Y42         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y42         FDCE (Prop_FFF_SLICEM_C_Q)
+                                                      0.076     7.761 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]/Q
+                         net (fo=1, routed)           0.290     8.051    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q[2]
+    SLICE_X51Y42         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.520     0.599 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.639    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.298     0.937    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.961 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.074     2.035    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.776     0.259 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215     0.474    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.498 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.803     2.301    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/wr_clk
+    SLICE_X51Y42         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]/C
+                         clock pessimism              0.000     2.301    
+    SLICE_X51Y42         FDCE (Setup_CFF2_SLICEM_C_D)
+                                                      0.025     2.326    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]
+  -------------------------------------------------------------------
+                         data arrival                           8.051    
+                         clock arrival                          2.326    
+  -------------------------------------------------------------------
+                         relative delay                         5.725    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK rise edge)
+                                                      0.000     0.000 r  
+    CONFIG_SITE_X0Y0     BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK
+    CONFIG_SITE_X0Y0     BSCANE2 (Prop_BSCAN1_CONFIG_SITE_INTERNAL_TCK_TCK)
+                                                      0.465     0.465 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
+                         net (fo=1, routed)           1.231     1.696    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
+    BUFGCE_X0Y21         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.720 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
+    X1Y0 (CLOCK_ROOT)    net (fo=482, routed)         1.382     3.102    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_clk
+    SLICE_X51Y42         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y42         FDCE (Prop_HFF2_SLICEM_C_Q)
+                                                      0.059     3.161 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]/Q
+                         net (fo=1, routed)           0.080     3.241    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q[1]
+    SLICE_X51Y43         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.629     0.729 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.779    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.779 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.335     1.114    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.142 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.206     2.348    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.318     0.030 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245     0.275    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.303 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       2.039     2.342    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/wr_clk
+    SLICE_X51Y43         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]/C
+                         clock pessimism              0.000     2.342    
+    SLICE_X51Y43         FDCE (Hold_BFF2_SLICEM_C_D)
+                                                      0.062     2.404    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]
+  -------------------------------------------------------------------
+                         data arrival                           3.241    
+                         clock arrival                          2.404    
+  -------------------------------------------------------------------
+                         relative delay                         0.837    
+
+
+
+Id: 9
+set_bus_skew -from [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]}]] -to [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+work_unbuffered       dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK
+                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]/D
+                                                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
+                                                                                                            Slow         0.329      9.671
+
+
+Slack (MET) :             9.671ns  (requirement - actual skew)
+  Endpoint Source:        dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Endpoint Destination:   dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK)
+  Reference Source:       dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Reference Destination:  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:   -0.378ns
+  Reference Relative Delay:  -5.280ns
+  Relative CRPR:              4.573ns
+  Actual Bus Skew:            0.329ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.629     0.729 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.779    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.779 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.335     1.114    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.142 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.206     2.348    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.318     0.030 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245     0.275    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.303 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       2.027     2.330    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_clk
+    SLICE_X51Y42         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y42         FDCE (Prop_DFF_SLICEM_C_Q)
+                                                      0.078     2.408 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[0]/Q
+                         net (fo=1, routed)           0.340     2.748    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q[0]
+    SLICE_X52Y42         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK rise edge)
+                                                      0.000     0.000 r  
+    CONFIG_SITE_X0Y0     BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK
+    CONFIG_SITE_X0Y0     BSCANE2 (Prop_BSCAN1_CONFIG_SITE_INTERNAL_TCK_TCK)
+                                                      0.465     0.465 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
+                         net (fo=1, routed)           1.231     1.696    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
+    BUFGCE_X0Y21         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.720 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
+    X1Y0 (CLOCK_ROOT)    net (fo=482, routed)         1.381     3.101    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/rd_clk
+    SLICE_X52Y42         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]/C
+                         clock pessimism              0.000     3.101    
+    SLICE_X52Y42         FDCE (Setup_GFF2_SLICEL_C_D)
+                                                      0.025     3.126    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]
+  -------------------------------------------------------------------
+                         data arrival                           2.748    
+                         clock arrival                          3.126    
+  -------------------------------------------------------------------
+                         relative delay                        -0.378    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.520     0.599 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.639    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.298     0.937    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.961 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.074     2.035    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.776     0.259 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215     0.474    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.498 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.803     2.301    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_clk
+    SLICE_X51Y42         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y42         FDCE (Prop_DFF2_SLICEM_C_Q)
+                                                      0.061     2.362 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/Q
+                         net (fo=1, routed)           0.100     2.462    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q[1]
+    SLICE_X52Y42         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK rise edge)
+                                                      0.000     0.000 r  
+    CONFIG_SITE_X0Y0     BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK
+    CONFIG_SITE_X0Y0     BSCANE2 (Prop_BSCAN1_CONFIG_SITE_INTERNAL_TCK_TCK)
+                                                      4.300     4.300 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
+                         net (fo=1, routed)           1.786     6.086    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
+    BUFGCE_X0Y21         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     6.114 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
+    X1Y0 (CLOCK_ROOT)    net (fo=482, routed)         1.566     7.680    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/rd_clk
+    SLICE_X52Y42         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/C
+                         clock pessimism              0.000     7.680    
+    SLICE_X52Y42         FDCE (Hold_DFF2_SLICEL_C_D)
+                                                      0.062     7.742    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]
+  -------------------------------------------------------------------
+                         data arrival                           2.462    
+                         clock arrival                          7.742    
+  -------------------------------------------------------------------
+                         relative delay                        -5.280    
+
+
+
+Id: 10
+set_bus_skew -from [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[3]}]] -to [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[3]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+work_unbuffered       dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK
+                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[3]/D
+                                                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]/D
+                                                                                                            Slow         0.328      9.672
+
+
+Slack (MET) :             9.672ns  (requirement - actual skew)
+  Endpoint Source:        dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Endpoint Destination:   dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK)
+  Reference Source:       dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Reference Destination:  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:   -0.522ns
+  Reference Relative Delay:  -5.345ns
+  Relative CRPR:              4.495ns
+  Actual Bus Skew:            0.328ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.629     0.729 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.779    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.779 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.335     1.114    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.142 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.206     2.348    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.318     0.030 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245     0.275    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.303 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       2.020     2.323    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_clk
+    SLICE_X43Y38         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y38         FDCE (Prop_EFF_SLICEL_C_Q)
+                                                      0.079     2.402 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[3]/Q
+                         net (fo=1, routed)           0.207     2.609    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q[3]
+    SLICE_X43Y35         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK rise edge)
+                                                      0.000     0.000 r  
+    CONFIG_SITE_X0Y0     BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK
+    CONFIG_SITE_X0Y0     BSCANE2 (Prop_BSCAN1_CONFIG_SITE_INTERNAL_TCK_TCK)
+                                                      0.465     0.465 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
+                         net (fo=1, routed)           1.231     1.696    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
+    BUFGCE_X0Y21         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.720 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
+    X1Y0 (CLOCK_ROOT)    net (fo=482, routed)         1.387     3.107    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/wr_clk
+    SLICE_X43Y35         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[3]/C
+                         clock pessimism              0.000     3.107    
+    SLICE_X43Y35         FDCE (Setup_HFF2_SLICEL_C_D)
+                                                      0.025     3.132    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[3]
+  -------------------------------------------------------------------
+                         data arrival                           2.609    
+                         clock arrival                          3.132    
+  -------------------------------------------------------------------
+                         relative delay                        -0.522    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.520     0.599 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.639    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.298     0.937    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.961 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.074     2.035    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.776     0.259 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215     0.474    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.498 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.787     2.284    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_clk
+    SLICE_X43Y36         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y36         FDCE (Prop_AFF_SLICEL_C_Q)
+                                                      0.058     2.342 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.rd_pntr_gc_reg[0]/Q
+                         net (fo=1, routed)           0.076     2.418    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q[0]
+    SLICE_X44Y36         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK rise edge)
+                                                      0.000     0.000 r  
+    CONFIG_SITE_X0Y0     BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK
+    CONFIG_SITE_X0Y0     BSCANE2 (Prop_BSCAN1_CONFIG_SITE_INTERNAL_TCK_TCK)
+                                                      4.300     4.300 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
+                         net (fo=1, routed)           1.786     6.086    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
+    BUFGCE_X0Y21         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     6.114 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
+    X1Y0 (CLOCK_ROOT)    net (fo=482, routed)         1.588     7.702    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/wr_clk
+    SLICE_X44Y36         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]/C
+                         clock pessimism              0.000     7.702    
+    SLICE_X44Y36         FDCE (Hold_BFF2_SLICEM_C_D)
+                                                      0.062     7.764    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].wr_stg_inst/Q_reg_reg[0]
+  -------------------------------------------------------------------
+                         data arrival                           2.418    
+                         clock arrival                          7.764    
+  -------------------------------------------------------------------
+                         relative delay                        -5.345    
+
+
+
+Id: 11
+set_bus_skew -from [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]}]] -to [get_cells [list {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[0]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[2]} {dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK
+                      work_unbuffered       dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]/D
+                                                                            dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
+                                                                                                            Slow         0.322      9.678
+
+
+Slack (MET) :             9.678ns  (requirement - actual skew)
+  Endpoint Source:        dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK)
+  Endpoint Destination:   dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Reference Source:       dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK)
+  Reference Destination:  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by work_unbuffered)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:    5.762ns
+  Reference Relative Delay:   0.898ns
+  Relative CRPR:              4.543ns
+  Actual Bus Skew:            0.322ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK rise edge)
+                                                      0.000     0.000 r  
+    CONFIG_SITE_X0Y0     BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK
+    CONFIG_SITE_X0Y0     BSCANE2 (Prop_BSCAN1_CONFIG_SITE_INTERNAL_TCK_TCK)
+                                                      4.300     4.300 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
+                         net (fo=1, routed)           1.786     6.086    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
+    BUFGCE_X0Y21         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     6.114 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
+    X1Y0 (CLOCK_ROOT)    net (fo=482, routed)         1.587     7.701    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_clk
+    SLICE_X44Y36         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y36         FDCE (Prop_FFF_SLICEM_C_Q)
+                                                      0.076     7.777 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[3]/Q
+                         net (fo=1, routed)           0.295     8.072    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q[3]
+    SLICE_X43Y36         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.079     0.079    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.520     0.599 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.040     0.639    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.639 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.298     0.937    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.961 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.074     2.035    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -1.776     0.259 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.215     0.474    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     0.498 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       1.787     2.284    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/rd_clk
+    SLICE_X43Y36         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]/C
+                         clock pessimism              0.000     2.284    
+    SLICE_X43Y36         FDCE (Setup_DFF2_SLICEL_C_D)
+                                                      0.025     2.309    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[3]
+  -------------------------------------------------------------------
+                         data arrival                           8.072    
+                         clock arrival                          2.309    
+  -------------------------------------------------------------------
+                         relative delay                         5.762    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK rise edge)
+                                                      0.000     0.000 r  
+    CONFIG_SITE_X0Y0     BSCANE2                      0.000     0.000 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK
+    CONFIG_SITE_X0Y0     BSCANE2 (Prop_BSCAN1_CONFIG_SITE_INTERNAL_TCK_TCK)
+                                                      0.465     0.465 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK
+                         net (fo=1, routed)           1.231     1.696    dbg_hub/inst/BSCANID.u_xsdbm_id/tck_bs
+    BUFGCE_X0Y21         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     1.720 r  dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
+    X1Y0 (CLOCK_ROOT)    net (fo=482, routed)         1.397     3.117    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_clk
+    SLICE_X44Y37         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y37         FDCE (Prop_DFF2_SLICEM_C_Q)
+                                                      0.061     3.178 r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.wr_pntr_gc_reg[1]/Q
+                         net (fo=1, routed)           0.106     3.284    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q[1]
+    SLICE_X43Y38         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock work_unbuffered rise edge)
+                                                      0.000     0.000 r  
+    T24                                               0.000     0.000 r  sys_clk_p (IN)
+                         net (fo=0)                   0.100     0.100    u_integrated/u_core/u_clock/u_ibufds/I
+    HPIOBDIFFINBUF_X0Y36 DIFFINBUF (Prop_DIFFINBUF_HPIOBDIFFINBUF_DIFF_IN_P_O)
+                                                      0.629     0.729 r  u_integrated/u_core/u_clock/u_ibufds/DIFFINBUF_INST/O
+                         net (fo=1, routed)           0.050     0.779    u_integrated/u_core/u_clock/u_ibufds/OUT
+    T24                  IBUFCTRL (Prop_IBUFCTRL_HPIOB_M_I_O)
+                                                      0.000     0.779 r  u_integrated/u_core/u_clock/u_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.335     1.114    u_integrated/u_core/u_clock/u_ibufds_n_0
+    BUFGCE_X0Y32         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     1.142 r  u_integrated/u_core/u_clock/g_input_global.u_input_bufg/O
+                         net (fo=1, routed)           1.206     2.348    u_integrated/u_core/u_clock/mmcm_input_clock
+    MMCM_X0Y2            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -2.318     0.030 r  u_integrated/u_core/u_clock/u_mmcm/CLKOUT0
+                         net (fo=1, routed)           0.245     0.275    u_integrated/u_core/u_clock/work_unbuffered
+    BUFGCE_X0Y61         BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     0.303 r  u_integrated/u_core/u_clock/u_work_bufg/O
+    X0Y1 (CLOCK_ROOT)    net (fo=20084, routed)       2.020     2.323    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/rd_clk
+    SLICE_X43Y38         FDCE                                         r  dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]/C
+                         clock pessimism              0.000     2.323    
+    SLICE_X43Y38         FDCE (Hold_HFF2_SLICEL_C_D)
+                                                      0.062     2.385    dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_2_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/gnxpm_cdc.gsync_stage[1].rd_stg_inst/Q_reg_reg[1]
+  -------------------------------------------------------------------
+                         data arrival                           3.284    
+                         clock arrival                          2.385    
+  -------------------------------------------------------------------
+                         relative delay                         0.898    
+
+
+

@@ -1,0 +1,11 @@
+test_bubbles_do_not_shift_history (__main__.ReferenceTests.test_bubbles_do_not_shift_history) ... ok
+test_dc_gain (__main__.ReferenceTests.test_dc_gain) ... ok
+test_hand_impulse (__main__.ReferenceTests.test_hand_impulse) ... ok
+test_hand_rounding (__main__.ReferenceTests.test_hand_rounding) ... ok
+test_reset_cancels_inflight_and_clears_history (__main__.ReferenceTests.test_reset_cancels_inflight_and_clears_history) ... ok
+test_saturation_extrema (__main__.ReferenceTests.test_saturation_extrema) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK

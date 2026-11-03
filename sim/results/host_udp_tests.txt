@@ -1,0 +1,17 @@
+test_actual_loopback (test_v4_integration.V4Tests.test_actual_loopback) ... ok
+test_calibration_matches_report_interpolation (test_v4_integration.V4Tests.test_calibration_matches_report_interpolation) ... ok
+test_invalid_boundaries (test_v4_integration.V4Tests.test_invalid_boundaries) ... ok
+test_no_invented_waveform (test_v4_integration.V4Tests.test_no_invented_waveform) ... ok
+test_result_sequence_and_invalidation (test_v4_integration.V4Tests.test_result_sequence_and_invalidation) ... ok
+test_saturation_and_lock_fault (test_v4_integration.V4Tests.test_saturation_and_lock_fault) ... ok
+test_units_and_source (test_v4_integration.V4Tests.test_units_and_source) ... ok
+test_adc_chunk (test_udp_protocol.NativeUDPTests.test_adc_chunk) ... ok
+test_json_optional (test_udp_protocol.NativeUDPTests.test_json_optional) ... ok
+test_native_calibrated_packet (test_udp_protocol.NativeUDPTests.test_native_calibrated_packet) ... ok
+test_native_raw_code (test_udp_protocol.NativeUDPTests.test_native_raw_code) ... ok
+test_udp_loopback_and_reassemble_out_of_order (test_udp_protocol.NativeUDPTests.test_udp_loopback_and_reassemble_out_of_order) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.383s
+
+OK

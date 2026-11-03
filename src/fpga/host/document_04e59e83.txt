@@ -1,0 +1,13 @@
+V4 千兆 UDP 上位机接收步骤
+==========================================
+1. 用千兆网线连接 AXAU15 RJ45 与电脑网口（或连接在同一局域网）。
+2. 电脑有线网卡设置 IPv4 静态地址 192.168.1.100，掩码 255.255.255.0。
+   FPGA 源地址 192.168.1.10 -> 目的广播地址 192.168.1.255，UDP/5001。
+3. Windows 防火墙允许 Python 接收 UDP 5001 入站数据，注意路由器/交换机可能屏蔽广播。
+4. 电脑运行根目录 03_start_pc_udp_receiver.cmd，观察 seq / FFT Hz / temp / PID。
+5. FPGA 下载最新 V4 bitstream 后，确认板载 PHY 的 link LED 及电脑网卡实际速度为 1 Gbps。
+6. 没有数据：先本机运行 python host/demo_udp_sender.py，排除 Python 解析器问题；
+   再用 Wireshark 过滤 udp.port == 5001，确认有没有底层 UDP 帧。
+
+通信仅 FPGA -> 电脑。FPGA 内部温度模型并非 TEC200 实物控制。
+如果 FFT 未通过 VIO 0x70 使能，可能读到初始 0Hz，不代表 UDP 没发送。
