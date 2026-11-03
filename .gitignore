@@ -1,0 +1,22 @@
+# Local Vivado working state and regenerable products
+.Xil/
+**/.Xil/
+**/*.cache/
+**/*.gen/
+**/*.ip_user_files/
+**/*.runs/
+**/*.sim/
+
+# Python environments and caches
+.venv/
+venv/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Keep exported reports, logs, bit/ltx and test data in their documented folders.
