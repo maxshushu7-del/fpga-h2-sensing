@@ -1,7 +1,7 @@
 # 报告与展示材料
 
-- [技术报告PDF](design/design_report.pdf) / [Word](design/design_report.docx)
-- [中文海报](poster/poster_zh.pptx) / [英文海报](poster/poster_en.pptx)
+- 技术报告：[PDF](design/design_report.pdf) / [Word原稿](design/design_report.docx)
+- 中英文合并海报：[PDF](poster/poster_bilingual.pdf) / [PPTX](poster/poster_bilingual.pptx)
 - [介绍PPT](media/system_introduction.pptx) / [视频](media/system_introduction.mp4)
 - [AI协作原记录入口](ai_collaboration/README.md)
 - [从零复现](reproduction.md)

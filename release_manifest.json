@@ -1,5 +1,5 @@
 {
-  "release": "2026-11-03",
+  "release": "2026-11-04",
   "hash_algorithm": "SHA-256",
   "scope": "published repository files excluding this manifest and regenerable local products",
   "files": [
@@ -20,8 +20,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3516,
-      "sha256": "aea5e7fd92143906cdff46a6cc237bb13bac849b075be5b81da37d659c618869"
+      "bytes": 3546,
+      "sha256": "6f0b6bcaad09fca99463a84d38d0d77b0cdfe7cb27d0c5ab591e970d89e8f28d"
     },
     {
       "path": "board/README.md",
@@ -72,6 +72,11 @@
       "path": "board/scripts/.gitkeep",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "board/scripts/jtag_measurement.md",
+      "bytes": 2692,
+      "sha256": "5fd8ba8fb55e8958d33c548c6e7abde73cab7515ed7f17c079f331a0af3a7317"
     },
     {
       "path": "build/README.md",
@@ -1930,8 +1935,8 @@
     },
     {
       "path": "report/README.md",
-      "bytes": 621,
-      "sha256": "e49d9536cbb253572c8a3bae1cb87e04574d977dddb2eb61d86a6c8faa235ff2"
+      "bytes": 650,
+      "sha256": "8399b21df4522ff538d324dc64cb7bd282abe181a5fc4f4dcc409e9590aa32b5"
     },
     {
       "path": "report/ai_collaboration/README.md",
@@ -1949,14 +1954,19 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "report/design/README.md",
+      "bytes": 329,
+      "sha256": "031e687d20a545f00c317c1f0d65ec36a4a7da1343d4706102937e02455752b1"
+    },
+    {
       "path": "report/design/design_report.docx",
-      "bytes": 8851363,
-      "sha256": "9410074011631e19eee9436ab102fc255cae2f9fed0f25840d9fe351873461af"
+      "bytes": 7562397,
+      "sha256": "19fc76f122f4354614a582fc131f0a3f38380acde9060c2c0e5e32ea0ea0ed50"
     },
     {
       "path": "report/design/design_report.pdf",
-      "bytes": 4509433,
-      "sha256": "667a7c94ad0b826276644c0c17f5a5441d44cba2b6800eed132000ca9e3900bd"
+      "bytes": 3994790,
+      "sha256": "e644dbb5f59f8238e3d3516203fb7cf3c537caecac76247f168b120a4b829fab"
     },
     {
       "path": "report/media/.gitkeep",
@@ -1984,19 +1994,24 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "report/poster/poster_en.pptx",
-      "bytes": 11107782,
-      "sha256": "00da3decd6d73a127072d9a32dd3e32ecda1007f588427d463197b5410e58f4e"
+      "path": "report/poster/README.md",
+      "bytes": 250,
+      "sha256": "e769afac9d1f5812151f4374d524073f3d70cdb29c4d9e4e1a172e9e5ad6687f"
     },
     {
-      "path": "report/poster/poster_zh.pptx",
-      "bytes": 11108210,
-      "sha256": "1e42082f4736df6d45bdf1d0a9b285679c4efc30253f25616eccb0f5cf9d7380"
+      "path": "report/poster/poster_bilingual.pdf",
+      "bytes": 540170,
+      "sha256": "47b29cf7dfb2547794830c8d1e107d2da4df051a019f8deb835fa4fa31910b1e"
+    },
+    {
+      "path": "report/poster/poster_bilingual.pptx",
+      "bytes": 11267753,
+      "sha256": "39fdc31054d96ec8cadf894862a3ecf6b060423ce6d6e30a51d29023901a8461"
     },
     {
       "path": "report/reproduction.md",
-      "bytes": 2875,
-      "sha256": "8fc1d8e467a0c28ca449393dcfd70ac8e635d46f4120b8693db6f3ce7d681e91"
+      "bytes": 2922,
+      "sha256": "8d4fbcbe94494820e918a83d485d5d110c53383676a1a74691df52c36fd9b977"
     },
     {
       "path": "report/requirements.md",
@@ -2005,8 +2020,8 @@
     },
     {
       "path": "report/submission_checklist.md",
-      "bytes": 926,
-      "sha256": "0c03c26892928feb923c5df733f5788e79f9a3f0099cffd1dcb5fff5ea67bd11"
+      "bytes": 979,
+      "sha256": "67561233ec625a87657949533054d3d029bc4d9f956cffa93a2d063ac5f7b347"
     },
     {
       "path": "sim/README.md",

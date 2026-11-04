@@ -6,8 +6,9 @@
 
 | 材料 | 入口 |
 |---|---|
-| 技术报告 PDF / Word | [PDF](report/design/design_report.pdf) · [Word](report/design/design_report.docx) |
-| 海报与介绍PPT | [中文海报](report/poster/poster_zh.pptx) · [英文海报](report/poster/poster_en.pptx) · [介绍PPT](report/media/system_introduction.pptx) |
+| 技术报告 | [PDF预览](report/design/design_report.pdf) · [Word原稿](report/design/design_report.docx) |
+| 中英文合并海报 | [PDF预览](report/poster/poster_bilingual.pdf) · [可编辑PPTX](report/poster/poster_bilingual.pptx) |
+| 作品介绍PPT | [PPTX](report/media/system_introduction.pptx) |
 | 作品介绍视频 | [MP4](report/media/system_introduction.mp4) |
 | 从零复现 | [工具、命令、IP、接收与上板步骤](report/reproduction.md) |
 | 第四版 FPGA 源码 | [src/fpga](src/fpga/README.md) |

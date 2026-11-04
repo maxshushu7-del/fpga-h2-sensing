@@ -39,6 +39,6 @@ E:/Codex/FPGA/workspace/h2_gui_env/Scripts/python.exe main.py
 
 ## 上板与数据
 
-同次bit/ltx在`board/bitstream`。先核对供电、AD/DA接口、输入范围与时钟初始化，再启用采样及测频；输出授权应按执行器接口确认。PC使用`192.168.1.100/24`等空闲地址，监听5001。VIO测频使能及ILA触发步骤见技术报告5.4。先核对来源地址、包序号、FFT序号和有效位，再观察图形显示。
+同次bit/ltx在`board/bitstream`。先核对供电、AD/DA接口、输入范围与时钟初始化，再启用采样及测频；输出授权应按执行器接口确认。PC使用`192.168.1.100/24`等空闲地址，监听5001。VIO测频使能及ILA触发步骤见[独立JTAG操作说明](../board/scripts/jtag_measurement.md)。先核对来源地址、包序号、FFT序号和有效位，再观察图形显示。
 
 `data/measured`是队员提供的信号源读数转录；`data/reference`是RTL运行导出的频谱。温度标志标明V4热对象模型来源。原始照片在`board/photos`，相应条件不能互相替代。
